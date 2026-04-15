@@ -1,5 +1,6 @@
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/animations/FadeIn'
-import clientsImg from '../../Clients.png'
+// @ts-ignore
+import clientsImg from '/Clients.png'
 
 const services = [
   {
@@ -92,7 +93,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Testimonial — Highlighted */}
+      {/* Testimonial */}
       <section className="py-24 px-6 bg-yale-blue relative overflow-hidden">
         <div className="absolute top-[-20%] right-[-5%] w-80 h-80 bg-white/5 rounded-full blur-3xl" />
         <div className="absolute bottom-[-15%] left-[-5%] w-72 h-72 bg-white/5 rounded-full blur-3xl" />
