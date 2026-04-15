@@ -240,7 +240,7 @@ export default function Home() {
               <img
                 src={clientsImg}
                 alt="YHCC Client Organizations"
-                className="w-full h-auto object-contain max-h-48"
+                className="w-full h-auto object-contain max-h-96"
               />
             </div>
           </FadeIn>
