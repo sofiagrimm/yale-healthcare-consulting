@@ -9,7 +9,7 @@ const leadership = [
   { name: 'Kyler Parker', role: 'Executive Operations Director' },
   { name: 'Fariba Hossain', role: 'Chief of Staff' },
   { name: 'Usman Khalid', role: 'Director of Finances' },
-  { name: 'Holly Tran', role: 'Project Manager (Research)' },
+  { name: 'Holly Tran', role: 'Research Project Manager' },
   { name: 'Leonardo Chung', role: 'Secretary' },
   { name: 'Emma Lee', role: 'Secretary' },
   { name: 'Grace Udoh', role: 'Outreach Director' },
