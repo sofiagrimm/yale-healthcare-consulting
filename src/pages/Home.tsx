@@ -70,7 +70,7 @@ const stats = [
   { value: '50+', label: 'Student Consultants' },
   { value: '10+', label: 'Client Engagements' },
   { value: '4', label: 'Practice Areas' },
-  { value: 'Free', label: 'For Clients' },
+  { value: 'Yale', label: 'Student-Run' },
 ]
 
 const afterYHCC = [
