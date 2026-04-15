@@ -8,8 +8,8 @@ const values = [
     desc: 'We care about producing deliverables that clients can actually use — not just completing a project. If a recommendation doesn\'t hold up, we say so.',
   },
   {
-    title: 'Pro bono, no exceptions',
-    desc: 'Every engagement is free for the client. That\'s not a marketing line — it\'s the reason we exist. Most of our partners couldn\'t afford this kind of support otherwise.',
+    title: 'No cost to clients, no exceptions',
+    desc: 'Every engagement is free for the client. That\'s not a marketing line — it\'s the reason we exist. Most of our partners couldn\'t access this kind of support otherwise.',
   },
   {
     title: 'Diverse teams on purpose',
@@ -24,7 +24,7 @@ const values = [
 const timeline = [
   {
     year: 'Founded',
-    event: 'YHCC started as a Dwight Hall at Yale member organization, with a focus on pro bono consulting for Connecticut healthcare nonprofits.',
+    event: 'YHCC started as a Dwight Hall at Yale member organization, with a focus on consulting for Connecticut healthcare nonprofits.',
   },
   {
     year: 'First Projects',
@@ -60,7 +60,7 @@ export default function About() {
               We're a student consulting group at Yale. Here's what that actually means.
             </h1>
             <p className="text-white/75 text-lg font-light max-w-xl leading-relaxed">
-              A Dwight Hall member organization focused on pro bono healthcare consulting.
+              A Dwight Hall member organization focused on healthcare consulting.
             </p>
           </FadeIn>
         </div>

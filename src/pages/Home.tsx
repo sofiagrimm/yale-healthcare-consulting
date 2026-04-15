@@ -9,7 +9,7 @@ const slides = [
   {
     label: 'Healthcare Strategy',
     title: 'Real consulting work. Real healthcare clients.',
-    sub: 'YHCC is a student-run consulting group at Yale. We take on pro bono projects with hospitals, nonprofits, and health systems — and we actually do the work.',
+    sub: 'YHCC is a student-run consulting group at Yale. We take on projects with hospitals, nonprofits, and health systems — and we actually do the work.',
     cta: 'Work With Us',
     to: '/contact',
     ctaSecondary: 'Our Services',
@@ -70,7 +70,7 @@ const stats = [
   { value: '50+', label: 'Student Consultants' },
   { value: '10+', label: 'Client Engagements' },
   { value: '4', label: 'Practice Areas' },
-  { value: '100%', label: 'Pro Bono' },
+  { value: 'Free', label: 'For Clients' },
 ]
 
 const afterYHCC = [
@@ -236,11 +236,11 @@ export default function Home() {
             </Link>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <div className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex items-center justify-center">
+            <div className="bg-gray-50 border border-gray-100 rounded-3xl p-10 flex items-center justify-center">
               <img
                 src={clientsImg}
                 alt="YHCC Client Organizations"
-                className="max-w-full h-auto object-contain max-h-24"
+                className="w-full h-auto object-contain max-h-48"
               />
             </div>
           </FadeIn>

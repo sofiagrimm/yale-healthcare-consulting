@@ -72,7 +72,7 @@ export default function Services() {
               What we work on.
             </h1>
             <p className="text-white/75 text-lg font-light max-w-xl leading-relaxed">
-              Four practice areas. All pro bono. Scoped around your actual problem.
+              Four practice areas. Scoped around your actual problem.
             </p>
           </FadeIn>
         </div>
@@ -123,11 +123,11 @@ export default function Services() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 flex items-center justify-center">
+            <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-10 flex items-center justify-center">
               <img
                 src={clientsImg}
                 alt="YHCC Client Organizations"
-                className="max-w-full h-auto object-contain max-h-24"
+                className="w-full h-auto object-contain max-h-48"
               />
             </div>
           </FadeIn>
