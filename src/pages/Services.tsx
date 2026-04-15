@@ -58,7 +58,7 @@ export default function Services() {
                   <ul className="space-y-4">
                     {bullets.map((b, i) => (
                       <li key={i} className="flex items-start gap-3 text-gray-600 text-sm leading-relaxed">
-                        <span className="text-yale-teal font-bold mt-0.5">&#10003;</span>
+                        <span className="text-yale-teal font-bold mt-0.5 flex-shrink-0">&#10003;</span>
                         {b}
                       </li>
                     ))}
@@ -80,27 +80,50 @@ export default function Services() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <div className="bg-white rounded-3xl shadow-md p-10 flex items-center justify-center min-h-[160px]">
-              <p className="text-gray-400 text-sm">Client logos coming soon.</p>
+            <div className="bg-white rounded-3xl shadow-md p-8 flex items-center justify-center">
+              <img
+                src="/Clients.png"
+                alt="YHCC Client Organizations"
+                className="max-w-full h-auto object-contain"
+              />
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="py-20 px-6 bg-yale-blue text-white relative overflow-hidden">
-        <div className="absolute top-[-20%] right-[-5%] w-72 h-72 bg-white/5 rounded-full blur-3xl" />
-        <div className="max-w-3xl mx-auto text-center relative">
+      {/* Testimonial — Highlighted */}
+      <section className="py-24 px-6 bg-yale-blue relative overflow-hidden">
+        <div className="absolute top-[-20%] right-[-5%] w-80 h-80 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-[-15%] left-[-5%] w-72 h-72 bg-white/5 rounded-full blur-3xl" />
+        <div className="max-w-3xl mx-auto relative">
           <FadeIn>
-            <div className="text-6xl text-white/20 font-serif leading-none mb-4">&ldquo;</div>
-            <blockquote className="text-lg font-light leading-relaxed text-white/90 mb-8">
-              Working with the Yale Healthcare Consulting Collective was a seamless experience, and the
-              results were invaluable. Their team provided digitized surveys, thorough data analysis, and
-              a comprehensive report outlining methodology, outcomes, and actionable recommendations for
-              improvement. We have already been able to incorporate several of the findings into grants.
-            </blockquote>
-            <div className="font-semibold text-white">Bethany Simmonds</div>
-            <div className="text-white/60 text-sm mt-1">Senior Director of Advancement, Mental Health CT</div>
+            {/* Large decorative quote mark */}
+            <div className="text-8xl text-white/15 font-serif leading-none select-none mb-2">&ldquo;</div>
+
+            {/* Highlighted quote card */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-10 py-10">
+              <p className="text-white text-lg md:text-xl font-light leading-relaxed tracking-wide">
+                Working with the Yale Healthcare Consulting Collective was a{' '}
+                <span className="font-semibold text-white">seamless experience</span>, and the results were{' '}
+                <span className="font-semibold text-white">invaluable</span>. Their team provided{' '}
+                <span className="bg-white/20 px-1 rounded">digitized surveys</span>,{' '}
+                <span className="bg-white/20 px-1 rounded">thorough data analysis</span>, and a{' '}
+                <span className="bg-white/20 px-1 rounded">comprehensive report</span> outlining methodology,
+                outcomes, and actionable recommendations for improvement. We have already been able to
+                incorporate several of the findings into{' '}
+                <span className="font-semibold text-white underline decoration-white/40 underline-offset-2">grants</span>.
+              </p>
+
+              <div className="mt-8 pt-6 border-t border-white/20 flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                  BS
+                </div>
+                <div>
+                  <div className="font-semibold text-white">Bethany Simmonds</div>
+                  <div className="text-white/60 text-sm mt-0.5">Senior Director of Advancement, Mental Health CT</div>
+                </div>
+              </div>
+            </div>
           </FadeIn>
         </div>
       </section>
