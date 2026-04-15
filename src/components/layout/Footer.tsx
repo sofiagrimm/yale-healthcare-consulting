@@ -8,8 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Column 1 */}
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <img src="/assets/logo.svg" alt="YHCC" className="w-7 h-7" />
+            <div className="flex items-center gap-2.5 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" className="w-7 h-7 flex-shrink-0">
+                <circle cx="20" cy="20" r="20" fill="#0f4d92"/>
+                <rect x="18" y="9" width="4" height="22" rx="2" fill="white"/>
+                <rect x="9" y="18" width="22" height="4" rx="2" fill="white"/>
+              </svg>
               <span className="font-bold text-white text-sm leading-tight">Yale Healthcare Consulting Collective</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -32,17 +36,13 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4 text-sm uppercase tracking-wide">Connect With Us</h4>
             <div className="flex flex-col gap-3 text-sm">
-              <a
-                href="mailto:yhcc@dwighthall.org"
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
+              <a href="mailto:yhcc@dwighthall.org" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Mail size={15} />
                 yhcc@dwighthall.org
               </a>
               <a
                 href="https://www.linkedin.com/company/yale-healthcare-consulting-collective"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-white transition-colors"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -53,8 +53,7 @@ export default function Footer() {
               </a>
               <a
                 href="https://www.instagram.com/yalehealthcareconsulting"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-white transition-colors"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

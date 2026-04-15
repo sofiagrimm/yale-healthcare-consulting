@@ -17,8 +17,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-bold text-yale-blue text-base leading-tight">
-          <img src="/assets/logo.svg" alt="YHCC" className="w-8 h-8 flex-shrink-0" />
+        <Link to="/" className="flex items-center gap-2.5 font-bold text-yale-blue text-base leading-tight">
+          {/* Inline SVG logo — no external file dependency */}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" className="w-8 h-8 flex-shrink-0">
+            <circle cx="20" cy="20" r="20" fill="#0f4d92"/>
+            <rect x="18" y="9" width="4" height="22" rx="2" fill="white"/>
+            <rect x="9" y="18" width="22" height="4" rx="2" fill="white"/>
+          </svg>
           <span className="hidden sm:inline">Yale Healthcare Consulting Collective</span>
           <span className="sm:hidden">YHCC</span>
         </Link>
