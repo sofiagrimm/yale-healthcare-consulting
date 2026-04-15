@@ -1,4 +1,5 @@
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/animations/FadeIn'
+import clientsImg from '../../Clients.png'
 
 const services = [
   {
@@ -82,7 +83,7 @@ export default function Services() {
           <FadeIn delay={0.1}>
             <div className="bg-white rounded-3xl shadow-md p-8 flex items-center justify-center">
               <img
-                src="/Clients.png"
+                src={clientsImg}
                 alt="YHCC Client Organizations"
                 className="max-w-full h-auto object-contain"
               />
@@ -97,10 +98,7 @@ export default function Services() {
         <div className="absolute bottom-[-15%] left-[-5%] w-72 h-72 bg-white/5 rounded-full blur-3xl" />
         <div className="max-w-3xl mx-auto relative">
           <FadeIn>
-            {/* Large decorative quote mark */}
             <div className="text-8xl text-white/15 font-serif leading-none select-none mb-2">&ldquo;</div>
-
-            {/* Highlighted quote card */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-10 py-10">
               <p className="text-white text-lg md:text-xl font-light leading-relaxed tracking-wide">
                 Working with the Yale Healthcare Consulting Collective was a{' '}
@@ -113,7 +111,6 @@ export default function Services() {
                 incorporate several of the findings into{' '}
                 <span className="font-semibold text-white underline decoration-white/40 underline-offset-2">grants</span>.
               </p>
-
               <div className="mt-8 pt-6 border-t border-white/20 flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                   BS
