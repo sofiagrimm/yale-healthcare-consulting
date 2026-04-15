@@ -114,7 +114,7 @@ export default function Services() {
 
       {/* ── Clients ── */}
       <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <FadeIn className="text-center mb-10">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-2">Who We've Worked With</p>
             <h2 className="text-3xl font-bold text-yale-blue mb-3">Our clients</h2>
@@ -127,7 +127,7 @@ export default function Services() {
               <img
                 src={clientsImg}
                 alt="YHCC Client Organizations"
-                className="w-full h-auto object-contain max-h-96"
+                className="w-full h-auto object-contain"
               />
             </div>
           </FadeIn>
