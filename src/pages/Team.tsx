@@ -2,13 +2,26 @@ import { FadeIn, StaggerContainer, StaggerItem } from '../components/animations/
 import { Link } from 'react-router'
 
 const leadership = [
-  { name: 'President', role: 'Executive Leadership', initials: 'P' },
-  { name: 'Vice President', role: 'Executive Leadership', initials: 'VP' },
-  { name: 'Project Manager', role: 'Project Operations', initials: 'PM' },
-  { name: 'Project Manager', role: 'Project Operations', initials: 'PM' },
-  { name: 'Director of Recruitment', role: 'Operations', initials: 'DR' },
-  { name: 'Director of Partnerships', role: 'Operations', initials: 'DP' },
+  { name: 'Gianna Thomas', role: 'President' },
+  { name: 'Vivek Malik', role: 'Vice President' },
+  { name: 'Neelesh Pandey', role: 'Vice President' },
+  { name: 'Colin George', role: 'Client Relations Director' },
+  { name: 'Kyler Parker', role: 'Executive Operations Director' },
+  { name: 'Fariba Hossain', role: 'Chief of Staff' },
+  { name: 'Usman Khalid', role: 'Director of Finances' },
+  { name: 'Holly Tran', role: 'Project Manager (Research)' },
+  { name: 'Leonardo Chung', role: 'Secretary' },
+  { name: 'Emma Lee', role: 'Secretary' },
+  { name: 'Grace Udoh', role: 'Outreach Director' },
+  { name: 'Sofia Grimm', role: 'Client Lead' },
+  { name: 'Donovan Brown', role: 'Client Lead' },
+  { name: 'Hildana Kassa', role: 'Client Lead' },
+  { name: 'Mira Lehman', role: 'Client Lead' },
 ]
+
+function initials(name: string) {
+  return name.split(' ').map((n) => n[0]).join('')
+}
 
 export default function Team() {
   return (
@@ -18,32 +31,29 @@ export default function Team() {
         <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-white/5 rounded-full blur-3xl" />
         <div className="max-w-6xl mx-auto relative">
           <FadeIn>
-            <p className="text-yale-teal font-semibold uppercase text-sm tracking-widest mb-3">The People</p>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Our Team</h1>
-            <p className="text-white/80 text-lg font-light max-w-2xl leading-relaxed">
-              50+ active members from across Yale\'s schools and departments, united by a commitment
-              to community health and rigorous problem-solving.
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-5">Our Team</h1>
+            <p className="text-white/80 text-lg font-light max-w-xl leading-relaxed">
+              A diverse group of talented students from across Yale University
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Leadership */}
+      {/* Leadership Grid */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-12">
-            <p className="text-yale-teal font-semibold uppercase text-sm tracking-widest mb-2">Leadership</p>
-            <h2 className="text-3xl font-bold text-yale-blue">Executive Board</h2>
+            <h2 className="text-3xl font-bold text-yale-blue">Leadership Team</h2>
           </FadeIn>
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {leadership.map(({ name, role, initials }, i) => (
-              <StaggerItem key={i}>
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-center">
-                  <div className="w-16 h-16 rounded-full bg-yale-blue/10 text-yale-blue font-bold text-lg flex items-center justify-center mx-auto mb-4">
-                    {initials}
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+            {leadership.map(({ name, role }) => (
+              <StaggerItem key={name}>
+                <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-center">
+                  <div className="w-14 h-14 rounded-full bg-yale-blue/10 text-yale-blue font-bold text-sm flex items-center justify-center mx-auto mb-3">
+                    {initials(name)}
                   </div>
-                  <h3 className="font-bold text-yale-blue">{name}</h3>
-                  <p className="text-gray-500 text-sm mt-1">{role}</p>
+                  <h3 className="font-bold text-yale-blue text-sm leading-tight">{name}</h3>
+                  <p className="text-gray-500 text-xs mt-1 leading-tight">{role}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -51,56 +61,48 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Members */}
+      {/* Join Section */}
       <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <FadeIn direction="left">
-              <p className="text-yale-teal font-semibold uppercase text-sm tracking-widest mb-3">Our Members</p>
-              <h2 className="text-3xl font-bold text-yale-blue mb-6">50+ Dedicated Consultants</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                YHCC draws talent from across Yale\'s undergraduate college and graduate and professional
-                schools — including the School of Medicine, School of Public Health, Law School,
-                School of Management, and more.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Our consultants bring expertise across medicine, public health, policy, economics,
-                engineering, data science, and the humanities — enabling truly interdisciplinary teams
-                for every engagement.
-              </p>
-            </FadeIn>
-            <FadeIn direction="right" delay={0.15}>
-              <div className="grid grid-cols-3 gap-3">
-                {Array.from({ length: 9 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="aspect-square rounded-full bg-yale-blue/10 flex items-center justify-center text-yale-blue font-bold text-sm"
-                  >
-                    {String.fromCharCode(65 + i)}
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
-          </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <FadeIn>
+            <h2 className="text-3xl font-bold text-yale-blue mb-4">Join Our Team</h2>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              We&apos;re always looking for passionate students who want to make an impact in healthcare.
+              Applications open at the beginning of each semester.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="bg-yale-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-yale-blue-dark transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Learn More
+              </Link>
+              <a
+                href="mailto:yhcc@dwighthall.org"
+                className="border border-yale-blue text-yale-blue px-8 py-3 rounded-lg font-semibold hover:bg-yale-blue hover:text-white transition-all duration-300"
+              >
+                Get In Touch
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Join CTA */}
-      <section className="py-20 px-6 bg-yale-blue text-white text-center relative overflow-hidden">
-        <div className="absolute bottom-[-10%] left-[-5%] w-80 h-80 bg-white/5 rounded-full blur-3xl" />
-        <FadeIn className="relative">
-          <h2 className="text-3xl font-bold mb-4">Interested in Joining?</h2>
-          <p className="text-white/80 max-w-xl mx-auto mb-8 font-light text-lg">
-            We recruit Yale students each semester. If you\'re passionate about healthcare and want
-            hands-on consulting experience, we\'d love to hear from you.
-          </p>
-          <Link
-            to="/contact"
-            className="bg-white text-yale-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5 inline-block"
-          >
-            Get in Touch
-          </Link>
-        </FadeIn>
+      {/* Diversity Statement */}
+      <section className="py-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <FadeIn>
+            <div className="bg-yale-blue/5 border border-yale-blue/15 rounded-2xl p-10 text-center">
+              <h3 className="text-2xl font-bold text-yale-blue mb-4">Diversity &amp; Inclusion</h3>
+              <p className="text-gray-600 leading-relaxed">
+                YHCC is committed to fostering a diverse and inclusive environment. We believe that varied
+                perspectives and backgrounds strengthen our work and enable us to better serve the
+                healthcare community. We welcome students from all Yale schools and all backgrounds to
+                join our mission.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
       </section>
     </div>
   )
