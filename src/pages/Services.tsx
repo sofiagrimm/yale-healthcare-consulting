@@ -9,53 +9,53 @@ const services = [
     icon: <BarChart2 size={24} />,
     label: 'Practice Area 01',
     title: 'Social Impact & Research',
-    desc: 'We help organizations understand their impact, benchmark their performance, and make the case for continued investment.',
+    desc: 'Helping organizations understand what their work is actually doing — and build the evidence base to show it to funders and stakeholders.',
     bullets: [
-      'Social Impact Evaluations & Social ROI',
-      'Performance Metrics & KPI Frameworks',
-      'Stakeholder Engagement & Survey Research',
-      'Market Research & Industry Forecasts',
+      'Social impact evaluations and social ROI analysis',
+      'Survey design, digitization, and data analysis',
+      'Performance metrics and KPI frameworks',
+      'Market research and competitive landscape reviews',
     ],
-    example: 'Delivered digitized survey research and a comprehensive outcomes report used directly in grant applications for a Connecticut mental health nonprofit.',
+    example: 'We ran a full survey research project for Mental Health CT — digitized their data collection, analyzed results, and wrote a report they used directly in grant applications.',
   },
   {
     icon: <Megaphone size={24} />,
     label: 'Practice Area 02',
     title: 'Visibility & Growth',
-    desc: 'From brand strategy to partnership development, we help organizations expand their reach and accelerate their mission.',
+    desc: 'Strategy for organizations that need to reach more people — whether that means patients, donors, partners, or the public.',
     bullets: [
-      'Brand Awareness & Digital Optimization',
-      'Multi-channel Engagement Strategies',
-      'Growth & Market Development Roadmaps',
-      'Partnership Strategy & Product Launch',
+      'Brand and digital presence audits',
+      'Multi-channel outreach and engagement strategy',
+      'Partnership identification and outreach frameworks',
+      'Growth roadmaps and market development plans',
     ],
-    example: 'Developed a digital engagement strategy and multi-channel outreach framework for a regional healthcare nonprofit looking to expand donor and patient reach.',
+    example: 'Developed a digital engagement and donor outreach strategy for a regional nonprofit looking to expand beyond its existing network.',
   },
   {
     icon: <Wrench size={24} />,
     label: 'Practice Area 03',
-    title: 'Product & Operations',
-    desc: 'We dig into the operational data to find inefficiencies, model scenarios, and build tools that support better decisions.',
+    title: 'Operations & Analytics',
+    desc: 'Digging into operational data to find inefficiencies, model future scenarios, and build tools that help leadership make better calls.',
     bullets: [
-      'Operational Analytics & Process Improvement',
-      'Annual Resource Planning & Fleet Modeling',
-      'Performance Dashboards & Data Modeling',
-      'MVP Design & User Insights',
+      'Operational process mapping and improvement',
+      'Annual resource planning and fleet modeling',
+      'Performance dashboards and data models',
+      'Decision-support tools and scenario analysis',
     ],
-    example: 'Built an Annual Resource Planning fleet strategy model for a national blood services organization, projecting vehicle lifecycle costs and replacement timelines.',
+    example: 'Built an annual resource planning model for a national blood services organization — projecting vehicle lifecycle costs and replacement schedules over a 10-year horizon.',
   },
   {
     icon: <Sparkles size={24} />,
     label: 'Practice Area 04',
-    title: 'Custom Solutions',
-    desc: 'Not every challenge fits a standard framework. We collaborate closely to scope and execute engagements built around your specific needs.',
+    title: 'Custom Projects',
+    desc: 'Some problems don\'t fit a standard service offering. We\'re willing to scope something from scratch if the project is a good fit.',
     bullets: [
-      'Tailored project scoping and discovery',
-      'Cross-functional team assembly',
-      'Flexible timelines and deliverable formats',
-      'Long-term partnership options available',
+      'Discovery calls to scope the problem together',
+      'Team assembly based on the specific skill needs',
+      'Flexible deliverable formats',
+      'Longer-term partnerships for ongoing work',
     ],
-    example: 'Collaborated with a digital health startup to scope a market entry analysis and competitive landscape review ahead of a Connecticut product launch.',
+    example: 'Worked with a digital health startup to map the Connecticut competitive landscape and identify market entry positioning ahead of their product launch.',
   },
 ]
 
@@ -69,10 +69,10 @@ export default function Services() {
           <FadeIn>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50 mb-4">Our Services</p>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-5 leading-tight">
-              Comprehensive consulting solutions for healthcare organizations.
+              What we work on.
             </h1>
             <p className="text-white/75 text-lg font-light max-w-xl leading-relaxed">
-              Four practice areas. One mission: rigorous, actionable strategy delivered pro bono.
+              Four practice areas. All pro bono. Scoped around your actual problem.
             </p>
           </FadeIn>
         </div>
@@ -102,8 +102,8 @@ export default function Services() {
                     </ul>
                   </div>
                   <div className="bg-gray-50 border border-gray-100 rounded-xl p-6">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-yale-teal mb-3">Example Engagement</p>
-                    <p className="text-sm text-gray-600 leading-relaxed italic">&ldquo;{example}&rdquo;</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-yale-teal mb-3">A recent project</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{example}</p>
                   </div>
                 </div>
               </StaggerItem>
@@ -116,10 +116,10 @@ export default function Services() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-2">Our Clients</p>
-            <h2 className="text-3xl font-bold text-yale-blue mb-3">Recent Partner Organizations</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-2">Who We've Worked With</p>
+            <h2 className="text-3xl font-bold text-yale-blue mb-3">Our clients</h2>
             <p className="text-gray-500">
-              Proud to partner with leading healthcare organizations across Connecticut and beyond.
+              Healthcare nonprofits, health systems, and community organizations — mostly in Connecticut.
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -142,15 +142,11 @@ export default function Services() {
           <FadeIn>
             <div className="text-8xl text-white/10 font-serif leading-none select-none mb-2">&ldquo;</div>
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-10 py-10">
-              <p className="text-white text-lg md:text-xl font-light leading-relaxed tracking-wide">
-                Working with the Yale Healthcare Consulting Collective was a{' '}
-                <span className="font-semibold">seamless experience</span>, and the results were{' '}
-                <span className="font-semibold">invaluable</span>. Their team provided{' '}
-                <span className="bg-white/20 px-1 rounded">digitized surveys</span>,{' '}
-                <span className="bg-white/20 px-1 rounded">thorough data analysis</span>, and a{' '}
-                <span className="bg-white/20 px-1 rounded">comprehensive report</span> outlining methodology,
-                outcomes, and actionable recommendations. We have already incorporated several findings into{' '}
-                <span className="font-semibold underline decoration-white/40 underline-offset-2">grants</span>.
+              <p className="text-white text-lg md:text-xl font-light leading-relaxed">
+                Working with YHCC was a seamless experience, and the results were invaluable. Their team
+                provided digitized surveys, thorough data analysis, and a comprehensive report outlining
+                methodology, outcomes, and actionable recommendations. We've already incorporated several
+                of the findings into grants.
               </p>
               <div className="mt-8 pt-6 border-t border-white/20 flex items-center gap-4">
                 <div className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
@@ -170,16 +166,15 @@ export default function Services() {
       <section className="py-20 px-6 text-center">
         <FadeIn>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-3">Start a project</p>
-          <h2 className="text-3xl font-bold text-yale-blue mb-4">Ready to work together?</h2>
+          <h2 className="text-3xl font-bold text-yale-blue mb-4">Think we could help?</h2>
           <p className="text-gray-500 max-w-xl mx-auto mb-8">
-            Tell us about your organization and the challenge you're facing. We'll scope an engagement
-            and assemble the right team.
+            Tell us what you're working on. We'll scope an engagement and get back to you within a few days.
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 bg-yale-blue text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-yale-blue-dark transition-all duration-300 hover:-translate-y-0.5"
           >
-            Get Started <ArrowRight size={14} />
+            Get in Touch <ArrowRight size={14} />
           </Link>
         </FadeIn>
       </section>

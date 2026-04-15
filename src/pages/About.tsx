@@ -4,47 +4,47 @@ import { ArrowRight, GraduationCap, Stethoscope, Globe, Microscope } from 'lucid
 
 const values = [
   {
-    title: 'Impact-First',
-    desc: 'Every engagement is chosen for its potential to improve patient care, organizational efficiency, or community health outcomes.',
+    title: 'The work comes first',
+    desc: 'We care about producing deliverables that clients can actually use — not just completing a project. If a recommendation doesn\'t hold up, we say so.',
   },
   {
-    title: 'Intellectual Rigor',
-    desc: 'We bring the analytical standards of Yale\'s academic culture to every deliverable — data-driven, clearly argued, and well-documented.',
+    title: 'Pro bono, no exceptions',
+    desc: 'Every engagement is free for the client. That\'s not a marketing line — it\'s the reason we exist. Most of our partners couldn\'t afford this kind of support otherwise.',
   },
   {
-    title: 'Radical Accessibility',
-    desc: 'All consulting is pro bono. We exist to give organizations access to strategic talent they otherwise couldn\'t afford.',
+    title: 'Diverse teams on purpose',
+    desc: 'We deliberately mix pre-med, policy, engineering, and public health students on every project. Healthcare problems don\'t fit neatly into one discipline.',
   },
   {
-    title: 'Interdisciplinary Edge',
-    desc: 'Our teams combine medicine, public health, policy, engineering, and economics because the best healthcare solutions draw from all of them.',
+    title: 'Honest about what we are',
+    desc: 'We\'re students, not McKinsey. We\'re upfront about that. What we bring is time, rigor, and a genuine interest in the problem — which turns out to be pretty valuable.',
   },
 ]
 
 const timeline = [
   {
     year: 'Founded',
-    event: 'YHCC established as a Dwight Hall at Yale member organization, bringing student consulting to local nonprofits.',
+    event: 'YHCC started as a Dwight Hall at Yale member organization, with a focus on pro bono consulting for Connecticut healthcare nonprofits.',
   },
   {
-    year: 'First Engagements',
-    event: 'Completed inaugural consulting projects with Connecticut healthcare nonprofits, delivering survey research and strategic recommendations.',
+    year: 'First Projects',
+    event: 'Completed our first client engagements — survey research and outcomes analysis for local mental health and community health organizations.',
   },
   {
     year: 'Growth',
-    event: 'Expanded to 50+ members across Yale College and graduate schools; launched four formal practice areas.',
+    event: 'Grew to 50+ members across Yale College and the graduate schools. Established four practice areas and a structured project model.',
   },
   {
     year: 'Today',
-    event: 'Active engagements with 10+ organizations; alumni in medical school, consulting, and public health roles across the country.',
+    event: 'Active projects with 10+ organizations. Alumni in medical school, consulting, and public health roles across the country.',
   },
 ]
 
 const afterPaths = [
   { icon: <Stethoscope size={20} />, title: 'Medicine', desc: 'MD and MD–PhD programs at top medical schools.' },
-  { icon: <GraduationCap size={20} />, title: 'Consulting', desc: 'Healthcare strategy at leading consulting firms.' },
-  { icon: <Globe size={20} />, title: 'Public Health & Policy', desc: 'MPH programs, fellowships, and government roles.' },
-  { icon: <Microscope size={20} />, title: 'Research & Industry', desc: 'Academic labs, biotech, and health systems innovation.' },
+  { icon: <GraduationCap size={20} />, title: 'Consulting', desc: 'Healthcare strategy at leading firms.' },
+  { icon: <Globe size={20} />, title: 'Public Health', desc: 'MPH programs, fellowships, and government roles.' },
+  { icon: <Microscope size={20} />, title: 'Research', desc: 'Academic labs, biotech, and health systems.' },
 ]
 
 export default function About() {
@@ -57,10 +57,10 @@ export default function About() {
           <FadeIn>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50 mb-4">About YHCC</p>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-5 leading-tight">
-              Driven by a passion for healthcare innovation and social impact.
+              We're a student consulting group at Yale. Here's what that actually means.
             </h1>
             <p className="text-white/75 text-lg font-light max-w-xl leading-relaxed">
-              We are a student-led consulting organization at Yale — and a proud member of Dwight Hall.
+              A Dwight Hall member organization focused on pro bono healthcare consulting.
             </p>
           </FadeIn>
         </div>
@@ -68,21 +68,21 @@ export default function About() {
 
       {/* ── Mission ── */}
       <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <FadeIn direction="left">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-3">Our Mission</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-3">Our Story</p>
             <h2 className="text-3xl font-bold text-yale-blue mb-6 leading-snug">
-              Bridging the gap between academic excellence and healthcare practice.
+              We saw a gap and tried to fill it.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              YHCC was founded after witnessing the strategic gaps that hinder healthcare organizations —
-              especially those serving under-resourced communities. We saw that Yale students had the
-              skills, motivation, and time to help. So we built the infrastructure to connect them.
+              Healthcare nonprofits — especially smaller ones — often don't have the internal capacity
+              for the kind of research and strategy work they need. At the same time, Yale has hundreds
+              of students with relevant skills and not enough ways to use them.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Today, we partner with hospitals, nonprofits, and community health organizations across
-              Connecticut and beyond, providing the kind of structured, evidence-based analysis that
-              organizations use to improve operations, secure grants, and serve patients better.
+              YHCC was built to connect those two things. We take on real projects, put together
+              cross-disciplinary student teams, and deliver work that clients can bring to their boards,
+              funders, and leadership. No fee, no fluff.
             </p>
           </FadeIn>
           <FadeIn direction="right" delay={0.15}>
@@ -107,8 +107,8 @@ export default function About() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-2">What We Stand For</p>
-            <h2 className="text-3xl font-bold text-yale-blue">Our Values</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-2">How We Work</p>
+            <h2 className="text-3xl font-bold text-yale-blue">A few things we believe in.</h2>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {values.map(({ title, desc }) => (
@@ -130,8 +130,8 @@ export default function About() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-2">Career Outcomes</p>
             <h2 className="text-3xl font-bold text-yale-blue mb-3">After YHCC</h2>
             <p className="text-gray-500 max-w-xl">
-              The skills built at YHCC — structured problem-solving, client communication, data-driven
-              analysis — translate directly to every path in healthcare.
+              Members tend to say the consulting experience — working with real clients, scoping problems,
+              presenting findings — was some of the most useful preparation they had. Here's where they end up.
             </p>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
@@ -153,18 +153,17 @@ export default function About() {
         <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-3xl mx-auto text-center relative">
           <FadeIn>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50 mb-3">Ready to connect?</p>
-            <h2 className="text-3xl font-bold text-white mb-4">Work with us or join our team.</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50 mb-3">Get in touch</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Want to work with us or join the team?</h2>
             <p className="text-white/70 max-w-lg mx-auto mb-8">
-              Whether you represent a healthcare organization seeking strategic support, or a Yale student
-              ready to make an impact, we&apos;d love to hear from you.
+              Send us a note. We respond to every message and try to find a way to make it work.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-white text-yale-blue px-7 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5"
               >
-                Partner With Us <ArrowRight size={14} />
+                Contact Us <ArrowRight size={14} />
               </Link>
               <Link
                 to="/team"
