@@ -9,7 +9,7 @@ const values = [
   },
   {
     title: 'No cost to clients, no exceptions',
-    desc: 'Every engagement is at no cost to the client. That\'s not a marketing line — it\'s the reason we exist. Most of our partners couldn\'t access this kind of support otherwise.',
+    desc: 'Every engagement is fully funded by YHCC. That\'s not a marketing line — it\'s the reason we exist. Most of our partners couldn\'t access this kind of support otherwise.',
   },
   {
     title: 'Diverse teams on purpose',

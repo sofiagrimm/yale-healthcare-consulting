@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router'
 import { Menu, X } from 'lucide-react'
+// @ts-ignore
+import logoImg from '/logo.png'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -31,11 +33,7 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 font-bold text-yale-blue text-base leading-tight">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" className="w-8 h-8 flex-shrink-0">
-            <circle cx="20" cy="20" r="20" fill="#0f4d92"/>
-            <rect x="18" y="9" width="4" height="22" rx="2" fill="white"/>
-            <rect x="9" y="18" width="22" height="4" rx="2" fill="white"/>
-          </svg>
+          <img src={logoImg} alt="YHCC Logo" className="h-8 w-auto flex-shrink-0" />
           <span className="hidden sm:inline">Yale Healthcare Consulting Collective</span>
           <span className="sm:hidden">YHCC</span>
         </Link>
