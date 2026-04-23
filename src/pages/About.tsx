@@ -41,25 +41,25 @@ const timeline = [
 ]
 
 const afterPaths = [
-  { icon: <Stethoscope size={20} />, title: 'Medicine', desc: 'MD and MD–PhD programs at top medical schools.' },
-  { icon: <GraduationCap size={20} />, title: 'Consulting', desc: 'Healthcare strategy at leading firms.' },
-  { icon: <Globe size={20} />, title: 'Public Health', desc: 'MPH programs, fellowships, and government roles.' },
-  { icon: <Microscope size={20} />, title: 'Research', desc: 'Academic labs, biotech, and health systems.' },
+  { icon: <Stethoscope size={18} />, title: 'Medicine', desc: 'MD and MD–PhD programs at top medical schools.' },
+  { icon: <GraduationCap size={18} />, title: 'Consulting', desc: 'Healthcare strategy at leading firms.' },
+  { icon: <Globe size={18} />, title: 'Public Health', desc: 'MPH programs, fellowships, and government roles.' },
+  { icon: <Microscope size={18} />, title: 'Research', desc: 'Academic labs, biotech, and health systems.' },
 ]
 
 export default function About() {
   return (
     <div className="overflow-x-hidden">
       {/* ── Hero ── */}
-      <section className="relative bg-yale-blue text-white py-28 px-6 overflow-hidden">
-        <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+      <section className="relative bg-hero-gradient text-white py-28 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-6xl mx-auto relative">
           <FadeIn>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50 mb-4">About YHCC</p>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-5 leading-tight">
+            <p className="label-eyebrow text-white/40 mb-4">About YHCC</p>
+            <h1 className="text-[2.5rem] md:text-[3rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1] max-w-2xl">
               We're a student consulting group at Yale. Here's what that actually means.
             </h1>
-            <p className="text-white/75 text-lg font-light max-w-xl leading-relaxed">
+            <p className="text-white/60 text-base font-normal max-w-lg leading-relaxed">
               A Dwight Hall member organization focused on healthcare consulting.
             </p>
           </FadeIn>
@@ -67,35 +67,36 @@ export default function About() {
       </section>
 
       {/* ── Mission ── */}
-      <section className="py-20 px-6">
+      <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <FadeIn direction="left">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-3">Our Story</p>
-            <h2 className="text-3xl font-bold text-yale-blue mb-6 leading-snug">
+            <p className="label-eyebrow mb-3">Our Story</p>
+            <h2 className="text-[2rem] font-bold text-yale-blue mb-6 leading-tight tracking-tight">
               We saw a gap and tried to fill it.
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
+            <p className="prose-body mb-4">
               Healthcare nonprofits — especially smaller ones — often don't have the internal capacity
               for the kind of research and strategy work they need. At the same time, Yale has hundreds
               of students with relevant skills and not enough ways to use them.
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="prose-body">
               YHCC was built to connect those two things. We take on real projects, put together
               cross-disciplinary student teams, and deliver work that clients can bring to their boards,
               funders, and leadership. No fee, no fluff.
             </p>
           </FadeIn>
-          <FadeIn direction="right" delay={0.15}>
-            <div className="space-y-4">
-              {timeline.map(({ year, event }) => (
+          <FadeIn direction="right" delay={0.1}>
+            <div className="space-y-0">
+              {timeline.map(({ year, event }, i) => (
                 <div key={year} className="flex gap-5 items-start">
-                  <div className="flex-shrink-0 w-28 text-right">
-                    <span className="text-xs font-bold text-yale-teal uppercase tracking-wide">{year}</span>
+                  <div className="flex-shrink-0 w-24 text-right">
+                    <span className="text-[10.5px] font-bold text-yale-teal uppercase tracking-[0.12em]">{year}</span>
                   </div>
-                  <div className="w-px bg-gray-200 self-stretch relative">
-                    <div className="absolute top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-yale-blue" />
+                  <div className="flex flex-col items-center">
+                    <div className="w-2 h-2 rounded-full bg-yale-blue mt-1 flex-shrink-0" />
+                    {i < timeline.length - 1 && <div className="w-px flex-1 bg-gray-100 min-h-[36px] mt-1" />}
                   </div>
-                  <p className="text-sm text-gray-600 leading-relaxed pb-4">{event}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed pb-5">{event}</p>
                 </div>
               ))}
             </div>
@@ -104,18 +105,18 @@ export default function About() {
       </section>
 
       {/* ── Values ── */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-surface">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-2">How We Work</p>
-            <h2 className="text-3xl font-bold text-yale-blue">A few things we believe in.</h2>
+            <p className="label-eyebrow mb-2">How We Work</p>
+            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">A few things we believe in.</h2>
           </FadeIn>
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {values.map(({ title, desc }) => (
               <StaggerItem key={title}>
-                <div className="bg-white border border-gray-100 rounded-2xl p-7 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300">
-                  <h3 className="text-base font-bold text-yale-blue mb-2">{title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
+                <div className="bg-white border border-gray-100 rounded-2xl p-7 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
+                  <h3 className="text-[15px] font-bold text-yale-blue mb-2 tracking-tight">{title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -124,22 +125,22 @@ export default function About() {
       </section>
 
       {/* ── After YHCC ── */}
-      <section className="py-20 px-6">
+      <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yale-teal mb-2">Career Outcomes</p>
-            <h2 className="text-3xl font-bold text-yale-blue mb-3">After YHCC</h2>
-            <p className="text-gray-500 max-w-xl">
+            <p className="label-eyebrow mb-2">Career Outcomes</p>
+            <h2 className="text-[2rem] font-bold text-yale-blue mb-3 tracking-tight">After YHCC</h2>
+            <p className="prose-body max-w-xl">
               Members tend to say the consulting experience — working with real clients, scoping problems,
-              presenting findings — was some of the most useful preparation they had. Here's where they end up.
+              presenting findings — was some of the most useful preparation they had.
             </p>
           </FadeIn>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {afterPaths.map(({ icon, title, desc }) => (
               <StaggerItem key={title}>
-                <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div className="bg-surface border border-gray-100 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-card transition-all duration-300">
                   <div className="text-yale-teal mb-4">{icon}</div>
-                  <h3 className="text-sm font-bold text-yale-blue mb-1.5">{title}</h3>
+                  <h3 className="text-sm font-bold text-yale-blue mb-1.5 tracking-tight">{title}</h3>
                   <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
                 </div>
               </StaggerItem>
@@ -149,25 +150,25 @@ export default function About() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 px-6 bg-yale-blue relative overflow-hidden">
-        <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+      <section className="py-24 px-6 bg-hero-gradient relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_100%_0%,rgba(255,255,255,0.05)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-3xl mx-auto text-center relative">
           <FadeIn>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50 mb-3">Get in touch</p>
-            <h2 className="text-3xl font-bold text-white mb-4">Want to work with us or join the team?</h2>
-            <p className="text-white/70 max-w-lg mx-auto mb-8">
+            <p className="label-eyebrow text-white/40 mb-3">Get in touch</p>
+            <h2 className="text-[2rem] font-bold text-white mb-4 tracking-tight">Want to work with us or join the team?</h2>
+            <p className="text-white/60 max-w-lg mx-auto mb-8 leading-relaxed">
               Send us a note. We respond to every message and try to find a way to make it work.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-white text-yale-blue px-7 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 bg-white text-yale-blue px-7 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5"
               >
-                Contact Us <ArrowRight size={14} />
+                Contact Us <ArrowRight size={13} />
               </Link>
               <Link
                 to="/team"
-                className="inline-flex items-center gap-2 border border-white/30 text-white px-7 py-3 rounded-full font-semibold text-sm hover:bg-white/10 transition-all duration-300"
+                className="inline-flex items-center gap-2 border border-white/25 text-white/90 px-7 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 hover:border-white/40 transition-all duration-200"
               >
                 Meet the Team
               </Link>
