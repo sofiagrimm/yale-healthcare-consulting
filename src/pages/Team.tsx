@@ -1,23 +1,6 @@
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/animations/FadeIn'
 import { Link } from 'react-router'
-
-const leadership = [
-  { name: 'Gianna Thomas', role: 'President' },
-  { name: 'Vivek Malik', role: 'Vice President' },
-  { name: 'Neelesh Pandey', role: 'Vice President' },
-  { name: 'Colin George', role: 'Client Relations Director' },
-  { name: 'Kyler Parker', role: 'Executive Operations Director' },
-  { name: 'Fariba Hossain', role: 'Chief of Staff' },
-  { name: 'Usman Khalid', role: 'Director of Finances' },
-  { name: 'Holly Tran', role: 'Research Project Manager' },
-  { name: 'Leonardo Chung', role: 'Secretary' },
-  { name: 'Emma Lee', role: 'Secretary' },
-  { name: 'Grace Udoh', role: 'Outreach Director' },
-  { name: 'Sofia Grimm', role: 'Client Lead' },
-  { name: 'Donovan Brown', role: 'Client Lead' },
-  { name: 'Hildana Kassa', role: 'Client Lead' },
-  { name: 'Mira Lehman', role: 'Client Lead' },
-]
+import { leadership } from '../data/team'
 
 function initials(name: string) {
   return name.split(' ').map((n) => n[0]).join('')
@@ -44,12 +27,13 @@ export default function Team() {
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-12">
             <h2 className="text-3xl font-bold text-yale-blue">Leadership Team</h2>
+            <p className="text-gray-500 mt-2 text-sm">{leadership.length} members across Yale College and graduate schools</p>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
             {leadership.map(({ name, role }) => (
               <StaggerItem key={name}>
-                <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-center">
-                  <div className="w-14 h-14 rounded-full bg-yale-blue/10 text-yale-blue font-bold text-sm flex items-center justify-center mx-auto mb-3">
+                <div className="group bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 text-center cursor-default">
+                  <div className="w-14 h-14 rounded-full bg-yale-blue/10 text-yale-blue font-bold text-sm flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-blue group-hover:text-white transition-all duration-300">
                     {initials(name)}
                   </div>
                   <h3 className="font-bold text-yale-blue text-sm leading-tight">{name}</h3>
@@ -72,10 +56,10 @@ export default function Team() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                to="/contact"
+                to="/apply"
                 className="bg-yale-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-yale-blue-dark transition-all duration-300 hover:-translate-y-0.5"
               >
-                Learn More
+                Apply Now
               </Link>
               <a
                 href="mailto:yhcc@dwighthall.org"

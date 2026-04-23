@@ -1,5 +1,5 @@
-import { motion } from 'motion/react'
-import { ReactNode } from 'react'
+import { motion, useMotionValue, useSpring, useInView } from 'motion/react'
+import { ReactNode, useEffect, useRef } from 'react'
 
 type Direction = 'up' | 'down' | 'left' | 'right'
 
@@ -62,4 +62,57 @@ export function StaggerItem({ children, className }: { children: ReactNode; clas
       {children}
     </motion.div>
   )
+}
+
+export function ScaleIn({ children, delay = 0, className }: { children: ReactNode; delay?: number; className?: string }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.92 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay, ease: [0.16, 1, 0.3, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+export function HoverCard({ children, className }: { children: ReactNode; className?: string }) {
+  return (
+    <motion.div
+      whileHover={{ y: -6, boxShadow: '0 20px 40px -12px rgba(0,0,0,0.15)' }}
+      transition={{ duration: 0.25, ease: 'easeOut' }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+interface CountUpProps {
+  target: number
+  suffix?: string
+  prefix?: string
+  duration?: number
+  className?: string
+}
+
+export function CountUp({ target, suffix = '', prefix = '', duration = 1.8, className }: CountUpProps) {
+  const ref = useRef<HTMLSpanElement>(null)
+  const inView = useInView(ref, { once: true })
+  const motionVal = useMotionValue(0)
+  const spring = useSpring(motionVal, { duration: duration * 1000, bounce: 0 })
+
+  useEffect(() => {
+    if (inView) motionVal.set(target)
+  }, [inView, motionVal, target])
+
+  useEffect(() => {
+    return spring.on('change', (v) => {
+      if (ref.current) ref.current.textContent = `${prefix}${Math.round(v)}${suffix}`
+    })
+  }, [spring, prefix, suffix])
+
+  return <span ref={ref} className={className}>{prefix}0{suffix}</span>
 }

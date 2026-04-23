@@ -28,14 +28,27 @@ export default function Contact() {
   const [organization, setOrganization] = useState('')
   const [role, setRole] = useState('')
   const [message, setMessage] = useState('')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent(`YHCC Inquiry from ${name} (${organization})`)
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nOrganization: ${organization}\nRole: ${role}\n\nMessage:\n${message}`
-    )
-    window.location.href = `mailto:yhcc@dwighthall.org?subject=${subject}&body=${body}`
+    setStatus('sending')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, organization, role, message }),
+      })
+      if (!res.ok) throw new Error('Send failed')
+      setStatus('success')
+      setName('')
+      setEmail('')
+      setOrganization('')
+      setRole('')
+      setMessage('')
+    } catch {
+      setStatus('error')
+    }
   }
 
   const inputClass =
@@ -107,10 +120,23 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-yale-blue text-white py-3 rounded-lg font-semibold hover:bg-yale-blue-dark transition-all duration-300 hover:-translate-y-0.5"
+                  disabled={status === 'sending'}
+                  className="w-full bg-yale-blue text-white py-3 rounded-lg font-semibold hover:bg-yale-blue-dark transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0"
                 >
-                  Send Message
+                  {status === 'sending' ? 'Sending…' : 'Send Message'}
                 </button>
+
+                {status === 'success' && (
+                  <p className="text-green-600 text-sm font-medium text-center">
+                    Message sent! We'll be in touch soon.
+                  </p>
+                )}
+                {status === 'error' && (
+                  <p className="text-red-600 text-sm font-medium text-center">
+                    Something went wrong. Please email us directly at{' '}
+                    <a href="mailto:yhcc@dwighthall.org" className="underline">yhcc@dwighthall.org</a>.
+                  </p>
+                )}
               </form>
             </FadeIn>
 
