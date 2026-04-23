@@ -1,76 +1,102 @@
 import { Link } from 'react-router'
-import { Mail } from 'lucide-react'
+import { Mail, Linkedin, Instagram } from 'lucide-react'
+
+const nav = [
+  { label: 'About', to: '/about' },
+  { label: 'Services', to: '/services' },
+  { label: 'Case Studies', to: '/work' },
+  { label: 'Our Team', to: '/team' },
+  { label: 'Apply', to: '/apply' },
+  { label: 'Contact', to: '/contact' },
+]
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-6xl mx-auto px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
-          {/* Column 1 */}
-          <div>
-            <div className="flex items-center gap-2.5 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" className="w-7 h-7 flex-shrink-0">
+    <footer className="bg-[#0a0f1a] text-gray-400">
+      <div className="max-w-6xl mx-auto px-6 pt-16 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-12 mb-14">
+          {/* Brand */}
+          <div className="max-w-xs">
+            <div className="flex items-center gap-2.5 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" className="w-6 h-6 flex-shrink-0">
                 <circle cx="20" cy="20" r="20" fill="#0f4d92"/>
                 <rect x="18" y="9" width="4" height="22" rx="2" fill="white"/>
                 <rect x="9" y="18" width="22" height="4" rx="2" fill="white"/>
               </svg>
-              <span className="font-bold text-white text-sm leading-tight">Yale Healthcare Consulting Collective</span>
+              <span className="font-semibold text-white text-sm tracking-tight">YHCC</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Empowering students to drive innovation in healthcare through consulting excellence.
+            <p className="text-gray-500 text-sm leading-relaxed mb-5">
+              A Dwight Hall–affiliated student consulting group at Yale University, working with healthcare organizations to drive measurable impact.
             </p>
-          </div>
-
-          {/* Column 2 */}
-          <div>
-            <h4 className="font-semibold text-white mb-4 text-sm uppercase tracking-wide">Quick Links</h4>
-            <nav className="flex flex-col gap-2 text-sm">
-              <Link to="/about" className="hover:text-white transition-colors">About Us</Link>
-              <Link to="/services" className="hover:text-white transition-colors">Our Services</Link>
-              <Link to="/work" className="hover:text-white transition-colors">Case Studies</Link>
-              <Link to="/team" className="hover:text-white transition-colors">Our Team</Link>
-              <Link to="/apply" className="hover:text-white transition-colors">Apply</Link>
-              <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
-            </nav>
-          </div>
-
-          {/* Column 3 */}
-          <div>
-            <h4 className="font-semibold text-white mb-4 text-sm uppercase tracking-wide">Connect With Us</h4>
-            <div className="flex flex-col gap-3 text-sm">
-              <a href="mailto:yhcc@dwighthall.org" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Mail size={15} />
-                yhcc@dwighthall.org
-              </a>
+            <div className="flex items-center gap-3">
               <a
                 href="https://www.linkedin.com/company/yale-healthcare-consulting-collective"
                 target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all"
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-                  <circle cx="4" cy="4" r="2"/>
-                </svg>
-                LinkedIn
+                <Linkedin size={14} />
               </a>
               <a
                 href="https://www.instagram.com/yalehealthcareconsulting"
                 target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-white transition-colors"
+                aria-label="Instagram"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all"
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-                </svg>
-                Instagram
+                <Instagram size={14} />
               </a>
+              <a
+                href="mailto:yhcc@dwighthall.org"
+                aria-label="Email"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all"
+              >
+                <Mail size={14} />
+              </a>
+            </div>
+          </div>
+
+          {/* Nav */}
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gray-600 mb-4">Navigation</p>
+            <nav className="flex flex-col gap-2.5">
+              {nav.map(({ label, to }) => (
+                <Link
+                  key={to}
+                  to={to}
+                  className="text-sm text-gray-400 hover:text-white transition-colors duration-150"
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gray-600 mb-4">Contact</p>
+            <div className="flex flex-col gap-2.5 text-sm">
+              <a
+                href="mailto:yhcc@dwighthall.org"
+                className="text-gray-400 hover:text-white transition-colors duration-150"
+              >
+                yhcc@dwighthall.org
+              </a>
+              <p className="text-gray-600 text-xs leading-relaxed">
+                Yale University<br />
+                New Haven, CT 06520<br />
+                Mon–Fri, 9am–5pm EST
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 text-center text-xs text-white/40">
-          &copy; 2026 Yale Healthcare Consulting Collective. All rights reserved.
+        <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-gray-600">
+            &copy; {new Date().getFullYear()} Yale Healthcare Consulting Collective. All rights reserved.
+          </p>
+          <p className="text-xs text-gray-700">
+            Dwight Hall at Yale · Member Organization
+          </p>
         </div>
       </div>
     </footer>

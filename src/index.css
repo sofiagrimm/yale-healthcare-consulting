@@ -5,8 +5,69 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv11", "ss01", "ss03";
   }
+
   body {
     @apply text-gray-900 bg-white;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    letter-spacing: -0.003em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  ::selection {
+    background-color: #0f4d92;
+    color: #fff;
+  }
+
+  * {
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer components {
+  /* Eyebrow label used above section headings */
+  .label-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-yale-teal;
+  }
+
+  /* Standard section heading */
+  .section-heading {
+    @apply text-3xl font-bold text-yale-blue leading-tight;
+    letter-spacing: -0.025em;
+  }
+
+  /* Prose body copy */
+  .prose-body {
+    @apply text-gray-500 leading-relaxed;
+    font-size: 0.9375rem;
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient {
+    background: linear-gradient(135deg, #0f4d92 0%, #072050 100%);
+  }
+
+  /* Subtle noise texture for hero sections */
+  .hero-noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .tab-underline {
+    @apply border-b-2 border-yale-blue pb-0.5;
   }
 }
