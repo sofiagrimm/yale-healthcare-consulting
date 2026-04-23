@@ -8,7 +8,9 @@ const links = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
+  { to: '/work', label: 'Our Work' },
   { to: '/team', label: 'Team' },
+  { to: '/apply', label: 'Apply' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -38,7 +40,7 @@ export default function Header() {
           <span className="sm:hidden">YHCC</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {links.map(({ to, label }) => (
             <Link
               key={to}

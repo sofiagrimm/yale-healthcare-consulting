@@ -1,7 +1,7 @@
 import Slider from 'react-slick'
 import { Link } from 'react-router'
 import { Lightbulb, Target, Users, ArrowRight, TrendingUp, FlaskConical, HeartPulse } from 'lucide-react'
-import { FadeIn, StaggerContainer, StaggerItem } from '../components/animations/FadeIn'
+import { FadeIn, StaggerContainer, StaggerItem, CountUp } from '../components/animations/FadeIn'
 // @ts-ignore
 import clientsImg from '/Clients.png'
 
@@ -67,10 +67,10 @@ const exploreCards = [
 ]
 
 const stats = [
-  { value: '50+', label: 'Student Consultants' },
-  { value: '10+', label: 'Client Engagements' },
-  { value: '4', label: 'Practice Areas' },
-  { value: 'Yale', label: 'Student-Run' },
+  { value: 50, suffix: '+', label: 'Student Consultants' },
+  { value: 10, suffix: '+', label: 'Client Engagements' },
+  { value: 4, suffix: '', label: 'Practice Areas' },
+  { value: 1, suffix: '', label: 'Student-Run', display: 'Yale' },
 ]
 
 const afterYHCC = [
@@ -137,9 +137,11 @@ export default function Home() {
       {/* ── Stats Bar ── */}
       <section className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map(({ value, label }) => (
+          {stats.map(({ value, suffix, label, display }) => (
             <div key={label} className="text-center">
-              <div className="text-3xl font-bold text-yale-blue">{value}</div>
+              <div className="text-3xl font-bold text-yale-blue">
+                {display ? display : <CountUp target={value} suffix={suffix} />}
+              </div>
               <div className="text-xs text-gray-500 uppercase tracking-wide mt-1">{label}</div>
             </div>
           ))}
@@ -308,10 +310,10 @@ export default function Home() {
                 </p>
               </div>
               <Link
-                to="/contact"
+                to="/apply"
                 className="flex-shrink-0 inline-flex items-center gap-2 bg-white text-yale-blue px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-200 hover:-translate-y-0.5"
               >
-                Get in touch <ArrowRight size={14} />
+                Apply Now <ArrowRight size={14} />
               </Link>
             </div>
           </FadeIn>
