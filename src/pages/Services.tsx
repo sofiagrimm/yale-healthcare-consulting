@@ -1,4 +1,4 @@
-import { FadeIn, StaggerContainer, StaggerItem } from '../components/animations/FadeIn'
+import { FadeIn, StaggerContainer, StaggerItem, HoverCard, BlurReveal } from '../components/animations/FadeIn'
 import { Link } from 'react-router'
 import { ArrowRight, BarChart2, Megaphone, Wrench, Sparkles } from 'lucide-react'
 // @ts-ignore
@@ -66,15 +66,13 @@ export default function Services() {
       <section className="relative bg-hero-gradient text-white py-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-6xl mx-auto relative">
-          <FadeIn>
-            <p className="label-eyebrow text-white/40 mb-4">Our Services</p>
-            <h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">
-              What we work on.
-            </h1>
-            <p className="text-white/60 text-base font-normal max-w-md leading-relaxed">
-              Four practice areas. Scoped around your actual problem.
-            </p>
-          </FadeIn>
+          <BlurReveal delay={0.05}><p className="label-eyebrow text-white/40 mb-4">Our Services</p></BlurReveal>
+          <BlurReveal delay={0.15}>
+            <h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">What we work on.</h1>
+          </BlurReveal>
+          <BlurReveal delay={0.25}>
+            <p className="text-white/60 text-base font-normal max-w-md leading-relaxed">Four practice areas. Scoped around your actual problem.</p>
+          </BlurReveal>
         </div>
       </section>
 
@@ -84,7 +82,7 @@ export default function Services() {
           <StaggerContainer>
             {services.map(({ icon, label, title, desc, bullets, example }) => (
               <StaggerItem key={title}>
-                <div className="bg-white border border-gray-100 rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 p-8 grid md:grid-cols-[1fr_1.15fr] gap-8 items-start">
+                <HoverCard className="bg-white border border-gray-100 rounded-2xl shadow-card p-8 grid md:grid-cols-[1fr_1.15fr] gap-8 items-start">
                   <div>
                     <div className="flex items-center gap-3 mb-5">
                       <span className="text-yale-teal">{icon}</span>
@@ -105,7 +103,7 @@ export default function Services() {
                     <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-yale-teal mb-3">A recent project</p>
                     <p className="text-sm text-gray-600 leading-relaxed">{example}</p>
                   </div>
-                </div>
+                </HoverCard>
               </StaggerItem>
             ))}
           </StaggerContainer>

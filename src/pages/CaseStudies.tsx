@@ -1,4 +1,4 @@
-import { FadeIn, StaggerContainer, StaggerItem } from '../components/animations/FadeIn'
+import { FadeIn, StaggerContainer, StaggerItem, HoverCard, BlurReveal } from '../components/animations/FadeIn'
 import { Link } from 'react-router'
 import { ArrowRight, BarChart2, Megaphone, Wrench, TrendingUp } from 'lucide-react'
 
@@ -80,13 +80,9 @@ export default function CaseStudies() {
       <section className="relative bg-hero-gradient text-white py-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-6xl mx-auto relative">
-          <FadeIn>
-            <p className="label-eyebrow text-white/40 mb-4">Our Work</p>
-            <h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">Case Studies</h1>
-            <p className="text-white/60 text-base font-normal max-w-md leading-relaxed">
-              Real projects, real clients, real outcomes. Here's what YHCC has worked on.
-            </p>
-          </FadeIn>
+          <BlurReveal delay={0.05}><p className="label-eyebrow text-white/40 mb-4">Our Work</p></BlurReveal>
+          <BlurReveal delay={0.15}><h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">Case Studies</h1></BlurReveal>
+          <BlurReveal delay={0.25}><p className="text-white/60 text-base font-normal max-w-md leading-relaxed">Real projects, real clients, real outcomes. Here's what YHCC has worked on.</p></BlurReveal>
         </div>
       </section>
 
@@ -96,7 +92,7 @@ export default function CaseStudies() {
           <StaggerContainer>
             {cases.map(({ icon, tag, org, title, summary, work, outcome, label, labelColor }) => (
               <StaggerItem key={title}>
-                <div className="bg-white border border-gray-100 rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden">
+                <HoverCard className="bg-white border border-gray-100 rounded-2xl shadow-card overflow-hidden">
                   <div className="p-8 grid md:grid-cols-[1fr_1.05fr] gap-8 items-start">
                     <div>
                       <div className="flex items-center gap-2.5 mb-4 flex-wrap">
@@ -122,7 +118,7 @@ export default function CaseStudies() {
                       <p className="text-sm text-gray-700 leading-relaxed">{outcome}</p>
                     </div>
                   </div>
-                </div>
+                </HoverCard>
               </StaggerItem>
             ))}
           </StaggerContainer>

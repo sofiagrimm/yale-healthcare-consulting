@@ -1,7 +1,8 @@
 import Slider from 'react-slick'
 import { Link } from 'react-router'
 import { Lightbulb, Target, Users, ArrowRight, TrendingUp, FlaskConical, HeartPulse } from 'lucide-react'
-import { FadeIn, StaggerContainer, StaggerItem, CountUp } from '../components/animations/FadeIn'
+import { motion } from 'motion/react'
+import { FadeIn, StaggerContainer, StaggerItem, CountUp, BlurReveal, HoverCard, ScaleIn } from '../components/animations/FadeIn'
 // @ts-ignore
 import clientsImg from '/Clients.png'
 
@@ -104,27 +105,37 @@ export default function Home() {
             {slides.map((slide, i) => (
               <div key={i}>
                 <div className="max-w-2xl">
-                  <p className="label-eyebrow text-white/40 mb-5">{slide.label}</p>
-                  <h1 className="text-[2.75rem] md:text-[3.5rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6 whitespace-pre-line">
-                    {slide.title}
-                  </h1>
-                  <p className="text-white/65 text-base md:text-lg font-normal mb-9 leading-relaxed max-w-lg">
-                    {slide.sub}
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    <Link
-                      to={slide.to}
-                      className="inline-flex items-center gap-2 bg-white text-yale-blue px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-200 hover:-translate-y-0.5 shadow-sm"
-                    >
-                      {slide.cta} <ArrowRight size={14} />
-                    </Link>
-                    <Link
-                      to={slide.toSecondary}
-                      className="inline-flex items-center gap-2 border border-white/25 text-white/90 px-6 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 hover:border-white/40 transition-all duration-200"
-                    >
-                      {slide.ctaSecondary}
-                    </Link>
-                  </div>
+                  <BlurReveal delay={0.05}>
+                    <p className="label-eyebrow text-white/40 mb-5">{slide.label}</p>
+                  </BlurReveal>
+                  <BlurReveal delay={0.15}>
+                    <h1 className="text-[2.75rem] md:text-[3.5rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6 whitespace-pre-line">
+                      {slide.title}
+                    </h1>
+                  </BlurReveal>
+                  <BlurReveal delay={0.25}>
+                    <p className="text-white/65 text-base md:text-lg font-normal mb-9 leading-relaxed max-w-lg">
+                      {slide.sub}
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                        <Link
+                          to={slide.to}
+                          className="inline-flex items-center gap-2 bg-white text-yale-blue px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-sm"
+                        >
+                          {slide.cta} <ArrowRight size={14} />
+                        </Link>
+                      </motion.div>
+                      <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                        <Link
+                          to={slide.toSecondary}
+                          className="inline-flex items-center gap-2 border border-white/25 text-white/90 px-6 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 hover:border-white/40 transition-colors"
+                        >
+                          {slide.ctaSecondary}
+                        </Link>
+                      </motion.div>
+                    </div>
+                  </BlurReveal>
                 </div>
               </div>
             ))}
@@ -135,13 +146,15 @@ export default function Home() {
       {/* ── Stats Bar ── */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-9 grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-gray-100">
-          {stats.map(({ value, suffix, label, display }) => (
-            <div key={label} className="text-center px-4 first:pl-0 last:pr-0">
-              <div className="text-[2rem] font-bold text-yale-blue tracking-tight leading-none mb-1">
-                {display ? display : <CountUp target={value} suffix={suffix} />}
+          {stats.map(({ value, suffix, label, display }, i) => (
+            <ScaleIn key={label} delay={i * 0.08}>
+              <div className="text-center px-4">
+                <div className="text-[2rem] font-bold text-yale-blue tracking-tight leading-none mb-1">
+                  {display ? display : <CountUp target={value} suffix={suffix} />}
+                </div>
+                <div className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.12em]">{label}</div>
               </div>
-              <div className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.12em]">{label}</div>
-            </div>
+            </ScaleIn>
           ))}
         </div>
       </section>
@@ -179,11 +192,11 @@ export default function Home() {
                 { icon: <Users size={18} />, title: 'Consistent point of contact', desc: 'One team, one project lead, clear communication throughout.' },
                 { icon: <TrendingUp size={18} />, title: 'Deliverables you can use', desc: 'Reports, models, and presentations built for real decision-making.' },
               ].map(({ icon, title, desc }) => (
-                <div key={title} className="bg-surface border border-gray-100 rounded-xl p-5 hover:border-yale-blue/20 hover:shadow-card transition-all duration-300">
+                <HoverCard key={title} className="bg-surface border border-gray-100 rounded-xl p-5">
                   <div className="text-yale-teal mb-3">{icon}</div>
                   <h3 className="text-[13px] font-bold text-yale-blue mb-1.5 leading-tight">{title}</h3>
                   <p className="text-[12.5px] text-gray-500 leading-relaxed">{desc}</p>
-                </div>
+                </HoverCard>
               ))}
             </div>
           </FadeIn>
@@ -200,10 +213,8 @@ export default function Home() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {exploreCards.map(({ icon, label, title, desc, to }) => (
               <StaggerItem key={title}>
-                <Link
-                  to={to}
-                  className="group flex flex-col h-full bg-white rounded-2xl border border-gray-100 p-6 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
-                >
+                <Link to={to} className="group flex flex-col h-full">
+                <HoverCard className="flex flex-col h-full bg-white rounded-2xl border border-gray-100 p-6 shadow-card">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-yale-teal">{icon}</span>
                     <span className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-gray-400">{label}</span>
@@ -213,6 +224,7 @@ export default function Home() {
                   <div className="mt-5 flex items-center gap-1 text-[12px] font-semibold text-yale-blue group-hover:gap-2 transition-all duration-200">
                     Learn more <ArrowRight size={11} />
                   </div>
+                </HoverCard>
                 </Link>
               </StaggerItem>
             ))}
@@ -288,10 +300,10 @@ export default function Home() {
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
             {afterYHCC.map(({ icon, path }) => (
               <StaggerItem key={path}>
-                <div className="bg-white border border-gray-100 rounded-xl p-4 flex items-center gap-3 shadow-card">
+                <HoverCard className="bg-white border border-gray-100 rounded-xl p-4 flex items-center gap-3 shadow-card">
                   <span className="text-yale-teal flex-shrink-0">{icon}</span>
                   <span className="text-[13px] font-semibold text-yale-blue leading-tight">{path}</span>
-                </div>
+                </HoverCard>
               </StaggerItem>
             ))}
           </StaggerContainer>

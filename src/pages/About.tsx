@@ -1,4 +1,4 @@
-import { FadeIn, StaggerContainer, StaggerItem } from '../components/animations/FadeIn'
+import { FadeIn, StaggerContainer, StaggerItem, HoverCard, BlurReveal } from '../components/animations/FadeIn'
 import { Link } from 'react-router'
 import { ArrowRight, GraduationCap, Stethoscope, Globe, Microscope } from 'lucide-react'
 
@@ -54,15 +54,19 @@ export default function About() {
       <section className="relative bg-hero-gradient text-white py-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-6xl mx-auto relative">
-          <FadeIn>
+          <BlurReveal delay={0.05}>
             <p className="label-eyebrow text-white/40 mb-4">About YHCC</p>
+          </BlurReveal>
+          <BlurReveal delay={0.15}>
             <h1 className="text-[2.5rem] md:text-[3rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1] max-w-2xl">
               We're a student consulting group at Yale. Here's what that actually means.
             </h1>
+          </BlurReveal>
+          <BlurReveal delay={0.25}>
             <p className="text-white/60 text-base font-normal max-w-lg leading-relaxed">
               A Dwight Hall member organization focused on healthcare consulting.
             </p>
-          </FadeIn>
+          </BlurReveal>
         </div>
       </section>
 
@@ -114,10 +118,10 @@ export default function About() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {values.map(({ title, desc }) => (
               <StaggerItem key={title}>
-                <div className="bg-white border border-gray-100 rounded-2xl p-7 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
+                <HoverCard className="bg-white border border-gray-100 rounded-2xl p-7 shadow-card">
                   <h3 className="text-[15px] font-bold text-yale-blue mb-2 tracking-tight">{title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
-                </div>
+                </HoverCard>
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -138,11 +142,11 @@ export default function About() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {afterPaths.map(({ icon, title, desc }) => (
               <StaggerItem key={title}>
-                <div className="bg-surface border border-gray-100 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-card transition-all duration-300">
+                <HoverCard className="bg-surface border border-gray-100 rounded-2xl p-6">
                   <div className="text-yale-teal mb-4">{icon}</div>
                   <h3 className="text-sm font-bold text-yale-blue mb-1.5 tracking-tight">{title}</h3>
                   <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
-                </div>
+                </HoverCard>
               </StaggerItem>
             ))}
           </StaggerContainer>
