@@ -24,7 +24,8 @@ async function sendEmail({ to, subject, html, attachments = [] }) {
     console.log('[DEV] Email not configured — would send:', { to, subject })
     return
   }
-  await resend.emails.send({ from: EMAIL_FROM, to, subject, html, attachments })
+  const { error } = await resend.emails.send({ from: EMAIL_FROM, to, subject, html, attachments })
+  if (error) throw error
 }
 
 // ── Google APIs ───────────────────────────────────────────────────────────────
