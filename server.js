@@ -195,27 +195,31 @@ app.post('/api/apply', upload.single('resume'), async (req, res) => {
       docUrl || '', resumeUrl || '',
     ])
 
-    // ── Email notification ────────────────────────────────────────────────
+    // ── Email notification (non-fatal — data already saved above) ────────
     const attachments = resumeFile
       ? [{ filename: resumeFile.originalname, content: resumeFile.buffer.toString('base64') }]
       : []
 
-    await sendEmail({
-      to: EMAIL_TO,
-      subject: `F26 Application — ${name}`,
-      html: `
-        <h2 style="color:#0f4d92">New F26 Membership Application</h2>
-        <table cellpadding="6" style="border-collapse:collapse">
-          <tr><td><strong>Name</strong></td><td>${name}</td></tr>
-          <tr><td><strong>Email</strong></td><td><a href="mailto:${email}">${email}</a></td></tr>
-          <tr><td><strong>Graduating Year</strong></td><td>${year}</td></tr>
-          <tr><td><strong>Skills</strong></td><td>${skills || 'None specified'}</td></tr>
-        </table>
-        ${docUrl ? `<p><a href="${docUrl}">View full application in Google Docs →</a></p>` : ''}
-        ${resumeUrl ? `<p><a href="${resumeUrl}">View résumé in Google Drive →</a></p>` : ''}
-      `,
-      attachments,
-    })
+    try {
+      await sendEmail({
+        to: EMAIL_TO,
+        subject: `F26 Application — ${name}`,
+        html: `
+          <h2 style="color:#0f4d92">New F26 Membership Application</h2>
+          <table cellpadding="6" style="border-collapse:collapse">
+            <tr><td><strong>Name</strong></td><td>${name}</td></tr>
+            <tr><td><strong>Email</strong></td><td><a href="mailto:${email}">${email}</a></td></tr>
+            <tr><td><strong>Graduating Year</strong></td><td>${year}</td></tr>
+            <tr><td><strong>Skills</strong></td><td>${skills || 'None specified'}</td></tr>
+          </table>
+          ${docUrl ? `<p><a href="${docUrl}">View full application in Google Docs →</a></p>` : ''}
+          ${resumeUrl ? `<p><a href="${resumeUrl}">View résumé in Google Drive →</a></p>` : ''}
+        `,
+        attachments,
+      })
+    } catch (emailErr) {
+      console.error('Application email notification failed:', emailErr)
+    }
 
     res.json({ success: true, docUrl, resumeUrl })
   } catch (err) {
