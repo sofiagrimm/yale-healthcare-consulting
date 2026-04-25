@@ -135,7 +135,15 @@ app.post('/api/contact', async (req, res) => {
 })
 
 // Membership application
-app.post('/api/apply', upload.single('resume'), async (req, res) => {
+app.post('/api/apply', (req, res, next) => {
+  upload.single('resume')(req, res, (err) => {
+    if (err instanceof multer.MulterError) {
+      return res.status(400).json({ error: err.code === 'LIMIT_FILE_SIZE' ? 'File exceeds 10 MB limit.' : err.message })
+    }
+    if (err) return res.status(500).json({ error: 'File upload failed.' })
+    next()
+  })
+}, async (req, res) => {
   const {
     name, email, year, skills,
     skillsBlurb, interestArea, behavioral, caseStudy,
@@ -145,48 +153,47 @@ app.post('/api/apply', upload.single('resume'), async (req, res) => {
 
   const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })
 
+  const docHtml = `
+    <html><body style="font-family:Arial,sans-serif;max-width:800px;margin:auto">
+    <h1 style="color:#0f4d92">YHCC F26 Application — ${name}</h1>
+    <p style="color:#666">Submitted: ${timestamp}</p>
+    <hr/>
+    <h2>Part 1 — Basic Information</h2>
+    <table cellpadding="6" style="border-collapse:collapse;width:100%">
+      <tr><td><strong>Name</strong></td><td>${name}</td></tr>
+      <tr><td><strong>Email</strong></td><td>${email}</td></tr>
+      <tr><td><strong>Graduating Year</strong></td><td>${year}</td></tr>
+      <tr><td><strong>Skills / Experiences</strong></td><td>${skills || 'None specified'}</td></tr>
+    </table>
+    <hr/>
+    <h2>Part 2 — Short Response</h2>
+    <h3>Q1: Skills Elaboration (150w max)</h3>
+    <p style="white-space:pre-wrap">${skillsBlurb || '—'}</p>
+    <h3>Q2: Healthcare Interest (200w max)</h3>
+    <p style="white-space:pre-wrap">${interestArea || '—'}</p>
+    <h3>Q3: Behavioral Question (200w max)</h3>
+    <p style="white-space:pre-wrap">${behavioral || '—'}</p>
+    <hr/>
+    <h2>Part 3 — Case Study (400w max)</h2>
+    <p style="white-space:pre-wrap">${caseStudy || '—'}</p>
+    <hr/>
+    <p><em>Resume: ${resumeFile ? resumeFile.originalname : 'Not provided'}</em></p>
+    </body></html>
+  `
+
+  // ── Google Drive + Sheets (non-fatal — email is the primary record) ───
+  let docUrl = null
+  let resumeUrl = null
   try {
     const auth = getGoogleAuth()
-
-    // ── Google Drive: create doc + upload resume ──────────────────────────
-    const docHtml = `
-      <html><body style="font-family:Arial,sans-serif;max-width:800px;margin:auto">
-      <h1 style="color:#0f4d92">YHCC F26 Application — ${name}</h1>
-      <p style="color:#666">Submitted: ${timestamp}</p>
-      <hr/>
-      <h2>Part 1 — Basic Information</h2>
-      <table cellpadding="6" style="border-collapse:collapse;width:100%">
-        <tr><td><strong>Name</strong></td><td>${name}</td></tr>
-        <tr><td><strong>Email</strong></td><td>${email}</td></tr>
-        <tr><td><strong>Graduating Year</strong></td><td>${year}</td></tr>
-        <tr><td><strong>Skills / Experiences</strong></td><td>${skills || 'None specified'}</td></tr>
-      </table>
-      <hr/>
-      <h2>Part 2 — Short Response</h2>
-      <h3>Q1: Skills Elaboration (150w max)</h3>
-      <p style="white-space:pre-wrap">${skillsBlurb || '—'}</p>
-      <h3>Q2: Healthcare Interest (200w max)</h3>
-      <p style="white-space:pre-wrap">${interestArea || '—'}</p>
-      <h3>Q3: Behavioral Question (200w max)</h3>
-      <p style="white-space:pre-wrap">${behavioral || '—'}</p>
-      <hr/>
-      <h2>Part 3 — Case Study (400w max)</h2>
-      <p style="white-space:pre-wrap">${caseStudy || '—'}</p>
-      <hr/>
-      <p><em>Resume: ${resumeFile ? resumeFile.originalname : 'Not provided'}</em></p>
-      </body></html>
-    `
-
-    const { docUrl, resumeUrl } = await createDriveDoc(
+    ;({ docUrl, resumeUrl } = await createDriveDoc(
       auth,
       `${name} — F26 Application — ${timestamp.split(',')[0]}`,
       docHtml,
       resumeFile?.buffer,
       resumeFile?.originalname,
       resumeFile?.mimetype,
-    )
-
-    // ── Google Sheets: append row ─────────────────────────────────────────
+    ))
     await appendToSheet(auth, [
       timestamp, name, email, year,
       skills || '',
@@ -194,38 +201,45 @@ app.post('/api/apply', upload.single('resume'), async (req, res) => {
       resumeFile?.originalname || '',
       docUrl || '', resumeUrl || '',
     ])
-
-    // ── Email notification (non-fatal — data already saved above) ────────
-    const attachments = resumeFile
-      ? [{ filename: resumeFile.originalname, content: resumeFile.buffer.toString('base64') }]
-      : []
-
-    try {
-      await sendEmail({
-        to: EMAIL_TO,
-        subject: `F26 Application — ${name}`,
-        html: `
-          <h2 style="color:#0f4d92">New F26 Membership Application</h2>
-          <table cellpadding="6" style="border-collapse:collapse">
-            <tr><td><strong>Name</strong></td><td>${name}</td></tr>
-            <tr><td><strong>Email</strong></td><td><a href="mailto:${email}">${email}</a></td></tr>
-            <tr><td><strong>Graduating Year</strong></td><td>${year}</td></tr>
-            <tr><td><strong>Skills</strong></td><td>${skills || 'None specified'}</td></tr>
-          </table>
-          ${docUrl ? `<p><a href="${docUrl}">View full application in Google Docs →</a></p>` : ''}
-          ${resumeUrl ? `<p><a href="${resumeUrl}">View résumé in Google Drive →</a></p>` : ''}
-        `,
-        attachments,
-      })
-    } catch (emailErr) {
-      console.error('Application email notification failed:', emailErr)
-    }
-
-    res.json({ success: true, docUrl, resumeUrl })
-  } catch (err) {
-    console.error('Application submission error:', err)
-    res.status(500).json({ error: 'Failed to submit application' })
+  } catch (googleErr) {
+    console.error('Google integration error (non-fatal):', googleErr)
   }
+
+  // ── Email notification (full application data + resume attachment) ────
+  const attachments = resumeFile
+    ? [{ filename: resumeFile.originalname, content: resumeFile.buffer }]
+    : []
+
+  try {
+    await sendEmail({
+      to: EMAIL_TO,
+      subject: `F26 Application — ${name}`,
+      html: `
+        <h2 style="color:#0f4d92">New F26 Membership Application</h2>
+        <table cellpadding="6" style="border-collapse:collapse">
+          <tr><td><strong>Name</strong></td><td>${name}</td></tr>
+          <tr><td><strong>Email</strong></td><td><a href="mailto:${email}">${email}</a></td></tr>
+          <tr><td><strong>Graduating Year</strong></td><td>${year}</td></tr>
+          <tr><td><strong>Skills</strong></td><td>${skills || 'None specified'}</td></tr>
+        </table>
+        <h3>Q1: Skills Elaboration</h3>
+        <p style="white-space:pre-wrap;color:#333">${skillsBlurb || '—'}</p>
+        <h3>Q2: Healthcare Interest</h3>
+        <p style="white-space:pre-wrap;color:#333">${interestArea || '—'}</p>
+        <h3>Q3: Behavioral</h3>
+        <p style="white-space:pre-wrap;color:#333">${behavioral || '—'}</p>
+        <h3>Case Study</h3>
+        <p style="white-space:pre-wrap;color:#333">${caseStudy || '—'}</p>
+        ${docUrl ? `<p><a href="${docUrl}">View in Google Docs →</a></p>` : ''}
+        ${resumeUrl ? `<p><a href="${resumeUrl}">View résumé in Google Drive →</a></p>` : ''}
+      `,
+      attachments,
+    })
+  } catch (emailErr) {
+    console.error('Application email notification failed:', emailErr)
+  }
+
+  res.json({ success: true, docUrl, resumeUrl })
 })
 
 // SPA fallback
