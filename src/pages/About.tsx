@@ -13,7 +13,7 @@ const values = [
   },
   {
     title: 'Diverse teams on purpose',
-    desc: 'We deliberately mix pre-med, policy, engineering, and public health students on every project. Healthcare problems don\'t fit neatly into one discipline.',
+    desc: 'Our teams are composed of health sciences, policy, engineering, and public health students on every project. Healthcare problems don\'t fit neatly into one discipline.',
   },
   {
     title: 'Honest about what we are',
@@ -59,12 +59,12 @@ export default function About() {
           </BlurReveal>
           <BlurReveal delay={0.15}>
             <h1 className="text-[2.5rem] md:text-[3rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1] max-w-2xl">
-              We're a student consulting group at Yale. Here's what that actually means.
+              YHCC is a healthcare-focused consulting organization run by Yale students.
             </h1>
           </BlurReveal>
           <BlurReveal delay={0.25}>
             <p className="text-white/60 text-base font-normal max-w-lg leading-relaxed">
-              A Dwight Hall member organization focused on healthcare consulting.
+              A Dwight Hall member organization focused on social impact.
             </p>
           </BlurReveal>
         </div>
@@ -76,7 +76,7 @@ export default function About() {
           <FadeIn direction="left">
             <p className="label-eyebrow mb-3">Our Story</p>
             <h2 className="text-[2rem] font-bold text-yale-blue mb-6 leading-tight tracking-tight">
-              We saw a gap and tried to fill it.
+              Yale student talent to combat inefficiencies in healthcare organizations.
             </h2>
             <p className="prose-body mb-4">
               Healthcare nonprofits — especially smaller ones — often don't have the internal capacity

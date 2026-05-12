@@ -1,4 +1,3 @@
-import Slider from 'react-slick'
 import { Link } from 'react-router'
 import { Lightbulb, Target, Users, ArrowRight, TrendingUp, FlaskConical, HeartPulse } from 'lucide-react'
 import { motion } from 'motion/react'
@@ -6,42 +5,12 @@ import { FadeIn, StaggerContainer, StaggerItem, CountUp, BlurReveal, HoverCard, 
 // @ts-ignore
 import clientsImg from '/Clients.png'
 
-const slides = [
-  {
-    label: 'Healthcare Strategy',
-    title: 'Real consulting work.\nReal healthcare clients.',
-    sub: 'YHCC is a student-run consulting group at Yale. We take on projects with hospitals, nonprofits, and health systems — and we actually do the work.',
-    cta: 'Work With Us',
-    to: '/contact',
-    ctaSecondary: 'Our Services',
-    toSecondary: '/services',
-  },
-  {
-    label: 'Community Impact',
-    title: 'Yale students.\nLocal healthcare problems.',
-    sub: 'Our teams include pre-med students, public health researchers, engineers, and policy folks. Different backgrounds, same goal: useful deliverables for organizations doing important work.',
-    cta: 'Meet the Team',
-    to: '/team',
-    ctaSecondary: 'About YHCC',
-    toSecondary: '/about',
-  },
-  {
-    label: 'Join YHCC',
-    title: 'We recruit\nevery semester.',
-    sub: 'No consulting experience required. We welcome Yale undergrads and grad students from any major who want to work on something that matters.',
-    cta: 'Apply Now',
-    to: '/apply',
-    ctaSecondary: 'Learn More',
-    toSecondary: '/about',
-  },
-]
-
 const exploreCards = [
   {
     icon: <Target size={20} />,
     label: 'Projects',
     title: 'What we work on',
-    desc: 'Strategy, data analysis, and operations projects with Connecticut-area healthcare nonprofits and health systems.',
+    desc: 'Strategy, data analysis, AI, and operations projects with healthcare nonprofits and health systems.',
     to: '/services',
   },
   {
@@ -82,18 +51,6 @@ const afterYHCC = [
 ]
 
 export default function Home() {
-  const sliderSettings = {
-    autoplay: true,
-    autoplaySpeed: 6000,
-    fade: true,
-    infinite: true,
-    speed: 900,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true,
-  }
-
   return (
     <div className="overflow-x-hidden">
       {/* ── Hero ── */}
@@ -101,45 +58,42 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         <div className="relative max-w-6xl mx-auto px-6 py-28 md:py-36">
-          <Slider {...sliderSettings}>
-            {slides.map((slide, i) => (
-              <div key={i}>
-                <div className="max-w-2xl">
-                  <BlurReveal delay={0.05}>
-                    <p className="label-eyebrow text-white/40 mb-5">{slide.label}</p>
-                  </BlurReveal>
-                  <BlurReveal delay={0.15}>
-                    <h1 className="text-[2.75rem] md:text-[3.5rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6 whitespace-pre-line">
-                      {slide.title}
-                    </h1>
-                  </BlurReveal>
-                  <BlurReveal delay={0.25}>
-                    <p className="text-white/65 text-base md:text-lg font-normal mb-9 leading-relaxed max-w-lg">
-                      {slide.sub}
-                    </p>
-                    <div className="flex flex-wrap gap-3">
-                      <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                        <Link
-                          to={slide.to}
-                          className="inline-flex items-center gap-2 bg-white text-yale-blue px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-sm"
-                        >
-                          {slide.cta} <ArrowRight size={14} />
-                        </Link>
-                      </motion.div>
-                      <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                        <Link
-                          to={slide.toSecondary}
-                          className="inline-flex items-center gap-2 border border-white/25 text-white/90 px-6 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 hover:border-white/40 transition-colors"
-                        >
-                          {slide.ctaSecondary}
-                        </Link>
-                      </motion.div>
-                    </div>
-                  </BlurReveal>
-                </div>
+          <div className="max-w-2xl">
+            <BlurReveal delay={0.05}>
+              <p className="label-eyebrow text-white/40 mb-5">Healthcare Consulting</p>
+            </BlurReveal>
+            <BlurReveal delay={0.15}>
+              <h1 className="text-[2.75rem] md:text-[3.5rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6">
+                High-impact healthcare consulting
+              </h1>
+            </BlurReveal>
+            <BlurReveal delay={0.25}>
+              <p className="text-white/65 text-base md:text-lg font-normal mb-4 leading-relaxed max-w-lg">
+                YHCC's goal is to provide a diverse array of healthcare organizations with the highest level of structured research and strategy. We're a Dwight Hall member organization, which means community impact is our primary goal. Our deliverables end up in clients' grant applications and board presentations, and our recommendations inform strategic decisions.
+              </p>
+              <p className="text-white/55 text-sm font-normal mb-9 leading-relaxed max-w-lg">
+                We welcome motivated Yale students interested in healthcare who want to work on something that matters.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 bg-white text-yale-blue px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-sm"
+                  >
+                    Work With Us <ArrowRight size={14} />
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                  <Link
+                    to="/services"
+                    className="inline-flex items-center gap-2 border border-white/25 text-white/90 px-6 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 hover:border-white/40 transition-colors"
+                  >
+                    Our Services
+                  </Link>
+                </motion.div>
               </div>
-            ))}
-          </Slider>
+            </BlurReveal>
+          </div>
         </div>
       </section>
 
@@ -235,17 +189,11 @@ export default function Home() {
       {/* ── Recent Clients ── */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <FadeIn className="mb-10 flex items-baseline justify-between gap-4 flex-wrap">
+          <FadeIn className="mb-10">
             <div>
               <p className="label-eyebrow mb-1">Our Clients</p>
               <h2 className="text-[1.75rem] font-bold text-yale-blue tracking-tight">Organizations we've worked with.</h2>
             </div>
-            <Link
-              to="/work"
-              className="text-sm font-semibold text-yale-blue hover:text-yale-teal transition-colors flex items-center gap-1"
-            >
-              View case studies <ArrowRight size={13} />
-            </Link>
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="bg-surface border border-gray-100 rounded-3xl p-10 flex items-center justify-center">

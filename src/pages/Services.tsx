@@ -1,6 +1,6 @@
 import { FadeIn, StaggerContainer, StaggerItem, HoverCard, BlurReveal } from '../components/animations/FadeIn'
 import { Link } from 'react-router'
-import { ArrowRight, BarChart2, Megaphone, Wrench, Sparkles } from 'lucide-react'
+import { ArrowRight, BarChart2, Megaphone, Wrench, Bot } from 'lucide-react'
 // @ts-ignore
 import clientsImg from '/Clients.png'
 
@@ -8,15 +8,17 @@ const services = [
   {
     icon: <BarChart2 size={22} />,
     label: 'Practice Area 01',
-    title: 'Social Impact & Research',
+    title: 'Research & Evidence',
     desc: 'Helping organizations understand what their work is actually doing — and build the evidence base to show it to funders and stakeholders.',
     bullets: [
       'Social impact evaluations and social ROI analysis',
       'Survey design, digitization, and data analysis',
       'Performance metrics and KPI frameworks',
       'Market research and competitive landscape reviews',
+      'Analyses of health policy and therapeutic landscapes',
+      'Literature reviews to support research and grant applications',
     ],
-    example: 'We ran a full survey research project for Mental Health CT — digitized their data collection, analyzed results, and wrote a report they used directly in grant applications.',
+    example: 'We ran a full survey research project for a regional mental health organization — digitized their data collection, analyzed results, and wrote a report they used directly in grant applications.',
   },
   {
     icon: <Megaphone size={22} />,
@@ -28,6 +30,8 @@ const services = [
       'Multi-channel outreach and engagement strategy',
       'Partnership identification and outreach frameworks',
       'Growth roadmaps and market development plans',
+      'Benchmarking analyses comparing peer institutions and competitors',
+      'Patient-facing and internal-facing content development (educational resources, process guides, communication tools)',
     ],
     example: 'Developed a digital engagement and donor outreach strategy for a regional nonprofit looking to expand beyond its existing network.',
   },
@@ -37,25 +41,28 @@ const services = [
     title: 'Operations & Analytics',
     desc: 'Digging into operational data to find inefficiencies, model future scenarios, and build tools that help leadership make better calls.',
     bullets: [
+      'Patient journey mapping and care pathway analysis',
       'Operational process mapping and improvement',
-      'Annual resource planning and fleet modeling',
+      'Predictive economic modeling (budget scenarios, sliding-scale pricing, insurance reimbursement dynamics)',
+      'Program and operational analyses with recommendations for targeted growth, efficiency, and resource allocation',
       'Performance dashboards and data models',
       'Decision-support tools and scenario analysis',
     ],
     example: 'Built an annual resource planning model for a national blood services organization — projecting vehicle lifecycle costs and replacement schedules over a 10-year horizon.',
   },
   {
-    icon: <Sparkles size={22} />,
+    icon: <Bot size={22} />,
     label: 'Practice Area 04',
-    title: 'Custom Projects',
-    desc: 'Some problems don\'t fit a standard service offering. We\'re willing to scope something from scratch if the project is a good fit.',
+    title: 'AI & Technology',
+    desc: 'Scoping, building, and evaluating AI-assisted solutions for healthcare organizations — from workflow automation to agentic tools that actually get used.',
     bullets: [
-      'Discovery calls to scope the problem together',
-      'Team assembly based on the specific skill needs',
-      'Flexible deliverable formats',
-      'Longer-term partnerships for ongoing work',
+      'Determining, testing, and evaluating AI use cases to enhance operations and patient experience',
+      'AI-assisted tools to streamline administrative workflows (internal knowledge search, document summarization)',
+      'Agentic workflow design and implementation',
+      'Technology landscape reviews for digital health organizations',
+      'Custom scoping for organizations new to AI adoption',
     ],
-    example: 'Worked with a digital health startup to map the Connecticut competitive landscape and identify market entry positioning ahead of their product launch.',
+    example: 'Developed an AI-assisted internal knowledge search tool for a healthcare nonprofit — reducing time spent on document lookup and improving staff response time for patient-facing queries.',
   },
 ]
 
@@ -68,11 +75,41 @@ export default function Services() {
         <div className="max-w-6xl mx-auto relative">
           <BlurReveal delay={0.05}><p className="label-eyebrow text-white/40 mb-4">Our Services</p></BlurReveal>
           <BlurReveal delay={0.15}>
-            <h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">What we work on.</h1>
+            <h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">How We Create Impact</h1>
           </BlurReveal>
           <BlurReveal delay={0.25}>
             <p className="text-white/60 text-base font-normal max-w-md leading-relaxed">Four practice areas. Scoped around your actual problem.</p>
           </BlurReveal>
+        </div>
+      </section>
+
+      {/* ── Engagement Structure ── */}
+      <section className="py-12 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <div className="bg-surface border border-gray-100 rounded-2xl px-8 py-6 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
+              <div className="flex-shrink-0">
+                <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-yale-teal mb-1">How We Engage</p>
+                <p className="text-[15px] font-bold text-yale-blue tracking-tight">Our standard project model</p>
+              </div>
+              <div className="flex flex-wrap gap-6">
+                {[
+                  { num: '1', label: 'Project Leader' },
+                  { num: '10', label: 'Weeks' },
+                  { num: '6–9', label: 'Consultants' },
+                  { num: '1', label: 'Executive Director' },
+                ].map(({ num, label }) => (
+                  <div key={label} className="text-center">
+                    <div className="text-[1.75rem] font-bold text-yale-blue leading-none tracking-tight">{num}</div>
+                    <div className="text-[11px] text-gray-500 font-medium mt-0.5">{label}</div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-gray-500 leading-relaxed max-w-xs md:ml-auto">
+                Every engagement is fully pro bono. No fee, no catch — community impact is the point.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

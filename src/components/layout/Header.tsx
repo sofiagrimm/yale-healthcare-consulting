@@ -8,7 +8,6 @@ const links = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
-  { to: '/work', label: 'Our Work' },
   { to: '/team', label: 'Team' },
   { to: '/apply', label: 'Apply' },
 ]
@@ -71,7 +70,7 @@ export default function Header() {
             to="/contact"
             className="bg-yale-blue text-white text-[13.5px] font-semibold px-5 py-2 rounded-full hover:bg-yale-blue-dark transition-colors duration-200 tracking-tight"
           >
-            Work With Us
+            Contact Us
           </Link>
         </div>
 
@@ -105,7 +104,7 @@ export default function Header() {
             className="mt-3 bg-yale-blue text-white text-sm font-semibold px-5 py-2.5 rounded-full text-center hover:bg-yale-blue-dark transition-colors"
             onClick={() => setOpen(false)}
           >
-            Work With Us
+            Contact Us
           </Link>
         </div>
       )}
