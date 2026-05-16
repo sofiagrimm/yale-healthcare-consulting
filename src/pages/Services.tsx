@@ -9,7 +9,7 @@ const services = [
     icon: <BarChart2 size={22} />,
     label: 'Practice Area 01',
     title: 'Research & Evidence',
-    desc: 'Helping organizations understand what their work is actually doing — and build the evidence base to show it to funders and stakeholders.',
+    desc: 'Helping organizations understand what their work is actually doing, and build the evidence base to show it to funders and stakeholders.',
     bullets: [
       'Social impact evaluations and social ROI analysis',
       'Survey design, digitization, and data analysis',
@@ -18,13 +18,13 @@ const services = [
       'Analyses of health policy and therapeutic landscapes',
       'Literature reviews to support research and grant applications',
     ],
-    example: 'We ran a full survey research project for a regional mental health organization — digitized their data collection, analyzed results, and wrote a report they used directly in grant applications.',
+    example: 'We ran a full survey research project for a regional mental health organization, digitized their data collection, analyzed results, and wrote a report they used directly in grant applications.',
   },
   {
     icon: <Megaphone size={22} />,
     label: 'Practice Area 02',
     title: 'Visibility & Growth',
-    desc: 'Strategy for organizations that need to reach more people — whether that means patients, donors, partners, or the public.',
+    desc: 'Strategy for organizations that need to reach more people, whether that means patients, donors, partners, or the public.',
     bullets: [
       'Brand and digital presence audits',
       'Multi-channel outreach and engagement strategy',
@@ -48,13 +48,13 @@ const services = [
       'Performance dashboards and data models',
       'Decision-support tools and scenario analysis',
     ],
-    example: 'Built an annual resource planning model for a national blood services organization — projecting vehicle lifecycle costs and replacement schedules over a 10-year horizon.',
+    example: 'Built an annual resource planning model for a national blood services organization, projecting vehicle lifecycle costs and replacement schedules over a 10-year horizon.',
   },
   {
     icon: <Bot size={22} />,
     label: 'Practice Area 04',
     title: 'AI & Technology',
-    desc: 'Scoping, building, and evaluating AI-assisted solutions for healthcare organizations — from workflow automation to agentic tools that actually get used.',
+    desc: 'Scoping, building, and evaluating AI-assisted solutions for healthcare organizations, from workflow automation to agentic tools that actually get used.',
     bullets: [
       'Determining, testing, and evaluating AI use cases to enhance operations and patient experience',
       'AI-assisted tools to streamline administrative workflows (internal knowledge search, document summarization)',
@@ -62,7 +62,7 @@ const services = [
       'Technology landscape reviews for digital health organizations',
       'Custom scoping for organizations new to AI adoption',
     ],
-    example: 'Developed an AI-assisted internal knowledge search tool for a healthcare nonprofit — reducing time spent on document lookup and improving staff response time for patient-facing queries.',
+    example: 'Developed an AI-assisted internal knowledge search tool for a healthcare nonprofit, reducing time spent on document lookup and improving staff response time for patient-facing queries.',
   },
 ]
 
@@ -154,7 +154,7 @@ export default function Services() {
             <p className="label-eyebrow mb-2">Who We've Worked With</p>
             <h2 className="text-[1.85rem] font-bold text-yale-blue mb-3 tracking-tight">Our clients</h2>
             <p className="prose-body">
-              Healthcare nonprofits, health systems, and community organizations — mostly in Connecticut.
+              Healthcare nonprofits, health systems, and community organizations, mostly in Connecticut.
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>

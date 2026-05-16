@@ -5,11 +5,11 @@ import { ArrowRight, GraduationCap, Stethoscope, Globe, Microscope } from 'lucid
 const values = [
   {
     title: 'The work comes first',
-    desc: 'We care about producing deliverables that clients can actually use — not just completing a project. If a recommendation doesn\'t hold up, we say so.',
+    desc: 'We care about producing deliverables that clients can actually use, not just completing a project. If a recommendation doesn\'t hold up, we say so.',
   },
   {
     title: 'Community impact is the point',
-    desc: 'As a Dwight Hall member organization, we exist to serve organizations doing meaningful work in healthcare — not to pad resumes. The work has to matter.',
+    desc: 'As a Dwight Hall member organization, we exist to serve organizations doing meaningful work in healthcare, not to pad resumes. The work has to matter.',
   },
   {
     title: 'Diverse teams on purpose',
@@ -17,7 +17,7 @@ const values = [
   },
   {
     title: 'Honest about what we are',
-    desc: 'We\'re students, not McKinsey. We\'re upfront about that. What we bring is time, rigor, and deep interest in the problem — which turns out to be pretty valuable.',
+    desc: 'We\'re students, not McKinsey. We\'re upfront about that. What we bring is time, rigor, and deep interest in the problem, which turns out to be pretty valuable.',
   },
 ]
 
@@ -28,7 +28,7 @@ const timeline = [
   },
   {
     year: 'First Projects',
-    event: 'Completed our first client engagements — survey research and outcomes analysis for local mental health and community health organizations.',
+    event: 'Completed our first client engagements, survey research and outcomes analysis for local mental health and community health organizations.',
   },
   {
     year: 'Growth',
@@ -79,7 +79,7 @@ export default function About() {
               Yale student talent to combat inefficiencies in healthcare organizations.
             </h2>
             <p className="prose-body mb-4">
-              Healthcare nonprofits — especially smaller ones — often don't have the internal capacity
+              Healthcare nonprofits, especially smaller ones, often don't have the internal capacity
               for the kind of research and strategy work they need. At the same time, Yale has hundreds
               of students with relevant skills and not enough ways to use them.
             </p>
@@ -135,8 +135,8 @@ export default function About() {
             <p className="label-eyebrow mb-2">Career Outcomes</p>
             <h2 className="text-[2rem] font-bold text-yale-blue mb-3 tracking-tight">After YHCC</h2>
             <p className="prose-body max-w-xl">
-              Members tend to say the consulting experience — working with clients, scoping problems,
-              presenting findings — was some of the most useful preparation they had.
+              Members tend to say the consulting experience, working with clients, scoping problems,
+              presenting findings, was some of the most useful preparation they had.
             </p>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">

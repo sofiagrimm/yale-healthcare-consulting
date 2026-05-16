@@ -16,7 +16,7 @@ const timeline = [
 const faqs = [
   {
     q: 'Who can apply?',
-    a: 'Any Yale student — undergraduate or graduate — who is motivated and interested in healthcare. We welcome students from all schools and majors. No prior consulting experience is required.',
+    a: 'Any Yale student, undergraduate or graduate, who is motivated and interested in healthcare. We welcome students from all schools and majors. No prior consulting experience is required.',
   },
   {
     q: 'When do you recruit?',
@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: 'I don\'t have a healthcare background. Can I still apply?',
-    a: 'Yes. We deliberately build cross-disciplinary teams — economists, engineers, public policy students, and pre-med students all contribute meaningfully. Healthcare problems don\'t fit neatly into one discipline, and neither should our teams.',
+    a: 'Yes. We deliberately build cross-disciplinary teams, economists, engineers, public policy students, and pre-med students all contribute meaningfully. Healthcare problems don\'t fit neatly into one discipline, and neither should our teams.',
   },
   {
     q: 'What does the application involve?',
@@ -85,7 +85,7 @@ export default function Apply() {
           </BlurReveal>
           <BlurReveal delay={0.25}>
             <p className="text-white/60 text-base font-normal max-w-lg leading-relaxed">
-              We recruit at the start of each semester. Applications are open to all Yale students — no consulting experience required.
+              We recruit at the start of each semester. Applications are open to all Yale students, no consulting experience required.
             </p>
           </BlurReveal>
         </div>
@@ -172,7 +172,7 @@ export default function Apply() {
                   <a href="mailto:yhcc@dwighthall.org" className="text-yale-blue font-medium hover:text-yale-teal transition-colors">
                     yhcc@dwighthall.org
                   </a>
-                  {' '}— or sign up for a virtual Q&A with a board member.
+                  {' '} or sign up for a virtual Q&A with a board member.
                 </p>
               </div>
             </div>
@@ -189,7 +189,7 @@ export default function Apply() {
             <p className="label-eyebrow text-white/40 mb-3">Where members go</p>
             <h2 className="text-[2rem] font-bold text-white mb-4 tracking-tight">After YHCC</h2>
             <p className="text-white/60 max-w-lg mx-auto mb-8 leading-relaxed">
-              Members go on to med school, consulting firms, MPH programs, and research roles. The experience — client work, structured deliverables, problems that matter — tends to stick.
+              Members go on to med school, consulting firms, MPH programs, and research roles. The experience, client work, structured deliverables, problems that matter, tends to stick.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link

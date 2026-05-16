@@ -6,7 +6,7 @@ import { Link } from 'react-router'
 const faqs = [
   {
     q: 'What kinds of organizations do you work with?',
-    a: 'We work with healthcare nonprofits, community health organizations, health systems, and mission-driven healthcare startups — primarily in Connecticut and the broader Northeast.',
+    a: 'We work with healthcare nonprofits, community health organizations, health systems, and mission-driven healthcare startups, primarily in Connecticut and the broader Northeast.',
   },
   {
     q: 'Who can join YHCC?',
@@ -28,7 +28,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent(`YHCC Inquiry — ${role || 'General'} (${name})`)
+    const subject = encodeURIComponent(`YHCC Inquiry: ${role || 'General'} (${name})`)
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}${organization ? `\nOrganization: ${organization}` : ''}\nType: ${role}\n\n${message}`
     )
@@ -120,7 +120,7 @@ export default function Contact() {
               <h2 className="text-xl md:text-2xl font-bold text-yale-blue mb-3 tracking-tight">Get In Touch</h2>
               <p className="prose-body mb-8">
                 Whether you're a healthcare organization looking for structured research and strategy support,
-                or a Yale student interested in joining — we'd love to hear from you.
+                or a Yale student interested in joining, we'd love to hear from you.
               </p>
 
               <div className="space-y-5 mb-8">

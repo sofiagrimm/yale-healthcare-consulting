@@ -24,7 +24,7 @@ const exploreCards = [
     icon: <TrendingUp size={20} />,
     label: 'After YHCC',
     title: 'Where members go',
-    desc: 'Med school, consulting, MPH programs, research labs. YHCC alumni end up across healthcare — the experience translates.',
+    desc: 'Med school, consulting, MPH programs, research labs. YHCC alumni end up across healthcare, the experience translates.',
     to: '/about',
   },
   {
@@ -148,7 +148,7 @@ export default function Home() {
               Yale students do. So we connected them.
             </p>
             <p className="prose-body mb-7">
-              We're a Dwight Hall member organization, which means community impact is the point —
+              We're a Dwight Hall member organization, which means community impact is the point 
               not resume padding. The deliverables end up
               in grant applications and board presentations.
             </p>
@@ -162,7 +162,7 @@ export default function Home() {
           <FadeIn direction="right" delay={0.1}>
             <div className="grid grid-cols-2 gap-3">
               {[
-                { icon: <Lightbulb size={18} />, title: 'Cross-disciplinary teams', desc: 'Pre-med, econ, public health, engineering — mixed on purpose.' },
+                { icon: <Lightbulb size={18} />, title: 'Cross-disciplinary teams', desc: 'Pre-med, econ, public health, engineering, mixed on purpose.' },
                 { icon: <Target size={18} />, title: 'Scoped to your needs', desc: 'We scope each project around your specific problem, not a template.' },
                 { icon: <Users size={18} />, title: 'Consistent point of contact', desc: 'One team, one project lead, clear communication throughout.' },
                 { icon: <TrendingUp size={18} />, title: 'Deliverables you can use', desc: 'Reports, models, and presentations built for decision-making.' },
@@ -242,7 +242,7 @@ export default function Home() {
             <h2 className="text-[2rem] font-bold text-yale-blue mb-3 tracking-tight">After YHCC</h2>
             <p className="prose-body max-w-xl">
               Members go on to med school, consulting, MPH programs, and research roles. The consulting
-              experience — client calls, structured deliverables, working on problems that matter — tends to stick.
+              experience, client calls, structured deliverables, working on problems that matter, tends to stick.
             </p>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
