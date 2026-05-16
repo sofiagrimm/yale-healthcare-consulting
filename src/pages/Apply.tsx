@@ -27,8 +27,8 @@ const faqs = [
     a: 'Projects run for approximately 10 weeks. Members should expect to commit around 5–8 hours per week during an active engagement. Outside of projects, board members have additional responsibilities.',
   },
   {
-    q: 'Do clients pay for YHCC\'s work?',
-    a: 'No. All engagements are fully pro bono. This is non-negotiable — it\'s the reason we exist. Most of our partners are nonprofits or under-resourced organizations that couldn\'t access this kind of strategic support otherwise.',
+    q: 'What kinds of organizations does YHCC work with?',
+    a: 'We work with healthcare nonprofits, community health organizations, health systems, and mission-driven startups. Our focus is on organizations doing meaningful work in healthcare where structured research and strategy can make a real difference.',
   },
   {
     q: 'What kind of work will I actually do?',
@@ -111,7 +111,7 @@ export default function Apply() {
               <div className="bg-white border border-gray-100 rounded-2xl p-7 shadow-card">
                 <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-gray-400 mb-3">About YHCC</p>
                 <p className="text-sm text-gray-600 leading-relaxed mb-3">
-                  YHCC is a Dwight Hall–affiliated student consulting group at Yale working with healthcare organizations. We're focused on social impact — every engagement is pro bono.
+                  YHCC is a Dwight Hall–affiliated student consulting group at Yale working with healthcare organizations. We're focused on social impact.
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed mb-3">
                   Our work spans research and evidence, visibility and growth, operations and analytics, and AI and technology. Our deliverables end up in clients' grant applications, board presentations, and strategic plans.

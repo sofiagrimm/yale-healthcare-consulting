@@ -43,7 +43,7 @@ const services = [
     bullets: [
       'Patient journey mapping and care pathway analysis',
       'Operational process mapping and improvement',
-      'Predictive economic modeling (budget scenarios, sliding-scale pricing, insurance reimbursement dynamics)',
+      'Predictive economic modeling (budget scenarios, insurance reimbursement dynamics, legislative impact)',
       'Program and operational analyses with recommendations for targeted growth, efficiency, and resource allocation',
       'Performance dashboards and data models',
       'Decision-support tools and scenario analysis',
@@ -106,7 +106,7 @@ export default function Services() {
                 ))}
               </div>
               <p className="text-sm text-gray-500 leading-relaxed max-w-xs md:ml-auto">
-                Every engagement is fully pro bono. No fee, no catch — community impact is the point.
+                Community impact is our primary goal as a Dwight Hall member organization.
               </p>
             </div>
           </FadeIn>

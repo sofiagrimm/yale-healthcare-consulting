@@ -9,8 +9,8 @@ const faqs = [
     a: 'We work with a wide range of healthcare organizations including hospitals, clinics, health systems, healthcare startups, pharmaceutical companies, and health tech companies.',
   },
   {
-    q: 'How much do your services cost?',
-    a: 'Our services are fully free for clients. We work with organizations that couldn\'t otherwise access this kind of structured consulting support.',
+    q: 'What kinds of organizations do you work with?',
+    a: 'We work with healthcare nonprofits, community health organizations, health systems, and mission-driven healthcare startups — primarily in Connecticut and the broader Northeast.',
   },
   {
     q: 'Who can join YHCC?',

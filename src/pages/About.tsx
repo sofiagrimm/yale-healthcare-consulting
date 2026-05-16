@@ -8,8 +8,8 @@ const values = [
     desc: 'We care about producing deliverables that clients can actually use — not just completing a project. If a recommendation doesn\'t hold up, we say so.',
   },
   {
-    title: 'No cost to clients, no exceptions',
-    desc: 'Every engagement is fully funded by YHCC. That\'s not a marketing line — it\'s the reason we exist. Most of our partners couldn\'t access this kind of support otherwise.',
+    title: 'Community impact is the point',
+    desc: 'As a Dwight Hall member organization, we exist to serve organizations doing meaningful work in healthcare — not to pad resumes. The work has to matter.',
   },
   {
     title: 'Diverse teams on purpose',
@@ -86,7 +86,7 @@ export default function About() {
             <p className="prose-body">
               YHCC was built to connect those two things. We take on real projects, put together
               cross-disciplinary student teams, and deliver work that clients can bring to their boards,
-              funders, and leadership. No fee, no fluff.
+              funders, and leadership.
             </p>
           </FadeIn>
           <FadeIn direction="right" delay={0.1}>
