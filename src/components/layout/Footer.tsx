@@ -4,7 +4,6 @@ import { Mail, Linkedin, Instagram } from 'lucide-react'
 const nav = [
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
-  { label: 'Case Studies', to: '/work' },
   { label: 'Our Team', to: '/team' },
   { label: 'Apply', to: '/apply' },
   { label: 'Contact', to: '/contact' },
