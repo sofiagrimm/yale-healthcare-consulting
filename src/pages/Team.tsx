@@ -6,9 +6,6 @@ function initials(name: string) {
   return name.split(' ').map((n) => n[0]).join('')
 }
 
-const eboard = leadership.filter((m) => m.category === 'eboard')
-const board = leadership.filter((m) => m.category === 'board')
-
 export default function Team() {
   return (
     <div className="overflow-x-hidden">
@@ -26,12 +23,11 @@ export default function Team() {
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
-            <p className="label-eyebrow mb-2">Executive Board</p>
-            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">E-Board</h2>
-            <p className="prose-body mt-2">Presidents, Vice Presidents, and Directors</p>
+            <p className="label-eyebrow mb-2">Leadership</p>
+            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Executive Board</h2>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {eboard.map(({ name, role }) => (
+            {leadership.map(({ name, role }) => (
               <StaggerItem key={name}>
                 <div className="group bg-white rounded-2xl p-5 shadow-card border border-gray-100 hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 text-center cursor-default">
                   <div className="w-12 h-12 rounded-full bg-yale-blue/8 text-yale-blue font-bold text-sm flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-blue group-hover:text-white transition-all duration-300">
@@ -46,31 +42,8 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Board */}
-      <section className="py-16 px-6 bg-surface">
-        <div className="max-w-6xl mx-auto">
-          <FadeIn className="mb-10">
-            <p className="label-eyebrow mb-2">Board Members</p>
-            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Board</h2>
-          </FadeIn>
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {board.map(({ name, role }) => (
-              <StaggerItem key={name}>
-                <div className="group bg-white rounded-2xl p-5 shadow-card border border-gray-100 hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 text-center cursor-default">
-                  <div className="w-12 h-12 rounded-full bg-yale-teal/10 text-yale-teal font-bold text-sm flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-teal group-hover:text-white transition-all duration-300">
-                    {initials(name)}
-                  </div>
-                  <h3 className="font-bold text-yale-blue text-[13px] leading-tight tracking-tight">{name}</h3>
-                  <p className="text-gray-400 text-[11.5px] mt-1 leading-tight">{role}</p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
       {/* Join Section */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 bg-surface">
         <div className="max-w-2xl mx-auto text-center">
           <FadeIn>
             <p className="label-eyebrow mb-3">Join Us</p>
@@ -98,7 +71,7 @@ export default function Team() {
       </section>
 
       {/* Diversity Statement */}
-      <section className="py-20 px-6 bg-surface">
+      <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <div className="bg-yale-blue/4 border border-yale-blue/12 rounded-2xl p-10 text-center">
