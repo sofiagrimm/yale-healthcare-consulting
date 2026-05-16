@@ -70,12 +70,12 @@ export default function Services() {
   return (
     <div className="overflow-x-hidden">
       {/* ── Hero ── */}
-      <section className="relative bg-hero-gradient text-white py-28 px-6 overflow-hidden">
+      <section className="relative bg-hero-gradient text-white py-16 md:py-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-6xl mx-auto relative">
           <BlurReveal delay={0.05}><p className="label-eyebrow text-white/40 mb-4">Our Services</p></BlurReveal>
           <BlurReveal delay={0.15}>
-            <h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">How We Create Impact</h1>
+            <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">How We Create Impact</h1>
           </BlurReveal>
           <BlurReveal delay={0.25}>
             <p className="text-white/60 text-base font-normal max-w-md leading-relaxed">Four practice areas. Scoped around your problem.</p>
@@ -87,25 +87,25 @@ export default function Services() {
       <section className="py-12 px-6 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <div className="bg-surface border border-gray-100 rounded-2xl px-8 py-6 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
-              <div className="flex-shrink-0">
+            <div className="bg-surface border border-gray-100 rounded-2xl px-6 md:px-8 py-6 flex flex-col gap-5">
+              <div>
                 <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-yale-teal mb-1">How We Engage</p>
                 <p className="text-[15px] font-bold text-yale-blue tracking-tight">Our standard project model</p>
               </div>
-              <div className="flex flex-wrap gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {[
                   { num: '1', label: 'Project Leader' },
                   { num: '10', label: 'Weeks' },
                   { num: '6–9', label: 'Consultants' },
                   { num: '1', label: 'Executive Director' },
                 ].map(({ num, label }) => (
-                  <div key={label} className="text-center">
+                  <div key={label} className="bg-white border border-gray-100 rounded-xl p-4 text-center">
                     <div className="text-[1.75rem] font-bold text-yale-blue leading-none tracking-tight">{num}</div>
-                    <div className="text-[11px] text-gray-500 font-medium mt-0.5">{label}</div>
+                    <div className="text-[11px] text-gray-500 font-medium mt-1">{label}</div>
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-gray-500 leading-relaxed max-w-xs md:ml-auto">
+              <p className="text-sm text-gray-500 leading-relaxed">
                 Community impact is our primary goal as a Dwight Hall member organization.
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function Services() {
       </section>
 
       {/* ── Services List ── */}
-      <section className="py-20 px-6">
+      <section className="py-12 md:py-20 px-6">
         <div className="max-w-6xl mx-auto space-y-5">
           <StaggerContainer>
             {services.map(({ icon, label, title, desc, bullets, example }) => (
@@ -170,7 +170,7 @@ export default function Services() {
       </section>
 
       {/* ── Testimonial ── */}
-      <section className="py-28 px-6 bg-hero-gradient relative overflow-hidden">
+      <section className="py-16 md:py-28 px-6 bg-hero-gradient relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_100%,rgba(255,255,255,0.05)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-3xl mx-auto relative">
           <FadeIn>

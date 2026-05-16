@@ -51,14 +51,14 @@ export default function About() {
   return (
     <div className="overflow-x-hidden">
       {/* ── Hero ── */}
-      <section className="relative bg-hero-gradient text-white py-28 px-6 overflow-hidden">
+      <section className="relative bg-hero-gradient text-white py-16 md:py-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-6xl mx-auto relative">
           <BlurReveal delay={0.05}>
             <p className="label-eyebrow text-white/40 mb-4">About YHCC</p>
           </BlurReveal>
           <BlurReveal delay={0.15}>
-            <h1 className="text-[2.5rem] md:text-[3rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1] max-w-2xl">
+            <h1 className="text-[1.875rem] sm:text-[2.25rem] md:text-[3rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1] max-w-2xl">
               YHCC is a healthcare-focused consulting organization run by Yale students.
             </h1>
           </BlurReveal>
@@ -71,7 +71,7 @@ export default function About() {
       </section>
 
       {/* ── Mission ── */}
-      <section className="py-24 px-6">
+      <section className="py-14 md:py-24 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <FadeIn direction="left">
             <p className="label-eyebrow mb-3">Our Story</p>
@@ -129,7 +129,7 @@ export default function About() {
       </section>
 
       {/* ── After YHCC ── */}
-      <section className="py-24 px-6">
+      <section className="py-14 md:py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
             <p className="label-eyebrow mb-2">Career Outcomes</p>

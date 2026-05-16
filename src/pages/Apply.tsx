@@ -79,7 +79,7 @@ export default function Apply() {
             <p className="label-eyebrow text-white/40 mb-4">Join YHCC</p>
           </BlurReveal>
           <BlurReveal delay={0.15}>
-            <h1 className="text-[2.5rem] md:text-[3rem] font-bold tracking-[-0.03em] mb-4 leading-[1.1] max-w-2xl">
+            <h1 className="text-[1.875rem] sm:text-[2.25rem] md:text-[3rem] font-bold tracking-[-0.03em] mb-4 leading-[1.1] max-w-2xl">
               Apply to YHCC
             </h1>
           </BlurReveal>

@@ -57,13 +57,13 @@ export default function Home() {
       <section className="relative bg-hero-gradient text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="relative max-w-6xl mx-auto px-6 py-28 md:py-36">
+        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-36">
           <div className="max-w-2xl">
             <BlurReveal delay={0.05}>
               <p className="label-eyebrow text-white/40 mb-5">Healthcare Consulting</p>
             </BlurReveal>
             <BlurReveal delay={0.15}>
-              <h1 className="text-[2.75rem] md:text-[3.5rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6">
+              <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6">
                 High-impact healthcare consulting
               </h1>
             </BlurReveal>
@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       {/* ── Recent Clients ── */}
-      <section className="py-20 px-6">
+      <section className="py-12 md:py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
             <div>
@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* ── Who We Are ── */}
-      <section className="py-24 px-6">
+      <section className="py-14 md:py-24 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <FadeIn direction="left">
             <p className="label-eyebrow mb-3">Who We Are</p>
@@ -208,7 +208,7 @@ export default function Home() {
       </section>
 
       {/* ── Testimonial ── */}
-      <section className="py-28 px-6 bg-hero-gradient relative overflow-hidden">
+      <section className="py-16 md:py-28 px-6 bg-hero-gradient relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_100%,rgba(255,255,255,0.05)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-3xl mx-auto relative">
           <FadeIn>
