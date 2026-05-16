@@ -17,7 +17,7 @@ const values = [
   },
   {
     title: 'Honest about what we are',
-    desc: 'We\'re students, not McKinsey. We\'re upfront about that. What we bring is time, rigor, and a genuine interest in the problem — which turns out to be pretty valuable.',
+    desc: 'We\'re students, not McKinsey. We\'re upfront about that. What we bring is time, rigor, and deep interest in the problem — which turns out to be pretty valuable.',
   },
 ]
 
@@ -84,7 +84,7 @@ export default function About() {
               of students with relevant skills and not enough ways to use them.
             </p>
             <p className="prose-body">
-              YHCC was built to connect those two things. We take on real projects, put together
+              YHCC was built to connect those two things. We take on projects, put together
               cross-disciplinary student teams, and deliver work that clients can bring to their boards,
               funders, and leadership.
             </p>
@@ -135,7 +135,7 @@ export default function About() {
             <p className="label-eyebrow mb-2">Career Outcomes</p>
             <h2 className="text-[2rem] font-bold text-yale-blue mb-3 tracking-tight">After YHCC</h2>
             <p className="prose-body max-w-xl">
-              Members tend to say the consulting experience — working with real clients, scoping problems,
+              Members tend to say the consulting experience — working with clients, scoping problems,
               presenting findings — was some of the most useful preparation they had.
             </p>
           </FadeIn>

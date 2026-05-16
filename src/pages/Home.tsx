@@ -119,7 +119,7 @@ export default function Home() {
           <FadeIn direction="left">
             <p className="label-eyebrow mb-3">Who We Are</p>
             <h2 className="text-[2rem] font-bold text-yale-blue mb-5 leading-tight tracking-tight">
-              A student group at Yale that does actual consulting work.
+              A student consulting group at Yale.
             </h2>
             <p className="prose-body mb-4">
               We started YHCC because a lot of healthcare nonprofits in Connecticut don't have the
@@ -128,7 +128,7 @@ export default function Home() {
             </p>
             <p className="prose-body mb-7">
               We're a Dwight Hall member organization, which means community impact is the point —
-              not resume padding. The work is real, the clients are real, and the deliverables end up
+              not resume padding. The deliverables end up
               in grant applications and board presentations.
             </p>
             <Link
@@ -142,9 +142,9 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-3">
               {[
                 { icon: <Lightbulb size={18} />, title: 'Cross-disciplinary teams', desc: 'Pre-med, econ, public health, engineering — mixed on purpose.' },
-                { icon: <Target size={18} />, title: 'Scoped to your needs', desc: 'We scope each project around your actual problem, not a template.' },
+                { icon: <Target size={18} />, title: 'Scoped to your needs', desc: 'We scope each project around your specific problem, not a template.' },
                 { icon: <Users size={18} />, title: 'Consistent point of contact', desc: 'One team, one project lead, clear communication throughout.' },
-                { icon: <TrendingUp size={18} />, title: 'Deliverables you can use', desc: 'Reports, models, and presentations built for real decision-making.' },
+                { icon: <TrendingUp size={18} />, title: 'Deliverables you can use', desc: 'Reports, models, and presentations built for decision-making.' },
               ].map(({ icon, title, desc }) => (
                 <HoverCard key={title} className="bg-surface border border-gray-100 rounded-xl p-5">
                   <div className="text-yale-teal mb-3">{icon}</div>
@@ -242,7 +242,7 @@ export default function Home() {
             <h2 className="text-[2rem] font-bold text-yale-blue mb-3 tracking-tight">After YHCC</h2>
             <p className="prose-body max-w-xl">
               Members go on to med school, consulting, MPH programs, and research roles. The consulting
-              experience — client calls, structured deliverables, working on real problems — tends to stick.
+              experience — client calls, structured deliverables, working on problems that matter — tends to stick.
             </p>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">

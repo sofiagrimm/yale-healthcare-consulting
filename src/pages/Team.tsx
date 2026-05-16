@@ -42,6 +42,17 @@ export default function Team() {
         </div>
       </section>
 
+      {/* Board */}
+      <section className="py-16 px-6 bg-surface">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn className="mb-10">
+            <p className="label-eyebrow mb-2">Board Members</p>
+            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Board</h2>
+            <p className="prose-body mt-2">Announced soon.</p>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* Join Section */}
       <section className="py-24 px-6 bg-surface">
         <div className="max-w-2xl mx-auto text-center">

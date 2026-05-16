@@ -78,7 +78,7 @@ export default function Services() {
             <h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">How We Create Impact</h1>
           </BlurReveal>
           <BlurReveal delay={0.25}>
-            <p className="text-white/60 text-base font-normal max-w-md leading-relaxed">Four practice areas. Scoped around your actual problem.</p>
+            <p className="text-white/60 text-base font-normal max-w-md leading-relaxed">Four practice areas. Scoped around your problem.</p>
           </BlurReveal>
         </div>
       </section>

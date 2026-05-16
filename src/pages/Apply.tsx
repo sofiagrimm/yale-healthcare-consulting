@@ -28,11 +28,11 @@ const faqs = [
   },
   {
     q: 'What kinds of organizations does YHCC work with?',
-    a: 'We work with healthcare nonprofits, community health organizations, health systems, and mission-driven startups. Our focus is on organizations doing meaningful work in healthcare where structured research and strategy can make a real difference.',
+    a: 'We work with healthcare nonprofits, community health organizations, health systems, and mission-driven startups. Our focus is on organizations doing meaningful work in healthcare where structured research and strategy can drive impact.',
   },
   {
     q: 'What kind of work will I actually do?',
-    a: 'Real consulting work — research, data analysis, strategy, AI tool evaluation, operational modeling, and more. You\'ll work directly with clients, contribute to deliverables that end up in board presentations and grant applications, and have a named project role.',
+    a: 'Consulting work across research, data analysis, strategy, AI tool evaluation, and operational modeling. You\'ll work directly with clients, contribute to deliverables that end up in board presentations and grant applications, and have a named project role.',
   },
   {
     q: 'What do members get out of YHCC?',
@@ -151,7 +151,7 @@ export default function Apply() {
                 <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-gray-400 mb-3">What We Look For</p>
                 <ul className="space-y-2">
                   {[
-                    'Genuine interest in healthcare',
+                    'Interest in healthcare',
                     'Ability to do rigorous, structured work',
                     'Collaborative and reliable',
                     'Any Yale school or major',
@@ -189,7 +189,7 @@ export default function Apply() {
             <p className="label-eyebrow text-white/40 mb-3">Where members go</p>
             <h2 className="text-[2rem] font-bold text-white mb-4 tracking-tight">After YHCC</h2>
             <p className="text-white/60 max-w-lg mx-auto mb-8 leading-relaxed">
-              Members go on to med school, consulting firms, MPH programs, and research roles. The experience — real clients, real deliverables, working on problems that matter — tends to stick.
+              Members go on to med school, consulting firms, MPH programs, and research roles. The experience — client work, structured deliverables, problems that matter — tends to stick.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link
