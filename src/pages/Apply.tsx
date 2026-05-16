@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FadeIn, StaggerContainer, StaggerItem, BlurReveal, HoverCard } from '../components/animations/FadeIn'
+import { FadeIn, BlurReveal } from '../components/animations/FadeIn'
 import { Link } from 'react-router'
 import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react'
 
