@@ -15,8 +15,8 @@ export const board: TeamMember[] = [
   { name: 'Nadia Bakhtari', role: 'Co-Director of Outreach' },
   { name: 'Leo Chung', role: 'Co-Director of Outreach' },
   { name: 'Usman Khalid', role: 'Director of Finance' },
+  { name: 'Holly Tran', role: 'Co-Director of Membership' },
   { name: 'Emma Lee', role: 'Co-Director of Membership' },
   { name: 'Srishti Swaminathan', role: 'Director of Communications' },
-  { name: 'Holly Tran', role: 'Co-Director of Membership' },
   { name: 'Sean Yu', role: 'Director of Research' },
 ]
