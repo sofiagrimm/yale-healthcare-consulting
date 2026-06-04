@@ -33,7 +33,7 @@ const services = [
       'Benchmarking analyses comparing peer institutions and competitors',
       'Patient-facing and internal-facing content development (educational resources, process guides, communication tools)',
     ],
-    example: 'Developed a digital engagement and donor outreach strategy for a regional nonprofit looking to expand beyond its existing network.',
+    example: 'Designed and piloted a research-grounded reproductive and menstrual health training curriculum for university administrators at Yale, with a roadmap for broader rollout across Connecticut institutions.',
   },
   {
     icon: <Wrench size={22} />,
@@ -48,7 +48,7 @@ const services = [
       'Performance dashboards and data models',
       'Decision-support tools and scenario analysis',
     ],
-    example: 'Built an annual resource planning model for a national blood services organization, projecting vehicle lifecycle costs and replacement schedules over a 10-year horizon.',
+    example: 'Produced a condition selection framework and pilot rollout playbook for a post-discharge care coordination tool, identifying high-readmission Medicare/Medicaid patient cohorts and low-cost intervention strategies for Yale New Haven Hospital.',
   },
 ]
 
