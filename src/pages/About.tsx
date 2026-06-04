@@ -83,10 +83,13 @@ export default function About() {
               for the kind of research and strategy work they need. At the same time, Yale has hundreds
               of students with relevant skills and not enough ways to use them.
             </p>
-            <p className="prose-body">
+            <p className="prose-body mb-4">
               YHCC was built to connect those two things. We take on projects, put together
               cross-disciplinary student teams, and deliver work that clients can bring to their boards,
               funders, and leadership.
+            </p>
+            <p className="prose-body">
+              YHCC is also committed to engaging in high-impact research with Yale faculty and policy organizations across numerous aspects of healthcare, including health economics and policy, digital innovation, and drug development, and more.
             </p>
           </FadeIn>
           <FadeIn direction="right" delay={0.1}>
