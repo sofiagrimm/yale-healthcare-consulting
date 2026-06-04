@@ -1,6 +1,6 @@
 import { FadeIn, StaggerContainer, StaggerItem, HoverCard, BlurReveal } from '../components/animations/FadeIn'
 import { Link } from 'react-router'
-import { ArrowRight, BarChart2, Megaphone, Wrench } from 'lucide-react'
+import { ArrowRight, BarChart2, Megaphone, Wrench, Bot } from 'lucide-react'
 // @ts-ignore
 import clientsImg from '/Clients.png'
 
@@ -36,8 +36,22 @@ const services = [
     example: 'Designed and piloted a research-grounded reproductive and menstrual health training curriculum for university administrators at Yale, with a roadmap for broader rollout across Connecticut institutions.',
   },
   {
-    icon: <Wrench size={22} />,
+    icon: <Bot size={22} />,
     label: 'Practice Area 03',
+    title: 'AI & Technology',
+    desc: 'Scoping, building, and evaluating AI-assisted solutions for healthcare organizations, from workflow automation to agentic tools that actually get used.',
+    bullets: [
+      'Determining, testing, and evaluating AI use cases to enhance operations and patient experience',
+      'AI-assisted tools to streamline administrative workflows (internal knowledge search, document summarization)',
+      'Agentic workflow design and implementation',
+      'Technology landscape reviews for digital health organizations',
+      'Custom scoping for organizations new to AI adoption',
+    ],
+    example: 'Developed an AI-assisted internal knowledge search tool for a healthcare nonprofit, reducing time spent on document lookup and improving staff response time for patient-facing queries.',
+  },
+  {
+    icon: <Wrench size={22} />,
+    label: 'Practice Area 04',
     title: 'Operations & Analytics',
     desc: 'Digging into operational data to find inefficiencies, model future scenarios, and build tools that help leadership make better calls.',
     bullets: [
