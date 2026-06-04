@@ -36,22 +36,8 @@ const services = [
     example: 'Designed and piloted a research-grounded reproductive and menstrual health training curriculum for university administrators at Yale, with a roadmap for broader rollout across Connecticut institutions.',
   },
   {
-    icon: <Bot size={22} />,
-    label: 'Practice Area 03',
-    title: 'AI & Technology',
-    desc: 'Scoping, building, and evaluating AI-assisted solutions for healthcare organizations, from workflow automation to agentic tools that actually get used.',
-    bullets: [
-      'Determining, testing, and evaluating AI use cases to enhance operations and patient experience',
-      'AI-assisted tools to streamline administrative workflows (internal knowledge search, document summarization)',
-      'Agentic workflow design and implementation',
-      'Technology landscape reviews for digital health organizations',
-      'Custom scoping for organizations new to AI adoption',
-    ],
-    example: 'Developed an AI-assisted internal knowledge search tool for a healthcare nonprofit, reducing time spent on document lookup and improving staff response time for patient-facing queries.',
-  },
-  {
     icon: <Wrench size={22} />,
-    label: 'Practice Area 04',
+    label: 'Practice Area 03',
     title: 'Operations & Analytics',
     desc: 'Digging into operational data to find inefficiencies, model future scenarios, and build tools that help leadership make better calls.',
     bullets: [
@@ -62,7 +48,21 @@ const services = [
       'Performance dashboards and data models',
       'Decision-support tools and scenario analysis',
     ],
-    example: 'Produced a condition selection framework and pilot rollout playbook for a post-discharge care coordination tool, identifying high-readmission Medicare/Medicaid patient cohorts and low-cost intervention strategies for Yale New Haven Hospital.',
+    example: 'Built an annual resource planning model for a national blood services organization, projecting vehicle lifecycle costs and replacement schedules over a 10-year horizon.',
+  },
+  {
+    icon: <Bot size={22} />,
+    label: 'Practice Area 04',
+    title: 'AI & Technology',
+    desc: 'Scoping, building, and evaluating AI-assisted solutions for healthcare organizations, from workflow automation to agentic tools that actually get used.',
+    bullets: [
+      'Determining, testing, and evaluating AI use cases to enhance operations and patient experience',
+      'AI-assisted tools to streamline administrative workflows (internal knowledge search, document summarization)',
+      'Agentic workflow design and implementation',
+      'Technology landscape reviews for digital health organizations',
+      'Custom scoping for organizations new to AI adoption',
+    ],
+    example: 'Developed an AI-assisted internal knowledge search tool for a healthcare nonprofit, reducing time spent on document lookup and improving staff response time for patient-facing queries.',
   },
 ]
 
