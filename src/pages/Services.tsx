@@ -62,7 +62,7 @@ const services = [
       'Technology landscape reviews for digital health organizations',
       'Custom scoping for organizations new to AI adoption',
     ],
-    example: 'Developed an AI-assisted internal knowledge search tool for a healthcare nonprofit, reducing time spent on document lookup and improving staff response time for patient-facing queries.',
+    example: 'Produced a condition selection framework and pilot rollout playbook for a post-discharge care coordination tool, identifying high-readmission Medicare/Medicaid patient cohorts and low-cost intervention strategies for Yale New Haven Hospital.',
   },
 ]
 
