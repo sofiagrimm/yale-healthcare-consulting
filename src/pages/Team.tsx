@@ -1,6 +1,6 @@
 import { FadeIn, StaggerContainer, StaggerItem, BlurReveal } from '../components/animations/FadeIn'
 import { Link } from 'react-router'
-import { leadership } from '../data/team'
+import { leadership, board } from '../data/team'
 
 function initials(name: string) {
   return name.split(' ').map((n) => n[0]).join('')
@@ -48,8 +48,20 @@ export default function Team() {
           <FadeIn className="mb-10">
             <p className="label-eyebrow mb-2">Board Members</p>
             <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Board</h2>
-            <p className="prose-body mt-2">Announced soon.</p>
           </FadeIn>
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {board.map(({ name, role }) => (
+              <StaggerItem key={name}>
+                <div className="group bg-white rounded-2xl p-5 shadow-card border border-gray-100 hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 text-center cursor-default">
+                  <div className="w-12 h-12 rounded-full bg-yale-blue/8 text-yale-blue font-bold text-sm flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-blue group-hover:text-white transition-all duration-300">
+                    {initials(name)}
+                  </div>
+                  <h3 className="font-bold text-yale-blue text-[13px] leading-tight tracking-tight">{name}</h3>
+                  <p className="text-gray-400 text-[11.5px] mt-1 leading-tight">{role}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
 
