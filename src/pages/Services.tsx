@@ -62,7 +62,7 @@ const services = [
       'Technology landscape reviews for digital health organizations',
       'Custom scoping for organizations new to AI adoption',
     ],
-    example: 'Conducted market research to develop an outreach strategy for an early AI startup focused on implementing its product nationwide.',
+    example: 'Conducted market research and competitive landscape analysis to develop a targeted outreach strategy for an early-stage AI startup, identifying key customer segments and go-to-market priorities to support nationwide product implementation.',
   },
 ]
 
