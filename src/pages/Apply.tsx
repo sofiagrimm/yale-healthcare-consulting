@@ -4,12 +4,13 @@ import { Link } from 'react-router'
 import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react'
 
 const timeline = [
-  { label: 'Virtual Q&A Sessions', date: 'TBD' },
-  { label: 'Written Application Opens', date: 'TBD' },
-  { label: 'Written Application Closes', date: 'TBD' },
-  { label: 'Interview Decisions', date: 'TBD' },
-  { label: 'In-Person Interviews', date: 'TBD' },
-  { label: 'Final Decisions', date: 'TBD' },
+  { label: 'Written Application Opens', date: 'Mon, 8/31' },
+  { label: 'Virtual Info Session', date: 'Fri, 9/4' },
+  { label: 'Written Application Due', date: 'Fri, 9/11' },
+  { label: 'Interview Decisions Released', date: 'Tues, 9/13' },
+  { label: 'In-Person Interviews', date: '9/19 - 9/20' },
+  { label: 'Final Decisions Released', date: 'Mon, 9/21' },
+  { label: 'Deadline to Accept', date: 'Wed, 9/23' },
   { label: 'Orientation & Onboarding', date: 'TBD' },
 ]
 
