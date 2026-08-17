@@ -3,7 +3,7 @@ import { Lightbulb, Target, Users, ArrowRight, TrendingUp, FlaskConical, HeartPu
 import { motion } from 'motion/react'
 import { FadeIn, StaggerContainer, StaggerItem, CountUp, BlurReveal, HoverCard, ScaleIn } from '../components/animations/FadeIn'
 // @ts-ignore
-import clientsImg from '/Clients.png'
+import clientsImg from '/currentclients.png'
 
 const exploreCards = [
   {
