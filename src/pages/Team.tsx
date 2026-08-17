@@ -8,15 +8,15 @@ function initials(name: string) {
 
 function ExecCard({ name, role, image }: TeamMember) {
   return (
-    <div className="group w-40 bg-white rounded-2xl p-5 shadow-card border border-gray-100 hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 text-center cursor-default">
+    <div className="group w-full bg-white rounded-2xl p-5 shadow-card border border-gray-100 hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 text-center cursor-default">
       {image ? (
         <img
           src={image}
           alt={name}
-          className="w-16 h-16 rounded-full object-cover mx-auto mb-3 ring-2 ring-yale-blue/10 group-hover:ring-yale-blue/30 transition-all duration-300"
+          className="w-20 h-20 rounded-full object-cover mx-auto mb-3 ring-2 ring-yale-blue/10 group-hover:ring-yale-blue/30 transition-all duration-300"
         />
       ) : (
-        <div className="w-16 h-16 rounded-full bg-yale-blue/8 text-yale-blue font-bold text-sm flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-blue group-hover:text-white transition-all duration-300">
+        <div className="w-20 h-20 rounded-full bg-yale-blue/8 text-yale-blue font-bold text-base flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-blue group-hover:text-white transition-all duration-300">
           {initials(name)}
         </div>
       )}
@@ -46,21 +46,12 @@ export default function Team() {
             <p className="label-eyebrow mb-2">Leadership</p>
             <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Executive Board</h2>
           </FadeIn>
-          <StaggerContainer className="flex flex-col items-center gap-4">
-            <div className="flex flex-wrap justify-center gap-4">
-              {leadership.slice(0, 2).map((member) => (
-                <StaggerItem key={member.name}>
-                  <ExecCard {...member} />
-                </StaggerItem>
-              ))}
-            </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              {leadership.slice(2).map((member) => (
-                <StaggerItem key={member.name}>
-                  <ExecCard {...member} />
-                </StaggerItem>
-              ))}
-            </div>
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            {leadership.map((member) => (
+              <StaggerItem key={member.name}>
+                <ExecCard {...member} />
+              </StaggerItem>
+            ))}
           </StaggerContainer>
         </div>
       </section>
