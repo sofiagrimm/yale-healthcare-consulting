@@ -1,14 +1,26 @@
+// @ts-ignore
+import vivekImg from '/vivek.png'
+// @ts-ignore
+import neeleshImg from '/neelesh.png'
+// @ts-ignore
+import sofiaImg from '/sofia.png'
+// @ts-ignore
+import kylerImg from '/kyler.png'
+// @ts-ignore
+import colinImg from '/colin.png'
+
 export interface TeamMember {
   name: string
   role: string
+  image?: string
 }
 
 export const leadership: TeamMember[] = [
-  { name: 'Vivek Malik', role: 'President' },
-  { name: 'Neelesh Pandey', role: 'President' },
-  { name: 'Sofia Grimm', role: 'Vice President' },
-  { name: 'Kyler Parker', role: 'Vice President' },
-  { name: 'Colin George', role: 'Vice President' },
+  { name: 'Vivek Malik', role: 'Co-President', image: vivekImg },
+  { name: 'Neelesh Pandey', role: 'Co-President', image: neeleshImg },
+  { name: 'Sofia Grimm', role: 'Vice President of Consulting', image: sofiaImg },
+  { name: 'Kyler Parker', role: 'Vice President of Operations', image: kylerImg },
+  { name: 'Colin George', role: 'Vice President of External Affairs', image: colinImg },
 ]
 
 export const board: TeamMember[] = [
