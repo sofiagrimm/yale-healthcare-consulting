@@ -8,6 +8,14 @@ import sofiaImg from '/sofia.png'
 import kylerImg from '/kyler.png'
 // @ts-ignore
 import colinImg from '/colin.png'
+// @ts-ignore
+import rosenthalImg from '/rosenthal.png'
+// @ts-ignore
+import krystalImg from '/krystal.png'
+// @ts-ignore
+import paltielImg from '/paltiel.png'
+// @ts-ignore
+import gliedImg from '/glied.png'
 
 export interface TeamMember {
   name: string
@@ -31,4 +39,11 @@ export const board: TeamMember[] = [
   { name: 'Emma Lee', role: 'Co-Director of Membership' },
   { name: 'Srishti Swaminathan', role: 'Director of Communications' },
   { name: 'Sean Yu', role: 'Director of Research' },
+]
+
+export const advisors: TeamMember[] = [
+  { name: 'David Rosenthal, MD', role: 'Associate Professor of Medicine, Yale Medical School', image: rosenthalImg },
+  { name: 'John Krystal, MD', role: 'Professor of Psychiatry, Yale Medical School', image: krystalImg },
+  { name: 'A. David Paltiel, PhD, MBA', role: 'Professor of Public Health, Yale School of Public Health', image: paltielImg },
+  { name: 'Sherry Glied, PhD', role: 'Professor of Public Service, New York University', image: gliedImg },
 ]
