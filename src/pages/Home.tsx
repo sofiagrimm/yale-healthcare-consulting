@@ -37,7 +37,7 @@ const exploreCards = [
 ]
 
 const stats = [
-  { value: 50, suffix: '+', label: 'Student Consultants' },
+  { value: 40, suffix: '+', label: 'Student Consultants' },
   { value: 10, suffix: '+', label: 'Client Engagements' },
   { value: 4, suffix: '', label: 'Practice Areas' },
   { value: 1, suffix: '', label: 'Student-Run', display: 'Yale' },
