@@ -16,11 +16,11 @@ export interface TeamMember {
 }
 
 export const leadership: TeamMember[] = [
-  { name: 'Vivek Malik', role: 'President', image: vivekImg },
-  { name: 'Neelesh Pandey', role: 'President', image: neeleshImg },
-  { name: 'Sofia Grimm', role: 'Vice President', image: sofiaImg },
-  { name: 'Kyler Parker', role: 'Vice President', image: kylerImg },
-  { name: 'Colin George', role: 'Vice President', image: colinImg },
+  { name: 'Vivek Malik', role: 'Co-President', image: vivekImg },
+  { name: 'Neelesh Pandey', role: 'Co-President', image: neeleshImg },
+  { name: 'Sofia Grimm', role: 'Vice President of Consulting', image: sofiaImg },
+  { name: 'Kyler Parker', role: 'Vice President of Operations', image: kylerImg },
+  { name: 'Colin George', role: 'Vice President of External Affairs', image: colinImg },
 ]
 
 export const board: TeamMember[] = [
