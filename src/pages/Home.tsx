@@ -123,7 +123,7 @@ export default function Home() {
             </div>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <div className="bg-surface border border-gray-100 rounded-3xl p-10 flex items-center justify-center">
+            <div className="bg-surface border border-gray-100 rounded-3xl p-4 flex items-center justify-center">
               <img
                 src={clientsImg}
                 alt="YHCC Client Organizations"
