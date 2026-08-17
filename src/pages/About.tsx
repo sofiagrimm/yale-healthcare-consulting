@@ -32,7 +32,7 @@ const timeline = [
   },
   {
     year: 'Growth',
-    event: 'Grew to 50+ members across Yale College and the graduate schools. Established four practice areas and a structured project model.',
+    event: 'Grew to 40+ members across Yale College and the graduate schools. Established four practice areas and a structured project model.',
   },
   {
     year: 'Today',
