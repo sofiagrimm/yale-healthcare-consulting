@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router'
 import { Menu, X } from 'lucide-react'
 // @ts-ignore
-import logoImg from '/logo.png'
+import logoImg from '/bluetextlogo.png'
 
 const links = [
   { to: '/', label: 'Home' },
