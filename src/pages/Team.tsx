@@ -1,12 +1,12 @@
 import { FadeIn, StaggerContainer, StaggerItem, BlurReveal } from '../components/animations/FadeIn'
 import { Link } from 'react-router'
-import { leadership, board, TeamMember } from '../data/team'
+import { leadership, board, advisors, TeamMember } from '../data/team'
 
 function initials(name: string) {
   return name.split(' ').map((n) => n[0]).join('')
 }
 
-function ExecCard({ name, role, image }: TeamMember) {
+function ExecCard({ name, role, affiliation, image }: TeamMember) {
   return (
     <div className="group w-full bg-white rounded-2xl p-5 shadow-card border border-gray-100 hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 text-center cursor-default">
       {image ? (
@@ -22,6 +22,7 @@ function ExecCard({ name, role, image }: TeamMember) {
       )}
       <h3 className="font-bold text-yale-blue text-[13px] leading-tight tracking-tight">{name}</h3>
       <p className="text-gray-400 text-[11.5px] mt-1 leading-tight">{role}</p>
+      {affiliation && <p className="text-gray-400 text-[11.5px] leading-tight">{affiliation}</p>}
     </div>
   )
 }
@@ -73,6 +74,23 @@ export default function Team() {
                   <h3 className="font-bold text-yale-blue text-[13px] leading-tight tracking-tight">{name}</h3>
                   <p className="text-gray-400 text-[11.5px] mt-1 leading-tight">{role}</p>
                 </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Board of Advisors */}
+      <section className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn className="mb-10">
+            <p className="label-eyebrow mb-2">Advisors</p>
+            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Board of Advisors</h2>
+          </FadeIn>
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {advisors.map((advisor) => (
+              <StaggerItem key={advisor.name}>
+                <ExecCard {...advisor} />
               </StaggerItem>
             ))}
           </StaggerContainer>
