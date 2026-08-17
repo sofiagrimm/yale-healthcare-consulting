@@ -20,6 +20,7 @@ import gliedImg from '/glied.png'
 export interface TeamMember {
   name: string
   role: string
+  affiliation?: string
   image?: string
 }
 
@@ -42,8 +43,8 @@ export const board: TeamMember[] = [
 ]
 
 export const advisors: TeamMember[] = [
-  { name: 'David Rosenthal, MD', role: 'Associate Professor of Medicine, Yale Medical School', image: rosenthalImg },
-  { name: 'John Krystal, MD', role: 'Professor of Psychiatry, Yale Medical School', image: krystalImg },
-  { name: 'A. David Paltiel, PhD, MBA', role: 'Professor of Public Health, Yale School of Public Health', image: paltielImg },
-  { name: 'Sherry Glied, PhD', role: 'Professor of Public Service, New York University', image: gliedImg },
+  { name: 'David Rosenthal, MD', role: 'Associate Professor of Medicine', affiliation: 'Yale School of Medicine', image: rosenthalImg },
+  { name: 'John Krystal, MD', role: 'Professor of Psychiatry', affiliation: 'Yale School of Medicine', image: krystalImg },
+  { name: 'A. David Paltiel, PhD, MBA', role: 'Professor of Public Health', affiliation: 'Yale School of Public Health', image: paltielImg },
+  { name: 'Sherry Glied, PhD', role: 'Professor of Public Service', affiliation: 'New York University', image: gliedImg },
 ]

@@ -6,7 +6,7 @@ function initials(name: string) {
   return name.split(' ').map((n) => n[0]).join('')
 }
 
-function ExecCard({ name, role, image }: TeamMember) {
+function ExecCard({ name, role, affiliation, image }: TeamMember) {
   return (
     <div className="group w-full bg-white rounded-2xl p-5 shadow-card border border-gray-100 hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 text-center cursor-default">
       {image ? (
@@ -22,6 +22,7 @@ function ExecCard({ name, role, image }: TeamMember) {
       )}
       <h3 className="font-bold text-yale-blue text-[13px] leading-tight tracking-tight">{name}</h3>
       <p className="text-gray-400 text-[11.5px] mt-1 leading-tight">{role}</p>
+      {affiliation && <p className="text-gray-400 text-[11.5px] leading-tight">{affiliation}</p>}
     </div>
   )
 }
