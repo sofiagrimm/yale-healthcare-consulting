@@ -115,7 +115,7 @@ app.post('/api/contact', async (req, res) => {
       to: EMAIL_TO,
       subject: `Inquiry From ${name}`,
       html: `
-        <h2 style="color:#0f4d92">Inquiry From ${name}</h2>
+        <h2 style="color:#14486f">Inquiry From ${name}</h2>
         <table cellpadding="6" style="border-collapse:collapse">
           <tr><td><strong>Name</strong></td><td>${name}</td></tr>
           <tr><td><strong>Email</strong></td><td><a href="mailto:${email}">${email}</a></td></tr>
@@ -150,7 +150,7 @@ app.post('/api/apply', upload.single('resume'), async (req, res) => {
     // ── Google Drive: create doc + upload resume ──────────────────────────
     const docHtml = `
       <html><body style="font-family:Arial,sans-serif;max-width:800px;margin:auto">
-      <h1 style="color:#0f4d92">YHCC F26 Application — ${name}</h1>
+      <h1 style="color:#14486f">YHCC F26 Application — ${name}</h1>
       <p style="color:#666">Submitted: ${timestamp}</p>
       <hr/>
       <h2>Part 1 — Basic Information</h2>
@@ -203,7 +203,7 @@ app.post('/api/apply', upload.single('resume'), async (req, res) => {
       to: EMAIL_TO,
       subject: `F26 Application — ${name}`,
       html: `
-        <h2 style="color:#0f4d92">New F26 Membership Application</h2>
+        <h2 style="color:#14486f">New F26 Membership Application</h2>
         <table cellpadding="6" style="border-collapse:collapse">
           <tr><td><strong>Name</strong></td><td>${name}</td></tr>
           <tr><td><strong>Email</strong></td><td><a href="mailto:${email}">${email}</a></td></tr>

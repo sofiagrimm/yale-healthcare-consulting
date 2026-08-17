@@ -25,7 +25,7 @@
   }
 
   ::selection {
-    background-color: #0f4d92;
+    background-color: #14486f;
     color: #fff;
   }
 
@@ -55,7 +55,7 @@
 
 @layer utilities {
   .bg-hero-gradient {
-    background: linear-gradient(135deg, #0f4d92 0%, #072050 100%);
+    background: linear-gradient(135deg, #14486f 0%, #072050 100%);
   }
 
   /* Subtle noise texture for hero sections */
