@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router'
 import { Menu, X } from 'lucide-react'
 // @ts-ignore
-import logoImg from '/logo.png'
+import logoImg from '/bluetextlogo.png'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -42,8 +42,7 @@ export default function Header() {
           className="flex items-center gap-3 font-bold text-yale-blue text-[15px] leading-tight flex-shrink-0"
         >
           <img src={logoImg} alt="YHCC Logo" className="h-7 w-auto flex-shrink-0" />
-          <span className="hidden lg:inline tracking-tight">Yale Healthcare Consulting Collective</span>
-          <span className="lg:hidden hidden sm:inline tracking-tight">YHCC</span>
+          <span className="hidden sm:inline tracking-tight">Yale Healthcare Consulting Collective</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
