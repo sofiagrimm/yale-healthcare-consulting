@@ -3,7 +3,7 @@ import { Lightbulb, Target, Users, ArrowRight, TrendingUp, FlaskConical, HeartPu
 import { motion } from 'motion/react'
 import { FadeIn, StaggerContainer, StaggerItem, CountUp, BlurReveal, HoverCard, ScaleIn } from '../components/animations/FadeIn'
 // @ts-ignore
-import clientsImg from '/Clients.png'
+import clientsImg from '/currentclients.png'
 
 const exploreCards = [
   {
@@ -123,13 +123,11 @@ export default function Home() {
             </div>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <div className="bg-surface border border-gray-100 rounded-3xl p-10 flex items-center justify-center">
-              <img
-                src={clientsImg}
-                alt="YHCC Client Organizations"
-                className="w-full h-auto object-contain"
-              />
-            </div>
+            <img
+              src={clientsImg}
+              alt="YHCC Client Organizations"
+              className="w-full h-auto object-contain"
+            />
           </FadeIn>
         </div>
       </section>
