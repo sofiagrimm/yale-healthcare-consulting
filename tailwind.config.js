@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'yale-blue': '#0f4d92',
+        'yale-blue': '#14486f',
         'yale-blue-dark': '#093a72',
         'yale-blue-deeper': '#072050',
         'yale-teal': '#1a8a8a',
@@ -19,8 +19,8 @@ export default {
         'display-sm': ['3rem', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, #0f4d92 0%, #072050 100%)',
-        'hero-gradient-subtle': 'linear-gradient(135deg, #0f4d92 0%, #093a72 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #14486f 0%, #072050 100%)',
+        'hero-gradient-subtle': 'linear-gradient(135deg, #14486f 0%, #093a72 100%)',
       },
       boxShadow: {
         'card': '0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06)',
