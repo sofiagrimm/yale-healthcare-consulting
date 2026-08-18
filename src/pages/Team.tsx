@@ -64,24 +64,17 @@ export default function Team() {
             <p className="label-eyebrow mb-2">Board Members</p>
             <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Board</h2>
           </FadeIn>
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {board.map(({ name, role, image }) => (
-              <StaggerItem key={name}>
-                <div className="group bg-white rounded-2xl p-6 shadow-card border border-gray-100 hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 text-center cursor-default">
-                  {image ? (
-                    <img
-                      src={image}
-                      alt={name}
-                      className="w-20 h-20 rounded-full object-cover mx-auto mb-3 ring-2 ring-yale-blue/10 group-hover:ring-yale-blue/30 transition-all duration-300"
-                    />
-                  ) : (
-                    <div className="w-20 h-20 rounded-full bg-yale-blue/8 text-yale-blue font-bold text-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-blue group-hover:text-white transition-all duration-300">
-                      {initials(name)}
-                    </div>
-                  )}
-                  <h3 className="font-bold text-yale-blue text-[13px] leading-tight tracking-tight">{name}</h3>
-                  <p className="text-gray-400 text-[11.5px] mt-1 leading-tight">{role}</p>
-                </div>
+          <StaggerContainer className="flex flex-wrap justify-center gap-4 mb-4">
+            {board.slice(0, 4).map((member) => (
+              <StaggerItem key={member.name} className="w-[45%] sm:w-[30%] lg:w-[22%]">
+                <ExecCard {...member} />
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+          <StaggerContainer className="flex flex-wrap justify-center gap-4">
+            {board.slice(4).map((member) => (
+              <StaggerItem key={member.name} className="w-[45%] sm:w-[30%] lg:w-[22%]">
+                <ExecCard {...member} />
               </StaggerItem>
             ))}
           </StaggerContainer>
