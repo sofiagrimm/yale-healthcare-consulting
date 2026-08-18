@@ -73,7 +73,7 @@ const cases = [
   },
 ]
 
-export default function CaseStudies() {
+export default function PastProjects() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero */}
@@ -81,7 +81,7 @@ export default function CaseStudies() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-6xl mx-auto relative">
           <BlurReveal delay={0.05}><p className="label-eyebrow text-white/40 mb-4">Our Work</p></BlurReveal>
-          <BlurReveal delay={0.15}><h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">Case Studies</h1></BlurReveal>
+          <BlurReveal delay={0.15}><h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">Past Projects</h1></BlurReveal>
           <BlurReveal delay={0.25}><p className="text-white/60 text-base font-normal max-w-md leading-relaxed">Real projects, real clients, real outcomes. Here's what YHCC has worked on.</p></BlurReveal>
         </div>
       </section>
