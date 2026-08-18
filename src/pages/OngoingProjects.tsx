@@ -13,11 +13,11 @@ import hipImg from '/HIP.png'
 import campImg from '/camp.png'
 
 const clients = [
-  { name: 'CT Department of Social Services', focus: 'Focus: Policy landscape, cost modeling', logo: dssImg },
-  { name: 'CT Oral Health Initiative', focus: 'Focus: Research and funding', logo: cohiImg },
-  { name: 'Ronald McDonald House', focus: 'Focus: Volunteer workflow', logo: rmhImg },
-  { name: 'Health Information Project', focus: 'Focus: Expansion', logo: hipImg },
-  { name: 'The Hole in the Wall Gang Camp', focus: 'Focus: Visibility and expansion', logo: campImg },
+  { name: 'CT Department of Social Services', focus: 'Focus: Policy landscape, cost modeling', logo: dssImg, url: 'https://portal.ct.gov/dss?language=en_US' },
+  { name: 'CT Oral Health Initiative', focus: 'Focus: Research and funding', logo: cohiImg, url: 'https://www.ctoralhealth.org/' },
+  { name: 'Ronald McDonald House', focus: 'Focus: Volunteer workflow', logo: rmhImg, url: 'https://www.ronaldmcdonaldhousectma.org/' },
+  { name: 'Health Information Project', focus: 'Focus: Expansion', logo: hipImg, url: 'https://behip.org/' },
+  { name: 'The Hole in the Wall Gang Camp', focus: 'Focus: Visibility and expansion', logo: campImg, url: 'https://www.holeinthewallgang.org/' },
 ]
 
 export default function OngoingProjects() {
@@ -36,15 +36,24 @@ export default function OngoingProjects() {
       {/* Clients */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {clients.map(({ name, focus, logo }) => (
-              <StaggerItem key={name}>
+          <StaggerContainer className="flex flex-wrap justify-center gap-6">
+            {clients.map(({ name, focus, logo, url }) => (
+              <StaggerItem key={name} className="w-full sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)]">
                 <HoverCard className="bg-white border border-gray-100 rounded-2xl shadow-card overflow-hidden h-full">
                   <div className="p-8 flex flex-col items-center text-center h-full">
                     <div className="h-16 flex items-center justify-center mb-5">
                       <img src={logo} alt={`${name} logo`} className="max-h-16 max-w-[180px] object-contain mix-blend-multiply" />
                     </div>
-                    <h3 className="text-[1.05rem] font-bold text-yale-blue tracking-tight leading-tight mb-2">{name}</h3>
+                    <h3 className="text-[1.05rem] font-bold tracking-tight leading-tight mb-2">
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-yale-blue hover:text-yale-teal transition-colors"
+                      >
+                        {name}
+                      </a>
+                    </h3>
                     <p className="text-sm text-gray-500 leading-relaxed">{focus}</p>
                   </div>
                 </HoverCard>
