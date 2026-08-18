@@ -29,7 +29,7 @@ export default function OngoingProjects() {
         <div className="max-w-6xl mx-auto relative">
           <BlurReveal delay={0.05}><p className="label-eyebrow text-white/40 mb-4">Our Work</p></BlurReveal>
           <BlurReveal delay={0.15}><h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">Ongoing Projects</h1></BlurReveal>
-          <BlurReveal delay={0.25}><p className="text-white/60 text-base font-normal max-w-md leading-relaxed">Engagements our teams are actively working on this semester.</p></BlurReveal>
+          <BlurReveal delay={0.25}><p className="text-white/60 text-base font-normal max-w-lg leading-relaxed">Engagements our teams are actively working on this semester. Hover over a client's name below to learn more and visit their website.</p></BlurReveal>
         </div>
       </section>
 
