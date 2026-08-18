@@ -41,9 +41,9 @@ export const leadership: TeamMember[] = [
 export const board: TeamMember[] = [
   { name: 'Nadia Bakhtari', role: 'Co-Director of Outreach' },
   { name: 'Leo Chung', role: 'Co-Director of Outreach' },
-  { name: 'Usman Khalid', role: 'Director of Finance' },
-  { name: 'Holly Tran', role: 'Co-Director of Membership' },
   { name: 'Emma Lee', role: 'Co-Director of Membership', image: emmaImg },
+  { name: 'Holly Tran', role: 'Co-Director of Membership' },
+  { name: 'Usman Khalid', role: 'Director of Finance' },
   { name: 'Srishti Swaminathan', role: 'Director of Communications', image: srishtiImg },
   { name: 'Sean Yu', role: 'Director of Research', image: seanImg },
 ]
