@@ -13,16 +13,16 @@ function ExecCard({ name, role, affiliation, image }: TeamMember) {
         <img
           src={image}
           alt={name}
-          className="w-24 h-24 rounded-full object-cover mx-auto mb-3 ring-2 ring-yale-blue/10 group-hover:ring-yale-blue/30 transition-all duration-300"
+          className="w-28 h-28 rounded-full object-cover mx-auto mb-3 ring-2 ring-yale-blue/10 group-hover:ring-yale-blue/30 transition-all duration-300"
         />
       ) : (
-        <div className="w-24 h-24 rounded-full bg-yale-blue/8 text-yale-blue font-bold text-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-blue group-hover:text-white transition-all duration-300">
+        <div className="w-28 h-28 rounded-full bg-yale-blue/8 text-yale-blue font-bold text-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-blue group-hover:text-white transition-all duration-300">
           {initials(name)}
         </div>
       )}
       <h3 className="font-bold text-yale-blue text-[13px] leading-tight tracking-tight">{name}</h3>
-      <p className="text-gray-400 text-[11.5px] mt-1 leading-tight">{role}</p>
-      {affiliation && <p className="text-gray-400 text-[11.5px] leading-tight">{affiliation}</p>}
+      <p className="text-gray-400 text-[10.5px] mt-1 leading-tight lg:whitespace-nowrap">{role}</p>
+      {affiliation && <p className="text-gray-400 text-[10.5px] leading-tight lg:whitespace-nowrap">{affiliation}</p>}
     </div>
   )
 }
@@ -47,7 +47,7 @@ export default function Team() {
             <p className="label-eyebrow mb-2">Leadership</p>
             <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Executive Board</h2>
           </FadeIn>
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {leadership.map((member) => (
               <StaggerItem key={member.name}>
                 <ExecCard {...member} />
@@ -68,7 +68,7 @@ export default function Team() {
             {board.map(({ name, role }) => (
               <StaggerItem key={name}>
                 <div className="group bg-white rounded-2xl p-6 shadow-card border border-gray-100 hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 text-center cursor-default">
-                  <div className="w-16 h-16 rounded-full bg-yale-blue/8 text-yale-blue font-bold text-base flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-blue group-hover:text-white transition-all duration-300">
+                  <div className="w-20 h-20 rounded-full bg-yale-blue/8 text-yale-blue font-bold text-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-yale-blue group-hover:text-white transition-all duration-300">
                     {initials(name)}
                   </div>
                   <h3 className="font-bold text-yale-blue text-[13px] leading-tight tracking-tight">{name}</h3>
