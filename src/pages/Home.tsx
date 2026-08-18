@@ -103,7 +103,7 @@ export default function Home() {
             <img
               src={dwightHallImg}
               alt="Dwight Hall at Yale"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[42%_35%]"
             />
           </div>
         </div>
