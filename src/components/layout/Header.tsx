@@ -25,6 +25,7 @@ const links: NavItem[] = [
     children: [
       { to: '/projects/ongoing', label: 'Ongoing Projects' },
       { to: '/projects/past', label: 'Past Projects' },
+      { to: '/projects/research-wing', label: 'Research Wing' },
     ],
   },
   { to: '/apply', label: 'Apply' },

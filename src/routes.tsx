@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import Apply from './pages/Apply'
 import OngoingProjects from './pages/OngoingProjects'
 import PastProjects from './pages/PastProjects'
+import ResearchWing from './pages/ResearchWing'
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
       { path: 'team', element: <Team /> },
       { path: 'projects/ongoing', element: <OngoingProjects /> },
       { path: 'projects/past', element: <PastProjects /> },
+      { path: 'projects/research-wing', element: <ResearchWing /> },
       { path: 'apply', element: <Apply /> },
       { path: 'contact', element: <Contact /> },
     ],
