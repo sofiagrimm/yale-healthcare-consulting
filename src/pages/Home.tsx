@@ -5,7 +5,7 @@ import { FadeIn, StaggerContainer, StaggerItem, CountUp, BlurReveal, HoverCard, 
 // @ts-ignore
 import clientsImg from '/currentclients.png'
 // @ts-ignore
-import dwightHallImg from '/DwightHall.png'
+import dwightHallImg from '/DwightHall2.png'
 
 const exploreCards = [
   {
@@ -103,7 +103,7 @@ export default function Home() {
             <img
               src={dwightHallImg}
               alt="Dwight Hall at Yale"
-              className="w-full h-full object-cover object-[42%_35%]"
+              className="w-full h-full object-cover object-[50%_15%]"
             />
           </div>
         </div>
