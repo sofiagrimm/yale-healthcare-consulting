@@ -2,25 +2,6 @@ import { FadeIn, StaggerContainer, StaggerItem, HoverCard, BlurReveal } from '..
 import { Link } from 'react-router'
 import { ArrowRight, GraduationCap, Stethoscope, Globe, Microscope } from 'lucide-react'
 
-const values = [
-  {
-    title: 'The work comes first',
-    desc: 'We care about producing deliverables that clients can actually use, not just completing a project. If a recommendation doesn\'t hold up, we say so.',
-  },
-  {
-    title: 'Community impact is the point',
-    desc: 'As a Dwight Hall member organization, we exist to serve organizations doing meaningful work in healthcare, not to pad resumes. The work has to matter.',
-  },
-  {
-    title: 'Diverse teams on purpose',
-    desc: 'Our teams are composed of health sciences, policy, engineering, and public health students on every project. Healthcare problems don\'t fit neatly into one discipline.',
-  },
-  {
-    title: 'Honest about what we are',
-    desc: 'We\'re students, not McKinsey. We\'re upfront about that. What we bring is time, rigor, and deep interest in the problem, which turns out to be pretty valuable.',
-  },
-]
-
 const timeline = [
   {
     year: 'Founded',
@@ -111,28 +92,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── Values ── */}
-      <section className="py-24 px-6 bg-surface">
-        <div className="max-w-6xl mx-auto">
-          <FadeIn className="mb-10">
-            <p className="label-eyebrow mb-2">How We Work</p>
-            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">A few things we believe in.</h2>
-          </FadeIn>
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {values.map(({ title, desc }) => (
-              <StaggerItem key={title}>
-                <HoverCard className="bg-white border border-gray-100 rounded-2xl p-7 shadow-card">
-                  <h3 className="text-[15px] font-bold text-yale-blue mb-2 tracking-tight">{title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
-                </HoverCard>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
       {/* ── After YHCC ── */}
-      <section className="py-14 md:py-24 px-6">
+      <section className="py-14 md:py-24 px-6 bg-surface">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
             <p className="label-eyebrow mb-2">Career Outcomes</p>
@@ -145,7 +106,7 @@ export default function About() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {afterPaths.map(({ icon, title, desc }) => (
               <StaggerItem key={title}>
-                <HoverCard className="bg-surface border border-gray-100 rounded-2xl p-6">
+                <HoverCard className="bg-white border border-gray-100 rounded-2xl p-6 shadow-card">
                   <div className="text-yale-teal mb-4">{icon}</div>
                   <h3 className="text-sm font-bold text-yale-blue mb-1.5 tracking-tight">{title}</h3>
                   <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
