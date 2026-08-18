@@ -59,15 +59,15 @@ export default function Home() {
       <section className="relative bg-hero-gradient text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-36">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2">
+          <div className="relative px-6 py-20 md:py-36 lg:pl-[max(1.5rem,calc((100vw-1152px)/2+1.5rem))] lg:pr-12 flex items-center">
             <div className="max-w-2xl">
               <BlurReveal delay={0.05}>
                 <p className="label-eyebrow text-white/40 mb-5">Healthcare Consulting</p>
               </BlurReveal>
               <BlurReveal delay={0.15}>
-                <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6">
-                  Yale Healthcare Consulting Collective
+                <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[2.5rem] xl:text-[2.75rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6">
+                  Yale Healthcare<br />Consulting Collective
                 </h1>
               </BlurReveal>
               <BlurReveal delay={0.25}>
@@ -97,14 +97,14 @@ export default function Home() {
                 </div>
               </BlurReveal>
             </div>
+          </div>
 
-            <BlurReveal delay={0.2} className="hidden md:block">
-              <img
-                src={dwightHallImg}
-                alt="Dwight Hall at Yale"
-                className="w-full h-auto rounded-2xl shadow-2xl ring-1 ring-white/10 object-cover"
-              />
-            </BlurReveal>
+          <div className="hidden lg:block">
+            <img
+              src={dwightHallImg}
+              alt="Dwight Hall at Yale"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
