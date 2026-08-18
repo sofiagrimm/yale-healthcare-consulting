@@ -2,7 +2,7 @@ import { FadeIn, StaggerContainer, StaggerItem, HoverCard, BlurReveal } from '..
 import { Link } from 'react-router'
 import { ArrowRight, BarChart2, Megaphone, Wrench, Bot } from 'lucide-react'
 // @ts-ignore
-import clientsImg from '/Clients.png'
+import clientsImg from '/currentclients.png'
 
 const services = [
   {
@@ -158,7 +158,7 @@ export default function Services() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <div className="bg-white rounded-3xl shadow-card border border-gray-100 p-10 flex items-center justify-center">
+            <div className="bg-white rounded-3xl shadow-card border border-gray-100 p-6 flex items-center justify-center">
               <img
                 src={clientsImg}
                 alt="YHCC Client Organizations"
