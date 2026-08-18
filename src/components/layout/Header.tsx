@@ -36,13 +36,12 @@ export default function Header() {
       {/* Accent stripe */}
       <div className="h-0.5 bg-hero-gradient" />
 
-      <div className="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between gap-6">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
         <Link
           to="/"
           className="flex items-center gap-3 font-bold text-yale-blue text-[15px] leading-tight flex-shrink-0"
         >
-          <img src={logoImg} alt="YHCC Logo" className="h-7 w-auto flex-shrink-0" />
-          <span className="hidden sm:inline tracking-tight">Yale Healthcare Consulting Collective</span>
+          <img src={logoImg} alt="YHCC Logo" className="h-10 w-auto flex-shrink-0" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
