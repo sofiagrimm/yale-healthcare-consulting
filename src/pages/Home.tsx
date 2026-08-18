@@ -59,7 +59,7 @@ export default function Home() {
       <section className="relative bg-hero-gradient text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="grid lg:grid-cols-2">
+        <div className="grid lg:grid-cols-[3fr_2fr]">
           <div className="relative px-6 py-20 md:py-36 lg:pl-[max(1.5rem,calc((100vw-1152px)/2+1.5rem))] lg:pr-12 flex items-center">
             <div className="max-w-2xl">
               <BlurReveal delay={0.05}>
@@ -99,11 +99,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:block relative">
             <img
               src={dwightHallImg}
               alt="Dwight Hall at Yale"
-              className="w-full h-full object-cover object-[50%_15%]"
+              className="absolute inset-0 w-full h-full object-cover object-[50%_15%]"
             />
           </div>
         </div>
