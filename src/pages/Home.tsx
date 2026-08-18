@@ -4,6 +4,8 @@ import { motion } from 'motion/react'
 import { FadeIn, StaggerContainer, StaggerItem, CountUp, BlurReveal, HoverCard, ScaleIn } from '../components/animations/FadeIn'
 // @ts-ignore
 import clientsImg from '/currentclients.png'
+// @ts-ignore
+import dwightHallImg from '/DwightHall2.png'
 
 const exploreCards = [
   {
@@ -57,42 +59,52 @@ export default function Home() {
       <section className="relative bg-hero-gradient text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-36">
-          <div className="max-w-2xl">
-            <BlurReveal delay={0.05}>
-              <p className="label-eyebrow text-white/40 mb-5">Healthcare Consulting</p>
-            </BlurReveal>
-            <BlurReveal delay={0.15}>
-              <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6">
-                Yale Healthcare Consulting Collective
-              </h1>
-            </BlurReveal>
-            <BlurReveal delay={0.25}>
-              <p className="text-white/65 text-base md:text-lg font-normal mb-4 leading-relaxed max-w-lg">
-                YHCC's goal is to provide a diverse array of healthcare organizations with the highest level of structured research and strategy. We're a Dwight Hall member organization, which means community impact is our primary goal. Our deliverables end up in clients' grant applications and board presentations, and our recommendations inform strategic decisions.
-              </p>
-              <p className="text-white/55 text-sm font-normal mb-9 leading-relaxed max-w-lg">
-                We welcome motivated Yale students interested in healthcare who want to work on something that matters.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 bg-white text-yale-blue px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-sm"
-                  >
-                    Work With Us <ArrowRight size={14} />
-                  </Link>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                  <Link
-                    to="/services"
-                    className="inline-flex items-center gap-2 border border-white/25 text-white/90 px-6 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 hover:border-white/40 transition-colors"
-                  >
-                    Our Services
-                  </Link>
-                </motion.div>
-              </div>
-            </BlurReveal>
+        <div className="grid lg:grid-cols-[3fr_2fr]">
+          <div className="relative px-6 py-20 md:py-36 lg:pl-[max(1.5rem,calc((100vw-1152px)/2+1.5rem))] lg:pr-12 flex items-center">
+            <div className="max-w-2xl">
+              <BlurReveal delay={0.05}>
+                <p className="label-eyebrow text-white/40 mb-5">Healthcare Consulting</p>
+              </BlurReveal>
+              <BlurReveal delay={0.15}>
+                <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[2.5rem] xl:text-[2.75rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6">
+                  Yale Healthcare<br />Consulting Collective
+                </h1>
+              </BlurReveal>
+              <BlurReveal delay={0.25}>
+                <p className="text-white/65 text-base md:text-lg font-normal mb-4 leading-relaxed max-w-lg">
+                  YHCC's goal is to provide a diverse array of healthcare organizations with the highest level of structured research and strategy. We're a Dwight Hall member organization, which means community impact is our primary goal. Our deliverables end up in clients' grant applications and board presentations, and our recommendations inform strategic decisions.
+                </p>
+                <p className="text-white/55 text-sm font-normal mb-9 leading-relaxed max-w-lg">
+                  We welcome motivated Yale students interested in healthcare who want to work on something that matters.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center gap-2 bg-white text-yale-blue px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-sm"
+                    >
+                      Work With Us <ArrowRight size={14} />
+                    </Link>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                    <Link
+                      to="/services"
+                      className="inline-flex items-center gap-2 border border-white/25 text-white/90 px-6 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 hover:border-white/40 transition-colors"
+                    >
+                      Our Services
+                    </Link>
+                  </motion.div>
+                </div>
+              </BlurReveal>
+            </div>
+          </div>
+
+          <div className="hidden lg:block relative">
+            <img
+              src={dwightHallImg}
+              alt="Dwight Hall at Yale"
+              className="absolute inset-0 w-full h-full object-cover object-[50%_15%]"
+            />
           </div>
         </div>
       </section>
