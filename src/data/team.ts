@@ -16,6 +16,12 @@ import krystalImg from '/krystal.png'
 import paltielImg from '/paltiel.png'
 // @ts-ignore
 import gliedImg from '/glied.png'
+// @ts-ignore
+import seanImg from '/sean.jpg'
+// @ts-ignore
+import emmaImg from '/emma.jpeg'
+// @ts-ignore
+import srishtiImg from '/srishti.png'
 
 export interface TeamMember {
   name: string
@@ -35,11 +41,11 @@ export const leadership: TeamMember[] = [
 export const board: TeamMember[] = [
   { name: 'Nadia Bakhtari', role: 'Co-Director of Outreach' },
   { name: 'Leo Chung', role: 'Co-Director of Outreach' },
-  { name: 'Usman Khalid', role: 'Director of Finance' },
+  { name: 'Emma Lee', role: 'Co-Director of Membership', image: emmaImg },
   { name: 'Holly Tran', role: 'Co-Director of Membership' },
-  { name: 'Emma Lee', role: 'Co-Director of Membership' },
-  { name: 'Srishti Swaminathan', role: 'Director of Communications' },
-  { name: 'Sean Yu', role: 'Director of Research' },
+  { name: 'Usman Khalid', role: 'Director of Finance' },
+  { name: 'Srishti Swaminathan', role: 'Director of Communications', image: srishtiImg },
+  { name: 'Sean Yu', role: 'Director of Research', image: seanImg },
 ]
 
 export const advisors: TeamMember[] = [
