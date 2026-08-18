@@ -64,7 +64,7 @@ export default function Home() {
             </BlurReveal>
             <BlurReveal delay={0.15}>
               <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6">
-                High-impact healthcare consulting
+                Yale Healthcare Consulting Collective
               </h1>
             </BlurReveal>
             <BlurReveal delay={0.25}>

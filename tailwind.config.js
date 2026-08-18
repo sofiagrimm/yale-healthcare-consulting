@@ -7,7 +7,7 @@ export default {
         'yale-blue': '#14486f',
         'yale-blue-dark': '#093a72',
         'yale-blue-deeper': '#072050',
-        'yale-teal': '#1a8a8a',
+        'yale-teal': '#29b6c6',
         'yale-teal-light': '#e6f4f4',
         'surface': '#f8f8f6',
       },
