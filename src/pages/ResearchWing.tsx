@@ -30,18 +30,26 @@ export default function ResearchWing() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero */}
-      <section className="relative bg-hero-gradient text-white py-28 px-6 overflow-hidden">
+      <section className="relative h-[220px] sm:h-[260px] md:h-[320px] overflow-hidden bg-hero-gradient">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
-        <div className="max-w-6xl mx-auto relative">
-          <BlurReveal delay={0.05}><p className="label-eyebrow text-white/40 mb-4">Our Work</p></BlurReveal>
-          <BlurReveal delay={0.15}><h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">Research Wing</h1></BlurReveal>
-          <BlurReveal delay={0.25}><p className="text-white/60 text-base font-normal max-w-lg leading-relaxed">Academic-style research alongside our consulting engagements, done in partnership with Yale faculty and policy organizations.</p></BlurReveal>
+        <div className="absolute inset-0 flex items-end px-6">
+          <div className="max-w-6xl mx-auto w-full pb-6 md:pb-8">
+            <BlurReveal delay={0.1}>
+              <h1 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] font-bold tracking-[-0.03em] text-white drop-shadow-[0_2px_12px_rgba(7,32,80,0.6)]">
+                Research
+              </h1>
+            </BlurReveal>
+          </div>
         </div>
       </section>
 
       {/* What We Do */}
-      <section className="py-20 px-6">
+      <section className="py-14 md:py-20 px-6">
         <div className="max-w-6xl mx-auto">
+          <FadeIn className="mb-10 max-w-2xl">
+            <p className="label-eyebrow mb-2">Our Work</p>
+            <p className="prose-body">Academic-style research alongside our consulting engagements, done in partnership with Yale faculty and policy organizations.</p>
+          </FadeIn>
           <FadeIn className="mb-10">
             <p className="label-eyebrow mb-2">What We Do</p>
             <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Two areas of focus</h2>
