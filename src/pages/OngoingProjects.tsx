@@ -2,6 +2,8 @@ import { Link } from 'react-router'
 import { ArrowRight } from 'lucide-react'
 import { FadeIn, BlurReveal, StaggerContainer, StaggerItem, HoverCard } from '../components/animations/FadeIn'
 // @ts-ignore
+import ongoingHeroImg from '/ongoing-hero.jpg'
+// @ts-ignore
 import dssImg from '/dss.png'
 // @ts-ignore
 import cohiImg from '/COHI.png'
@@ -24,18 +26,31 @@ export default function OngoingProjects() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero */}
-      <section className="relative bg-hero-gradient text-white py-28 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
-        <div className="max-w-6xl mx-auto relative">
-          <BlurReveal delay={0.05}><p className="label-eyebrow text-white/40 mb-4">Our Work</p></BlurReveal>
-          <BlurReveal delay={0.15}><h1 className="text-[2.75rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">Ongoing Projects</h1></BlurReveal>
-          <BlurReveal delay={0.25}><p className="text-white/60 text-base font-normal max-w-lg leading-relaxed">Engagements our teams are actively working on this semester. Hover over a client's name below to learn more and visit their website.</p></BlurReveal>
+      <section className="relative h-[220px] sm:h-[260px] md:h-[320px] overflow-hidden">
+        <img
+          src={ongoingHeroImg}
+          alt="Yale University campus"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(7,32,80,0.88)_0%,rgba(7,32,80,0.25)_40%,rgba(7,32,80,0)_75%)]" />
+        <div className="absolute inset-0 flex items-end px-6">
+          <div className="max-w-6xl mx-auto w-full pb-6 md:pb-8">
+            <BlurReveal delay={0.1}>
+              <h1 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] font-bold tracking-[-0.03em] text-white drop-shadow-[0_2px_12px_rgba(7,32,80,0.6)]">
+                Ongoing Projects
+              </h1>
+            </BlurReveal>
+          </div>
         </div>
       </section>
 
       {/* Clients */}
-      <section className="py-20 px-6">
+      <section className="py-14 md:py-20 px-6">
         <div className="max-w-6xl mx-auto">
+          <FadeIn className="mb-10 max-w-2xl">
+            <p className="label-eyebrow mb-2">Our Work</p>
+            <p className="prose-body">Engagements our teams are actively working on this semester. Hover over a client's name below to learn more and visit their website.</p>
+          </FadeIn>
           <StaggerContainer className="flex flex-wrap justify-center gap-6">
             {clients.map(({ name, focus, logo, url }) => (
               <StaggerItem key={name} className="w-full sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)]">

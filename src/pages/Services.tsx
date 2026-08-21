@@ -3,6 +3,8 @@ import { Link } from 'react-router'
 import { ArrowRight, BarChart2, Megaphone, Wrench, Bot } from 'lucide-react'
 // @ts-ignore
 import clientsImg from '/currentclients.png'
+// @ts-ignore
+import servicesHeroImg from '/services-hero.jpg'
 
 const services = [
   {
@@ -70,16 +72,21 @@ export default function Services() {
   return (
     <div className="overflow-x-hidden">
       {/* ── Hero ── */}
-      <section className="relative bg-hero-gradient text-white py-16 md:py-28 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
-        <div className="max-w-6xl mx-auto relative">
-          <BlurReveal delay={0.05}><p className="label-eyebrow text-white/40 mb-4">Our Services</p></BlurReveal>
-          <BlurReveal delay={0.15}>
-            <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.25rem] font-bold tracking-[-0.03em] mb-5 leading-[1.1]">How We Create Impact</h1>
-          </BlurReveal>
-          <BlurReveal delay={0.25}>
-            <p className="text-white/60 text-base font-normal max-w-md leading-relaxed">Four practice areas. Scoped around your problem.</p>
-          </BlurReveal>
+      <section className="relative h-[220px] sm:h-[260px] md:h-[320px] overflow-hidden">
+        <img
+          src={servicesHeroImg}
+          alt="Yale University campus"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-yale-blue-deeper/95 via-yale-blue-deeper/35 to-yale-blue-deeper/10" />
+        <div className="absolute inset-0 flex items-end">
+          <div className="max-w-6xl mx-auto px-6 w-full pb-6 md:pb-8">
+            <BlurReveal delay={0.1}>
+              <h1 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] font-bold tracking-[-0.03em] text-white drop-shadow-[0_2px_12px_rgba(7,32,80,0.6)]">
+                Our Services
+              </h1>
+            </BlurReveal>
+          </div>
         </div>
       </section>
 
