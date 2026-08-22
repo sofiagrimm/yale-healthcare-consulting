@@ -74,10 +74,10 @@ export default function Home() {
                 <div className="flex flex-wrap gap-3">
                   <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                     <Link
-                      to="/contact"
+                      to="/apply"
                       className="inline-flex items-center gap-2 bg-white text-yale-blue px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-sm"
                     >
-                      Work With Us <ArrowRight size={14} />
+                      Apply <ArrowRight size={14} />
                     </Link>
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
@@ -143,27 +143,27 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_100%,rgba(255,255,255,0.05)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch relative">
           <FadeIn direction="left">
-            <div className="h-full bg-white/8 backdrop-blur-sm border border-white/12 rounded-3xl p-8 md:p-10 flex flex-col justify-center">
-              <div className="text-5xl text-white/15 font-serif leading-none select-none mb-5">&ldquo;</div>
-              <p className="text-white text-lg md:text-xl font-light leading-[1.7] tracking-[-0.01em]">
+            <div className="h-full flex flex-col justify-center border-l-4 border-yale-teal pl-8 md:pl-10 py-2">
+              <div className="text-6xl text-yale-teal font-serif leading-none select-none mb-4">&ldquo;</div>
+              <p className="text-white text-xl md:text-2xl font-light leading-[1.6] tracking-[-0.01em]">
                 Working with YHCC was a seamless experience, and the results were invaluable. Their team
                 provided digitized surveys, thorough data analysis, and a comprehensive report outlining
                 methodology, outcomes, and actionable recommendations. We've already incorporated several
                 of the findings into grants.
               </p>
-              <div className="mt-8 pt-6 border-t border-white/12 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center text-white font-semibold text-xs flex-shrink-0">
+              <div className="mt-8 pt-6 border-t border-white/15 flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full bg-yale-teal/15 border border-yale-teal/40 flex items-center justify-center text-yale-teal font-semibold text-sm flex-shrink-0">
                   BS
                 </div>
                 <div>
                   <div className="font-semibold text-white text-sm">Bethany Simmonds</div>
-                  <div className="text-white/50 text-xs mt-0.5">Senior Director of Advancement, Mental Health CT</div>
+                  <div className="text-white/55 text-xs mt-0.5">Senior Director of Advancement, Mental Health CT</div>
                 </div>
               </div>
             </div>
           </FadeIn>
           <FadeIn direction="right" delay={0.1} className="hidden md:block">
-            <div className="h-full min-h-[320px] rounded-3xl bg-white/8 backdrop-blur-sm border border-white/12" />
+            <div className="h-full min-h-[320px] rounded-2xl bg-white/10 border border-white/20" />
           </FadeIn>
         </div>
       </section>
@@ -202,10 +202,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
             <p className="label-eyebrow mb-2">Career Outcomes</p>
-            <h2 className="text-[2rem] font-bold text-yale-blue mb-3 tracking-tight">After YHCC</h2>
-            <p className="prose-body max-w-xl">
-              Members go on to med school, consulting, MPH programs, and research roles.
-            </p>
+            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">After YHCC</h2>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
             {afterYHCC.map(({ icon, path }) => (
@@ -223,7 +220,7 @@ export default function Home() {
                 <p className="text-[11px] font-semibold text-white/45 uppercase tracking-[0.15em] mb-1">Recruiting</p>
                 <h3 className="text-lg font-bold mb-1.5 tracking-tight">We recruit at the start of each semester.</h3>
                 <p className="text-white/60 text-sm max-w-md leading-relaxed">
-                  Info sessions, the extracurricular bazaar, and an open application.
+                  Info sessions, optional coffee chats, and an open application.
                 </p>
               </div>
               <Link
