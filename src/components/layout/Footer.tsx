@@ -50,6 +50,13 @@ export default function Footer() {
                 <Mail size={14} />
               </a>
             </div>
+            <p className="text-xs text-gray-400 leading-relaxed mt-5 max-w-sm">
+              &ldquo;Yale&rdquo; and &ldquo;Yale University&rdquo; are registered trademarks of Yale University.
+              This website is a student run website and is maintained, hosted, and operated independently of
+              Yale University. The activities on this website are not supervised or endorsed by Yale and
+              information contained on this website does not necessarily reflect the opinions or official
+              positions of the University.
+            </p>
           </div>
 
           {/* Nav */}
@@ -83,10 +90,10 @@ export default function Footer() {
         <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
           <div>
             <p className="text-xs text-gray-400">
-              &copy; {new Date().getFullYear()} Yale Healthcare Consulting Collective. All rights reserved.
+              Campus photos courtesy of Yale University Office of Public Affairs &amp; Communications
             </p>
             <p className="text-xs text-gray-400 mt-1">
-              Photos courtesy of Yale University Office of Public Affairs &amp; Communications
+              &copy; {new Date().getFullYear()} Yale Healthcare Consulting Collective. All rights reserved.
             </p>
           </div>
           <p className="text-xs text-gray-400">
