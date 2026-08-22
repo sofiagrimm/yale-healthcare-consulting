@@ -5,7 +5,7 @@ import { FadeIn, StaggerContainer, StaggerItem, CountUp, BlurReveal, HoverCard, 
 // @ts-ignore
 import clientsImg from '/currentclients.png'
 // @ts-ignore
-import dwightHallImg from '/DwightHall2.png'
+import harknessTowerImg from '/harkness_tower.jpg'
 
 const exploreCards = [
   {
@@ -101,8 +101,8 @@ export default function Home() {
 
           <div className="hidden lg:block relative">
             <img
-              src={dwightHallImg}
-              alt="Dwight Hall at Yale"
+              src={harknessTowerImg}
+              alt="Harkness Tower at Yale"
               className="absolute inset-0 w-full h-full object-cover object-[50%_15%]"
             />
           </div>
