@@ -50,7 +50,7 @@ export default function Footer() {
                 <Mail size={14} />
               </a>
             </div>
-            <p className="text-xs text-gray-400 leading-relaxed mt-5 max-w-sm">
+            <p className="text-xs text-gray-400 leading-relaxed mt-5 max-w-xl">
               &ldquo;Yale&rdquo; and &ldquo;Yale University&rdquo; are registered trademarks of Yale University.
               This website is a student run website and is maintained, hosted, and operated independently of
               Yale University. The activities on this website are not supervised or endorsed by Yale and
@@ -62,17 +62,21 @@ export default function Footer() {
           {/* Nav */}
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gray-600 mb-4">Navigation</p>
-            <nav className="flex flex-col gap-2.5">
-              {nav.map(({ label, to }) => (
-                <Link
-                  key={to}
-                  to={to}
-                  className="text-sm text-gray-400 hover:text-white transition-colors duration-150"
-                >
-                  {label}
-                </Link>
+            <div className="flex gap-8">
+              {[nav.slice(0, 3), nav.slice(3)].map((col, i) => (
+                <nav key={i} className="flex flex-col gap-2.5">
+                  {col.map(({ label, to }) => (
+                    <Link
+                      key={to}
+                      to={to}
+                      className="text-sm text-gray-400 hover:text-white transition-colors duration-150"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </nav>
               ))}
-            </nav>
+            </div>
           </div>
 
           {/* Contact */}
