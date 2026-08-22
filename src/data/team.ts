@@ -37,8 +37,8 @@ export interface TeamMember {
 export const leadership: TeamMember[] = [
   { name: 'Vivek Malik', role: 'Co-President', image: vivekImg },
   { name: 'Neelesh Pandey', role: 'Co-President', image: neeleshImg },
-  { name: 'Sofia Grimm', role: 'Vice President of Consulting', image: sofiaImg },
   { name: 'Kyler Parker', role: 'Vice President of Operations', image: kylerImg },
+  { name: 'Sofia Grimm', role: 'Vice President of Consulting', image: sofiaImg },
   { name: 'Colin George', role: 'Vice President of External Affairs', image: colinImg },
 ]
 
