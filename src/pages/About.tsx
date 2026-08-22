@@ -1,8 +1,15 @@
 import { FadeIn, StaggerContainer, StaggerItem, HoverCard, BlurReveal } from '../components/animations/FadeIn'
 import { Link } from 'react-router'
-import { ArrowRight, GraduationCap, Stethoscope, Globe, Microscope } from 'lucide-react'
+import { ArrowRight, GraduationCap, Stethoscope, Globe, Microscope, Lightbulb, Target, Users, TrendingUp } from 'lucide-react'
 // @ts-ignore
 import aboutHeroImg from '/about-hero.jpg'
+
+const whoWeAreCards = [
+  { icon: <Lightbulb size={18} />, title: 'Cross-disciplinary teams', desc: 'STEM, econ, public health, engineering, mixed on purpose.' },
+  { icon: <Target size={18} />, title: 'Scoped to your needs', desc: 'We scope each project around your specific problem, not a template.' },
+  { icon: <Users size={18} />, title: 'Consistent point of contact', desc: 'One team, one project lead, clear communication throughout.' },
+  { icon: <TrendingUp size={18} />, title: 'Deliverables you can use', desc: 'Reports, models, and presentations built for decision-making.' },
+]
 
 const timeline = [
   {
@@ -52,8 +59,35 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── Mission ── */}
+      {/* ── Who We Are ── */}
       <section className="py-14 md:py-24 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <FadeIn direction="left">
+            <p className="label-eyebrow mb-3">Who We Are</p>
+            <h2 className="text-[2rem] font-bold text-yale-blue mb-5 leading-tight tracking-tight">
+              A student consulting group at Yale.
+            </h2>
+            <p className="prose-body">
+              We started YHCC because a lot of healthcare nonprofits in Connecticut don't have the
+              bandwidth for the kind of structured research and strategy work they actually need.
+            </p>
+          </FadeIn>
+          <FadeIn direction="right" delay={0.1}>
+            <div className="grid grid-cols-2 gap-3">
+              {whoWeAreCards.map(({ icon, title, desc }) => (
+                <HoverCard key={title} className="bg-surface border border-gray-100 rounded-xl p-5">
+                  <div className="text-yale-teal mb-3">{icon}</div>
+                  <h3 className="text-[13px] font-bold text-yale-blue mb-1.5 leading-tight">{title}</h3>
+                  <p className="text-[12.5px] text-gray-500 leading-relaxed">{desc}</p>
+                </HoverCard>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ── Mission ── */}
+      <section className="py-14 md:py-24 px-6 bg-surface">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <FadeIn direction="left">
             <p className="label-eyebrow mb-3">Our Story</p>
@@ -94,7 +128,7 @@ export default function About() {
       </section>
 
       {/* ── After YHCC ── */}
-      <section className="py-14 md:py-24 px-6 bg-surface">
+      <section className="py-14 md:py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
             <p className="label-eyebrow mb-2">Career Outcomes</p>
