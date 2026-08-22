@@ -106,44 +106,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Who We Are ── */}
-      <section className="py-14 md:py-24 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <FadeIn direction="left">
-            <p className="label-eyebrow mb-3">Who We Are</p>
-            <h2 className="text-[2rem] font-bold text-yale-blue mb-5 leading-tight tracking-tight">
-              A student consulting group at Yale.
-            </h2>
-            <p className="prose-body mb-7">
-              We started YHCC because a lot of healthcare nonprofits in Connecticut don't have the
-              bandwidth for the kind of structured research and strategy work they actually need.
-            </p>
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-1.5 text-yale-blue font-semibold text-sm hover:text-yale-teal transition-colors"
-            >
-              Our story <ArrowRight size={13} />
-            </Link>
-          </FadeIn>
-          <FadeIn direction="right" delay={0.1}>
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                { icon: <Lightbulb size={18} />, title: 'Cross-disciplinary teams', desc: 'STEM, econ, public health, engineering, mixed on purpose.' },
-                { icon: <Target size={18} />, title: 'Scoped to your needs', desc: 'We scope each project around your specific problem, not a template.' },
-                { icon: <Users size={18} />, title: 'Consistent point of contact', desc: 'One team, one project lead, clear communication throughout.' },
-                { icon: <TrendingUp size={18} />, title: 'Deliverables you can use', desc: 'Reports, models, and presentations built for decision-making.' },
-              ].map(({ icon, title, desc }) => (
-                <HoverCard key={title} className="bg-surface border border-gray-100 rounded-xl p-5">
-                  <div className="text-yale-teal mb-3">{icon}</div>
-                  <h3 className="text-[13px] font-bold text-yale-blue mb-1.5 leading-tight">{title}</h3>
-                  <p className="text-[12.5px] text-gray-500 leading-relaxed">{desc}</p>
-                </HoverCard>
-              ))}
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* ── Stats Bar ── */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-9 grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-gray-100">
@@ -161,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* ── Recent Clients ── */}
-      <section className="pt-12 md:pt-20 pb-6 md:pb-8 px-6 bg-surface">
+      <section className="pt-12 md:pt-20 pb-6 md:pb-8 px-6">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
             <div>
@@ -180,10 +142,10 @@ export default function Home() {
       </section>
 
       {/* ── Testimonial ── */}
-      <section className="py-14 md:py-24 px-6">
+      <section className="py-14 md:py-24 px-6 bg-surface">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
           <FadeIn direction="left">
-            <div className="h-full bg-surface border border-gray-100 rounded-3xl p-8 md:p-10 flex flex-col justify-center shadow-card">
+            <div className="h-full bg-white border border-gray-100 rounded-3xl p-8 md:p-10 flex flex-col justify-center shadow-card">
               <div className="text-5xl text-yale-blue/15 font-serif leading-none select-none mb-5">&ldquo;</div>
               <p className="text-yale-blue text-lg md:text-xl font-light leading-[1.7] tracking-[-0.01em]">
                 Working with YHCC was a seamless experience, and the results were invaluable. Their team
@@ -203,13 +165,13 @@ export default function Home() {
             </div>
           </FadeIn>
           <FadeIn direction="right" delay={0.1} className="hidden md:block">
-            <div className="h-full min-h-[320px] rounded-3xl bg-gradient-to-br from-yale-blue/[0.06] via-yale-teal/[0.05] to-yale-blue/[0.1] border border-gray-100" />
+            <div className="h-full min-h-[320px] rounded-3xl bg-white bg-gradient-to-br from-yale-blue/[0.06] via-yale-teal/[0.05] to-yale-blue/[0.1] border border-gray-100 shadow-card" />
           </FadeIn>
         </div>
       </section>
 
       {/* ── Explore YHCC ── */}
-      <section className="py-24 px-6 bg-surface">
+      <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-12">
             <p className="label-eyebrow mb-2">Explore YHCC</p>
@@ -238,7 +200,7 @@ export default function Home() {
       </section>
 
       {/* ── After YHCC ── */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 bg-surface">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
             <p className="label-eyebrow mb-2">Career Outcomes</p>
