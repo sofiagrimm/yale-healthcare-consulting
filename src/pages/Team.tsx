@@ -134,8 +134,9 @@ export default function Team() {
               <h3 className="text-xl font-bold text-yale-blue mb-3 tracking-tight">Diversity &amp; Inclusion</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 YHCC is committed to fostering a diverse and inclusive environment. We believe that varied
-                perspectives and backgrounds strengthen our work and enable us to better serve the
-                healthcare community. We welcome students from all Yale schools and all backgrounds.
+                perspectives and experiences strengthen our work and enable us to better serve the
+                healthcare community. We welcome Yale College students from all backgrounds to apply and
+                get involved.
               </p>
             </div>
           </FadeIn>
