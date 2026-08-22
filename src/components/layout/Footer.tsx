@@ -97,6 +97,9 @@ export default function Footer() {
             Dwight Hall at Yale · Member Organization
           </p>
         </div>
+        <p className="text-[11px] text-gray-700 text-center mt-4">
+          Photos courtesy of Yale University Office of Public Affairs &amp; Communications
+        </p>
       </div>
     </footer>
   )
