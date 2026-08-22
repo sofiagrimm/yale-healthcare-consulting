@@ -62,9 +62,6 @@ export default function Home() {
         <div className="grid lg:grid-cols-[3fr_2fr]">
           <div className="relative px-6 py-20 md:py-36 lg:pl-[max(1.5rem,calc((100vw-1152px)/2+1.5rem))] lg:pr-12 flex items-center">
             <div className="max-w-2xl">
-              <BlurReveal delay={0.05}>
-                <p className="label-eyebrow text-white/40 mb-5">Healthcare Consulting</p>
-              </BlurReveal>
               <BlurReveal delay={0.15}>
                 <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[2.5rem] xl:text-[2.75rem] font-bold tracking-[-0.03em] leading-[1.08] mb-6">
                   Yale Healthcare<br />Consulting Collective
@@ -72,7 +69,7 @@ export default function Home() {
               </BlurReveal>
               <BlurReveal delay={0.25}>
                 <p className="text-white/65 text-base md:text-lg font-normal mb-9 leading-relaxed max-w-lg">
-                  Yale Healthcare Consulting Collective's (YHCC) mission is to provide a diverse array of healthcare organizations with structured pro-bono research and strategy. As a Dwight Hall member organization, community impact is our primary goal. Our deliverables end up in clients' grant applications and board presentations, and our recommendations inform strategic decisions.
+                  Yale Healthcare Consulting Collective (YHCC) provides a diverse array of healthcare organizations with structured pro-bono research and strategy. As a Dwight Hall member organization, community impact is our primary goal. Our deliverables end up in clients' grant applications and board presentations, and our recommendations inform strategic decisions.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
@@ -107,8 +104,8 @@ export default function Home() {
       </section>
 
       {/* ── Stats Bar ── */}
-      <section className="bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 py-9 grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-gray-100">
+      <section className="bg-surface">
+        <div className="max-w-6xl mx-auto px-6 py-9 grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-gray-200">
           {stats.map(({ value, suffix, label, display }, i) => (
             <ScaleIn key={label} delay={i * 0.08}>
               <div className="text-center px-4">
