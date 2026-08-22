@@ -142,30 +142,31 @@ export default function Home() {
       </section>
 
       {/* ── Testimonial ── */}
-      <section className="py-14 md:py-24 px-6 bg-surface">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
+      <section className="py-14 md:py-24 px-6 bg-hero-gradient relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_100%,rgba(255,255,255,0.05)_0%,transparent_60%)] pointer-events-none" />
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch relative">
           <FadeIn direction="left">
-            <div className="h-full bg-white border border-gray-100 rounded-3xl p-8 md:p-10 flex flex-col justify-center shadow-card">
-              <div className="text-5xl text-yale-blue/15 font-serif leading-none select-none mb-5">&ldquo;</div>
-              <p className="text-yale-blue text-lg md:text-xl font-light leading-[1.7] tracking-[-0.01em]">
+            <div className="h-full bg-white/8 backdrop-blur-sm border border-white/12 rounded-3xl p-8 md:p-10 flex flex-col justify-center">
+              <div className="text-5xl text-white/15 font-serif leading-none select-none mb-5">&ldquo;</div>
+              <p className="text-white text-lg md:text-xl font-light leading-[1.7] tracking-[-0.01em]">
                 Working with YHCC was a seamless experience, and the results were invaluable. Their team
                 provided digitized surveys, thorough data analysis, and a comprehensive report outlining
                 methodology, outcomes, and actionable recommendations. We've already incorporated several
                 of the findings into grants.
               </p>
-              <div className="mt-8 pt-6 border-t border-gray-200 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-yale-blue/10 flex items-center justify-center text-yale-blue font-semibold text-xs flex-shrink-0">
+              <div className="mt-8 pt-6 border-t border-white/12 flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center text-white font-semibold text-xs flex-shrink-0">
                   BS
                 </div>
                 <div>
-                  <div className="font-semibold text-yale-blue text-sm">Bethany Simmonds</div>
-                  <div className="text-gray-500 text-xs mt-0.5">Senior Director of Advancement, Mental Health CT</div>
+                  <div className="font-semibold text-white text-sm">Bethany Simmonds</div>
+                  <div className="text-white/50 text-xs mt-0.5">Senior Director of Advancement, Mental Health CT</div>
                 </div>
               </div>
             </div>
           </FadeIn>
           <FadeIn direction="right" delay={0.1} className="hidden md:block">
-            <div className="h-full min-h-[320px] rounded-3xl bg-white bg-gradient-to-br from-yale-blue/[0.06] via-yale-teal/[0.05] to-yale-blue/[0.1] border border-gray-100 shadow-card" />
+            <div className="h-full min-h-[320px] rounded-3xl bg-white/8 backdrop-blur-sm border border-white/12" />
           </FadeIn>
         </div>
       </section>
