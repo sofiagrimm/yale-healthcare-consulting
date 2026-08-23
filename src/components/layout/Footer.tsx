@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a0f1a] text-gray-400">
       <div className="max-w-6xl mx-auto px-6 pt-16 pb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_auto] gap-10 sm:gap-16 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_auto] gap-10 sm:gap-16 mb-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-5">
@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+        <div className="border-t border-white/5 pt-5 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
           <div>
             <p className="text-xs text-gray-400">
               Campus photos courtesy of Yale University Office of Public Affairs &amp; Communications
