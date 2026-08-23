@@ -1,6 +1,5 @@
 import { FadeIn, StaggerContainer, StaggerItem, HoverCard, BlurReveal } from '../components/animations/FadeIn'
-import { Link } from 'react-router'
-import { ArrowRight, GraduationCap, Stethoscope, Globe, Microscope, Lightbulb, Target, Users, TrendingUp } from 'lucide-react'
+import { GraduationCap, Stethoscope, Globe, Microscope, Lightbulb, Target, Users, TrendingUp } from 'lucide-react'
 // @ts-ignore
 import aboutHeroImg from '/about-hero.jpg'
 
@@ -13,8 +12,8 @@ const whoWeAreCards = [
 
 const timeline = [
   {
-    year: 'Founded',
-    event: 'YHCC started as a Dwight Hall at Yale member organization, with a focus on consulting for Connecticut healthcare nonprofits.',
+    year: 'Founded in 2022',
+    event: 'YHCC started as a small group of students focused on consulting for healthcare nonprofits in the New Haven area.',
   },
   {
     year: 'First Projects',
@@ -22,11 +21,11 @@ const timeline = [
   },
   {
     year: 'Growth',
-    event: 'Grew to 40+ members across Yale College and the graduate schools. Established four practice areas and a structured project model.',
+    event: 'Grew to 40+ members across Yale College. Established four practice areas and a structured project model.',
   },
   {
     year: 'Today',
-    event: 'Active projects with 10+ organizations. Alumni in medical school, consulting, and public health roles across the country.',
+    event: 'Completed projects with 10+ organizations based in Connecticut and nationwide, expanding beyond our New Haven community. Alumni in medical school, consulting, and public health roles across the country.',
   },
 ]
 
@@ -92,28 +91,24 @@ export default function About() {
           <FadeIn direction="left">
             <p className="label-eyebrow mb-3">Our Story</p>
             <h2 className="text-[2rem] font-bold text-yale-blue mb-6 leading-tight tracking-tight">
-              Yale student talent to combat inefficiencies in healthcare organizations.
+              Yale student talent to strengthen healthcare organizations and expand their impact.
             </h2>
             <p className="prose-body mb-4">
               Healthcare nonprofits, especially smaller ones, often don't have the internal capacity
-              for the kind of research and strategy work they need. At the same time, Yale has hundreds
-              of students with relevant skills and not enough ways to use them.
-            </p>
-            <p className="prose-body mb-4">
-              YHCC was built to connect those two things. We take on projects, put together
+              for the kind of research and strategy work they need. We take on projects, put together
               cross-disciplinary student teams, and deliver work that clients can bring to their boards,
               funders, and leadership.
             </p>
             <p className="prose-body">
-              YHCC is also committed to engaging in high-impact research with Yale faculty and policy organizations across numerous aspects of healthcare, including health economics and policy, digital innovation, and drug development, and more.
+              YHCC is also committed to engaging in high-impact research with Yale faculty and policy organizations across numerous aspects of healthcare, including health economics and policy, digital innovation, and global health.
             </p>
           </FadeIn>
           <FadeIn direction="right" delay={0.1}>
-            <div className="space-y-0">
+            <div className="space-y-0 md:mt-10">
               {timeline.map(({ year, event }, i) => (
                 <div key={year} className="flex gap-5 items-start">
-                  <div className="flex-shrink-0 w-24 text-right">
-                    <span className="text-[10.5px] font-bold text-yale-teal uppercase tracking-[0.12em]">{year}</span>
+                  <div className="flex-shrink-0 w-32 text-right">
+                    <span className="text-[10.5px] font-bold text-yale-teal uppercase tracking-[0.1em] whitespace-nowrap">{year}</span>
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-2 h-2 rounded-full bg-yale-blue mt-1 flex-shrink-0" />
@@ -149,34 +144,6 @@ export default function About() {
               </StaggerItem>
             ))}
           </StaggerContainer>
-        </div>
-      </section>
-
-      {/* ── CTA ── */}
-      <section className="py-24 px-6 bg-hero-gradient relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_100%_0%,rgba(255,255,255,0.05)_0%,transparent_60%)] pointer-events-none" />
-        <div className="max-w-3xl mx-auto text-center relative">
-          <FadeIn>
-            <p className="label-eyebrow text-white/40 mb-3">Get in touch</p>
-            <h2 className="text-[2rem] font-bold text-white mb-4 tracking-tight">Want to work with us or join the team?</h2>
-            <p className="text-white/60 max-w-lg mx-auto mb-8 leading-relaxed">
-              Send us a note. We respond to every message and try to find a way to make it work.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-white text-yale-blue px-7 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5"
-              >
-                Contact Us <ArrowRight size={13} />
-              </Link>
-              <Link
-                to="/team"
-                className="inline-flex items-center gap-2 border border-white/25 text-white/90 px-7 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 hover:border-white/40 transition-all duration-200"
-              >
-                Meet the Team
-              </Link>
-            </div>
-          </FadeIn>
         </div>
       </section>
     </div>
