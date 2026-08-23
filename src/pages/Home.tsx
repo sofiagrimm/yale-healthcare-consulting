@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import { Lightbulb, Target, Users, ArrowRight, TrendingUp, FlaskConical, HeartPulse } from 'lucide-react'
+import { Lightbulb, Target, Users, ArrowRight, TrendingUp } from 'lucide-react'
 import { motion } from 'motion/react'
 import { FadeIn, StaggerContainer, StaggerItem, CountUp, BlurReveal, HoverCard, ScaleIn } from '../components/animations/FadeIn'
 // @ts-ignore
@@ -43,13 +43,6 @@ const stats = [
   { value: 10, suffix: '+', label: 'Client Engagements' },
   { value: 4, suffix: '', label: 'Practice Areas' },
   { value: 1, suffix: '', label: 'Student-Run', display: 'Yale' },
-]
-
-const afterYHCC = [
-  { icon: <HeartPulse size={16} />, path: 'MD & PhD Programs' },
-  { icon: <TrendingUp size={16} />, path: 'Healthcare Consulting' },
-  { icon: <FlaskConical size={16} />, path: 'Research & Biotech' },
-  { icon: <Users size={16} />, path: 'Public Health & Policy' },
 ]
 
 export default function Home() {
@@ -197,24 +190,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── After YHCC ── */}
-      <section className="py-24 px-6 bg-surface">
+      {/* ── Recruiting banner ── */}
+      <section className="py-16 px-6 bg-surface">
         <div className="max-w-6xl mx-auto">
-          <FadeIn className="mb-10">
-            <p className="label-eyebrow mb-2">Career Outcomes</p>
-            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">After YHCC</h2>
-          </FadeIn>
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
-            {afterYHCC.map(({ icon, path }) => (
-              <StaggerItem key={path}>
-                <HoverCard className="bg-white border border-gray-100 rounded-xl p-4 flex items-center gap-3 shadow-card">
-                  <span className="text-yale-teal flex-shrink-0">{icon}</span>
-                  <span className="text-[13px] font-semibold text-yale-blue leading-tight">{path}</span>
-                </HoverCard>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-          <FadeIn delay={0.2}>
+          <FadeIn>
             <div className="bg-hero-gradient text-white rounded-2xl p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div>
                 <p className="text-[11px] font-semibold text-white/45 uppercase tracking-[0.15em] mb-1">Recruiting</p>
