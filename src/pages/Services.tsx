@@ -43,8 +43,8 @@ export default function Services() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-yale-blue-deeper/95 via-yale-blue-deeper/35 to-yale-blue-deeper/10" />
-        <div className="absolute inset-0 flex items-end">
-          <div className="max-w-6xl mx-auto px-6 w-full pb-6 md:pb-8">
+        <div className="absolute inset-0 flex items-end px-6">
+          <div className="max-w-6xl mx-auto w-full pb-6 md:pb-8">
             <BlurReveal delay={0.1}>
               <h1 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] font-bold tracking-[-0.03em] text-white drop-shadow-[0_2px_12px_rgba(7,32,80,0.6)]">
                 Our Services
