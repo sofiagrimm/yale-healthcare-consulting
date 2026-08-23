@@ -15,7 +15,7 @@ import hipImg from '/HIP.png'
 import campImg from '/camp.png'
 
 const clients = [
-  { name: 'CT Department of Social Services', focus: 'Focus: Policy landscape, cost modeling', logo: dssImg, url: 'https://portal.ct.gov/dss?language=en_US' },
+  { name: 'CT Department of Social Services', focus: 'Focus: Policy landscape, cost implementation strategy', logo: dssImg, url: 'https://portal.ct.gov/dss?language=en_US' },
   { name: 'CT Oral Health Initiative', focus: 'Focus: Research and funding', logo: cohiImg, url: 'https://www.ctoralhealth.org/' },
   { name: 'Ronald McDonald House', focus: 'Focus: Volunteer workflow', logo: rmhImg, url: 'https://www.ronaldmcdonaldhousectma.org/' },
   { name: 'Health Information Project', focus: 'Focus: Expansion', logo: hipImg, url: 'https://behip.org/' },
@@ -55,7 +55,7 @@ export default function OngoingProjects() {
             {clients.map(({ name, focus, logo, url }) => (
               <StaggerItem key={name} className="w-full sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)]">
                 <HoverCard className="bg-white border border-gray-100 rounded-2xl shadow-card overflow-hidden h-full">
-                  <div className="p-8 flex flex-col items-center text-center h-full">
+                  <div className="p-6 flex flex-col items-center text-center h-full">
                     <div className="h-16 flex items-center justify-center mb-5">
                       <img src={logo} alt={`${name} logo`} className="max-h-16 max-w-[180px] object-contain mix-blend-multiply" />
                     </div>
@@ -69,7 +69,7 @@ export default function OngoingProjects() {
                         {name}
                       </a>
                     </h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">{focus}</p>
+                    <p className="text-xs text-gray-500 leading-relaxed">{focus}</p>
                   </div>
                 </HoverCard>
               </StaggerItem>
