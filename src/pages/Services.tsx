@@ -1,4 +1,4 @@
-import { FadeIn, StaggerContainer, StaggerItem, HoverCard, BlurReveal } from '../components/animations/FadeIn'
+import { FadeIn, StaggerContainer, StaggerItem, BlurReveal } from '../components/animations/FadeIn'
 import { BarChart2, Megaphone, Wrench, Bot } from 'lucide-react'
 // @ts-ignore
 import clientsImg from '/currentclients.png'
@@ -8,61 +8,26 @@ import servicesHeroImg from '/services-hero.jpg'
 const services = [
   {
     icon: <BarChart2 size={22} />,
-    label: 'Practice Area 01',
     title: 'Research & Evidence',
-    desc: 'Helping organizations understand what their work is actually doing, and build the evidence base to show it to funders and stakeholders.',
-    bullets: [
-      'Social impact evaluations and social ROI analysis',
-      'Survey design, digitization, and data analysis',
-      'Performance metrics and KPI frameworks',
-      'Market research and competitive landscape reviews',
-      'Analyses of health policy and therapeutic landscapes',
-      'Literature reviews to support research and grant applications',
-    ],
+    desc: 'Literature review, program evaluation, survey design, and data analysis for boards, funders, and grant reviewers.',
     example: 'We ran a full survey research project for a regional mental health organization, digitized their data collection, analyzed results, and wrote a report they used directly in grant applications.',
   },
   {
     icon: <Megaphone size={22} />,
-    label: 'Practice Area 02',
     title: 'Visibility & Growth',
-    desc: 'Strategy for organizations that need to reach more people, whether that means patients, donors, partners, or the public.',
-    bullets: [
-      'Brand and digital presence audits',
-      'Multi-channel outreach and engagement strategy',
-      'Partnership identification and outreach frameworks',
-      'Growth roadmaps and market development plans',
-      'Benchmarking analyses comparing peer institutions and competitors',
-      'Patient-facing and internal-facing content development (educational resources, process guides, communication tools)',
-    ],
+    desc: 'Market positioning, donor and stakeholder outreach, brand strategy, and partnership development.',
     example: 'Designed and piloted a research-grounded reproductive and menstrual health training curriculum for university administrators at Yale, with a roadmap for broader rollout across Connecticut institutions.',
   },
   {
     icon: <Wrench size={22} />,
-    label: 'Practice Area 03',
     title: 'Operations & Analytics',
-    desc: 'Digging into operational data to find inefficiencies, model future scenarios, and build tools that help leadership make better calls.',
-    bullets: [
-      'Patient journey mapping and care pathway analysis',
-      'Operational process mapping and improvement',
-      'Predictive economic modeling (budget scenarios, insurance reimbursement dynamics, legislative impact)',
-      'Program and operational analyses with recommendations for targeted growth, efficiency, and resource allocation',
-      'Performance dashboards and data models',
-      'Decision-support tools and scenario analysis',
-    ],
+    desc: 'Cost modeling, capacity and resource planning, workflow mapping, and financial forecasting.',
     example: 'Built an annual resource planning model for a national blood services organization, projecting vehicle lifecycle costs and replacement schedules over a 10-year horizon.',
   },
   {
     icon: <Bot size={22} />,
-    label: 'Practice Area 04',
     title: 'AI & Technology',
-    desc: 'Scoping, building, and evaluating AI-assisted solutions for healthcare organizations, from workflow automation to agentic tools that actually get used.',
-    bullets: [
-      'Determining, testing, and evaluating AI use cases to enhance operations and patient experience',
-      'AI-assisted tools to streamline administrative workflows (internal knowledge search, document summarization)',
-      'Agentic workflow design and implementation',
-      'Technology landscape reviews for digital health organizations',
-      'Custom scoping for organizations new to AI adoption',
-    ],
+    desc: 'Landscape scans of health tech, implementation strategy, tool prototyping, and go-to-market research.',
     example: 'Conducted market research and competitive landscape analysis to develop a targeted outreach strategy for an early-stage AI startup, identifying key customer segments and go-to-market priorities to support nationwide product implementation.',
   },
 ]
@@ -90,33 +55,33 @@ export default function Services() {
       </section>
 
       {/* ── Services List ── */}
-      <section className="py-12 md:py-20 px-6">
-        <div className="max-w-6xl mx-auto space-y-5">
-          <StaggerContainer>
-            {services.map(({ icon, label, title, desc, bullets, example }) => (
+      <section className="pt-12 md:pt-20 pb-8 md:pb-10 px-6">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <p className="text-xs text-gray-500 italic text-right mb-3">
+              Hover over a card to see a recent project
+            </p>
+          </FadeIn>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {services.map(({ icon, title, desc, example }) => (
               <StaggerItem key={title}>
-                <HoverCard className="bg-white border border-gray-100 rounded-2xl shadow-card p-8 grid md:grid-cols-[1fr_1.15fr] gap-8 items-start">
-                  <div>
-                    <div className="flex items-center gap-3 mb-5">
-                      <span className="text-yale-teal">{icon}</span>
-                      <span className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-gray-400">{label}</span>
+                <div className="group [perspective:1200px] h-72">
+                  <div className="relative w-full h-full transition-transform duration-500 ease-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                    {/* Front */}
+                    <div className="absolute inset-0 [backface-visibility:hidden] bg-white border border-gray-100 rounded-2xl shadow-card p-6 flex flex-col">
+                      <div className="w-11 h-11 rounded-full bg-yale-teal/10 flex items-center justify-center text-yale-teal mb-5 flex-shrink-0">
+                        {icon}
+                      </div>
+                      <h3 className="text-lg font-bold text-yale-blue mb-2.5 tracking-tight">{title}</h3>
+                      <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
                     </div>
-                    <h3 className="text-xl font-bold text-yale-blue mb-3 tracking-tight">{title}</h3>
-                    <p className="text-sm text-gray-500 leading-relaxed mb-5">{desc}</p>
-                    <ul className="space-y-2">
-                      {bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-2.5 text-sm text-gray-600">
-                          <span className="text-yale-teal font-bold mt-0.5 flex-shrink-0">&#10003;</span>
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Back */}
+                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-hero-gradient rounded-2xl shadow-card p-6 flex flex-col justify-center">
+                      <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-yale-teal mb-3">A recent project</p>
+                      <p className="text-sm text-white/85 leading-relaxed">{example}</p>
+                    </div>
                   </div>
-                  <div className="bg-surface border border-gray-100 rounded-xl p-6">
-                    <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-yale-teal mb-3">A recent project</p>
-                    <p className="text-sm text-gray-600 leading-relaxed">{example}</p>
-                  </div>
-                </HoverCard>
+                </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -124,7 +89,7 @@ export default function Services() {
       </section>
 
       {/* ── Engagement Structure ── */}
-      <section className="py-12 px-6 bg-white border-b border-gray-100">
+      <section className="pt-4 pb-12 px-6 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <div className="bg-surface border border-gray-100 rounded-2xl px-6 md:px-8 py-6">
