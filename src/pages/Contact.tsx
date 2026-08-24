@@ -6,11 +6,11 @@ import { Link } from 'react-router'
 const faqs = [
   {
     q: 'What kinds of organizations do you work with?',
-    a: 'We work with healthcare nonprofits, community health organizations, health systems, and mission-driven healthcare startups, primarily in Connecticut and the broader Northeast.',
+    a: 'We work with healthcare nonprofits, community health organizations, government, and mission-driven healthcare startups, primarily in Connecticut, while expanding our reach to organizations across the US.',
   },
   {
     q: 'Who can join YHCC?',
-    a: 'YHCC is open to all Yale students across all schools and programs. We value diverse perspectives and welcome students from backgrounds in business, medicine, public health, engineering, and beyond.',
+    a: 'YHCC is open to Yale undergraduate students across all majors. We value diverse perspectives and welcome students from backgrounds in business, medicine, public health, engineering, and beyond.',
   },
   {
     q: 'How long does a typical project take?',
