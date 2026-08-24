@@ -5,7 +5,7 @@ import { FadeIn, StaggerContainer, StaggerItem, CountUp, BlurReveal, HoverCard, 
 // @ts-ignore
 import clientsImg from '/currentclients.png'
 // @ts-ignore
-import harknessTowerImg from '/harkness_tower.jpg'
+import harknessTowerImg from '/Harkness CREDITED.jpg'
 
 const exploreCards = [
   {
@@ -92,6 +92,10 @@ export default function Home() {
               alt="Harkness Tower at Yale"
               className="absolute inset-0 w-full h-full object-cover object-[50%_15%]"
             />
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-yale-blue-deeper/70 to-transparent pointer-events-none" />
+            <p className="absolute bottom-3 right-4 text-[10.5px] text-white/90 tracking-wide drop-shadow-[0_1px_4px_rgba(7,32,80,0.9)]">
+              Photo by Andrew Hurley
+            </p>
           </div>
         </div>
       </section>
