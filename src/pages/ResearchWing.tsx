@@ -1,5 +1,4 @@
-import { Link } from 'react-router'
-import { ArrowRight, BookOpen, BarChart2, Stethoscope, Landmark } from 'lucide-react'
+import { BookOpen, BarChart2, Stethoscope, Landmark } from 'lucide-react'
 import { FadeIn, BlurReveal, StaggerContainer, StaggerItem, HoverCard } from '../components/animations/FadeIn'
 
 const focusAreas = [
@@ -43,16 +42,22 @@ export default function ResearchWing() {
         </div>
       </section>
 
-      {/* What We Do */}
-      <section className="py-14 md:py-20 px-6">
+      {/* Our Work */}
+      <section className="py-10 md:py-14 px-6 bg-surface">
         <div className="max-w-6xl mx-auto">
-          <FadeIn className="mb-10 max-w-2xl">
+          <FadeIn className="max-w-2xl">
             <p className="label-eyebrow mb-2">Our Work</p>
             <p className="prose-body">Academic-style research alongside our consulting engagements, done in partnership with Yale faculty and policy organizations.</p>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* What We Do */}
+      <section className="py-14 md:py-20 px-6">
+        <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-10">
             <p className="label-eyebrow mb-2">What We Do</p>
-            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Two areas of focus</h2>
+            <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Two types of research</h2>
           </FadeIn>
           <StaggerContainer className="grid sm:grid-cols-2 gap-6">
             {focusAreas.map(({ icon, title, desc }) => (
@@ -87,34 +92,6 @@ export default function ResearchWing() {
               </StaggerItem>
             ))}
           </StaggerContainer>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 px-6 bg-hero-gradient relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_100%,rgba(255,255,255,0.05)_0%,transparent_60%)] pointer-events-none" />
-        <div className="max-w-3xl mx-auto text-center relative">
-          <FadeIn>
-            <p className="label-eyebrow text-white/40 mb-3">Get involved</p>
-            <h2 className="text-[2rem] font-bold text-white mb-4 tracking-tight">Interested in our research?</h2>
-            <p className="text-white/60 max-w-lg mx-auto mb-8 leading-relaxed">
-              Reach out to learn more about the Research Wing, or apply to join a project team.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-white text-yale-blue px-7 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5"
-              >
-                Get in Touch <ArrowRight size={13} />
-              </Link>
-              <Link
-                to="/apply"
-                className="inline-flex items-center gap-2 border border-white/25 text-white/90 px-7 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 hover:border-white/40 transition-all duration-200"
-              >
-                Apply
-              </Link>
-            </div>
-          </FadeIn>
         </div>
       </section>
     </div>
