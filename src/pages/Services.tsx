@@ -52,6 +52,9 @@ export default function Services() {
             </BlurReveal>
           </div>
         </div>
+        <p className="absolute bottom-2 right-3 sm:bottom-3 sm:right-4 text-[10.5px] text-white/80 tracking-wide drop-shadow-[0_1px_4px_rgba(7,32,80,0.9)]">
+          Photo by Robert DeSanto
+        </p>
       </section>
 
       {/* ── Services List ── */}
