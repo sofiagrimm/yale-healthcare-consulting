@@ -1,5 +1,7 @@
 import { BookOpen, BarChart2, Stethoscope, Landmark } from 'lucide-react'
 import { FadeIn, BlurReveal, StaggerContainer, StaggerItem, HoverCard } from '../components/animations/FadeIn'
+// @ts-ignore
+import researchHeroImg from '/Aerial 1 CREDITED.jpg'
 
 const focusAreas = [
   {
@@ -31,8 +33,13 @@ export default function ResearchWing() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero */}
-      <section className="relative h-[220px] sm:h-[260px] md:h-[320px] overflow-hidden bg-hero-gradient">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)] pointer-events-none" />
+      <section className="relative h-[220px] sm:h-[260px] md:h-[320px] overflow-hidden">
+        <img
+          src={researchHeroImg}
+          alt="Aerial view of Yale University campus"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-yale-blue-deeper/95 via-yale-blue-deeper/35 to-yale-blue-deeper/10" />
         <div className="absolute inset-0 flex items-end px-6">
           <div className="max-w-6xl mx-auto w-full pb-6 md:pb-8">
             <BlurReveal delay={0.1}>
@@ -42,6 +49,9 @@ export default function ResearchWing() {
             </BlurReveal>
           </div>
         </div>
+        <p className="absolute bottom-2 right-3 sm:bottom-3 sm:right-4 text-[10.5px] text-white/80 tracking-wide drop-shadow-[0_1px_4px_rgba(7,32,80,0.9)]">
+          Photo by Paul Coco
+        </p>
       </section>
 
       {/* Our Work */}
