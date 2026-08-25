@@ -12,28 +12,28 @@ const exploreCards = [
     icon: <Users size={20} />,
     label: 'About',
     title: 'Who we are',
-    desc: 'Our mission, our story, and why community impact comes first.',
+    desc: 'Our mission and our story.',
     to: '/about',
   },
   {
     icon: <Target size={20} />,
     label: 'Services',
     title: 'What we do',
-    desc: 'Four practice areas, research, growth, operations, and AI, scoped to your problem.',
+    desc: 'Four practice areas scoped around your problem.',
     to: '/services',
   },
   {
     icon: <TrendingUp size={20} />,
     label: 'Projects',
     title: 'Our work',
-    desc: 'Client engagements our teams are actively working on this semester.',
+    desc: 'Ongoing client engagements.',
     to: '/projects/ongoing',
   },
   {
     icon: <Lightbulb size={20} />,
     label: 'Apply',
     title: 'Join the team',
-    desc: 'We recruit at the start of each semester. No consulting experience required.',
+    desc: 'We recruit at the start of each semester.',
     to: '/apply',
   },
 ]
@@ -135,38 +135,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Testimonial ── */}
-      <section className="py-14 md:py-24 px-6 bg-hero-gradient relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_100%,rgba(255,255,255,0.05)_0%,transparent_60%)] pointer-events-none" />
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch relative">
-          <FadeIn direction="left">
-            <div className="h-full flex flex-col justify-center border-l-4 border-yale-teal pl-8 md:pl-10 py-2">
-              <div className="text-6xl text-yale-teal font-serif leading-none select-none mb-4">&ldquo;</div>
-              <p className="text-white text-xl md:text-2xl font-light leading-[1.6] tracking-[-0.01em]">
-                Working with YHCC was a seamless experience, and the results were invaluable. Their team
-                provided digitized surveys, thorough data analysis, and a comprehensive report outlining
-                methodology, outcomes, and actionable recommendations. We've already incorporated several
-                of the findings into grants.
-              </p>
-              <div className="mt-8 pt-6 border-t border-white/15 flex items-center gap-4">
-                <div className="w-11 h-11 rounded-full bg-yale-teal/15 border border-yale-teal/40 flex items-center justify-center text-yale-teal font-semibold text-sm flex-shrink-0">
-                  BS
-                </div>
-                <div>
-                  <div className="font-semibold text-white text-sm">Bethany Simmonds</div>
-                  <div className="text-white/55 text-xs mt-0.5">Senior Director of Advancement, Mental Health CT</div>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-          <FadeIn direction="right" delay={0.1} className="hidden md:block">
-            <div className="h-full min-h-[320px] rounded-2xl bg-white/10 border border-white/20" />
-          </FadeIn>
-        </div>
-      </section>
-
       {/* ── Explore YHCC ── */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 bg-surface">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-12">
             <p className="label-eyebrow mb-2">Explore YHCC</p>
@@ -195,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* ── Recruiting banner ── */}
-      <section className="py-16 px-6 bg-surface">
+      <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <div className="bg-hero-gradient text-white rounded-2xl p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">

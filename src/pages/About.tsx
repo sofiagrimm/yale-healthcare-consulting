@@ -135,8 +135,8 @@ export default function About() {
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {afterPaths.map(({ icon, title, desc }) => (
-              <StaggerItem key={title}>
-                <HoverCard className="bg-white border border-gray-100 rounded-2xl p-6 shadow-card">
+              <StaggerItem key={title} className="h-full">
+                <HoverCard className="h-full flex flex-col bg-white border border-gray-100 rounded-2xl p-6 shadow-card">
                   <div className="text-yale-teal mb-4">{icon}</div>
                   <h3 className="text-sm font-bold text-yale-blue mb-1.5 tracking-tight">{title}</h3>
                   <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>

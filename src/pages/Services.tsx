@@ -9,25 +9,25 @@ const services = [
   {
     icon: <BarChart2 size={22} />,
     title: 'Research & Evidence',
-    desc: 'Literature review, program evaluation, survey design, and data analysis for boards, funders, and grant reviewers.',
+    bullets: ['Literature review', 'Policy analysis', 'Program evaluation', 'Data analysis'],
     example: 'We ran a full survey research project for a regional mental health organization, digitized their data collection, analyzed results, and wrote a report they used directly in grant applications.',
   },
   {
     icon: <Megaphone size={22} />,
     title: 'Visibility & Growth',
-    desc: 'Market positioning, donor and stakeholder outreach, brand strategy, and partnership development.',
+    bullets: ['Market positioning', 'Donor and stakeholder outreach', 'Brand strategy', 'Partnership development'],
     example: 'Designed and piloted a research-grounded reproductive and menstrual health training curriculum for university administrators at Yale, with a roadmap for broader rollout across Connecticut institutions.',
   },
   {
     icon: <Wrench size={22} />,
     title: 'Operations & Analytics',
-    desc: 'Cost modeling, capacity and resource planning, workflow mapping, and financial forecasting.',
+    bullets: ['Cost modeling', 'Capacity and resource planning', 'Workflow mapping'],
     example: 'Built an annual resource planning model for a national blood services organization, projecting vehicle lifecycle costs and replacement schedules over a 10-year horizon.',
   },
   {
     icon: <Bot size={22} />,
     title: 'AI & Technology',
-    desc: 'Landscape scans of health tech, implementation strategy, tool prototyping, and go-to-market research.',
+    bullets: ['Landscape scans of health tech', 'Implementation strategy', 'Tool prototyping', 'Go-to-market research'],
     example: 'Conducted market research and competitive landscape analysis to develop a targeted outreach strategy for an early-stage AI startup, identifying key customer segments and go-to-market priorities to support nationwide product implementation.',
   },
 ]
@@ -66,7 +66,7 @@ export default function Services() {
             </p>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map(({ icon, title, desc, example }) => (
+            {services.map(({ icon, title, bullets, example }) => (
               <StaggerItem key={title}>
                 <div className="group [perspective:1200px] h-72">
                   <div className="relative w-full h-full transition-transform duration-500 ease-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -76,7 +76,14 @@ export default function Services() {
                         {icon}
                       </div>
                       <h3 className="text-lg font-bold text-yale-blue mb-2.5 tracking-tight">{title}</h3>
-                      <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
+                      <ul className="space-y-2">
+                        {bullets.map((bullet) => (
+                          <li key={bullet} className="flex items-start gap-2 text-[12.5px] text-gray-500 leading-relaxed">
+                            <span className="text-yale-teal font-bold mt-0.5 flex-shrink-0">&#10003;</span>
+                            {bullet}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                     {/* Back */}
                     <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-hero-gradient rounded-2xl shadow-card p-6 flex flex-col justify-center">

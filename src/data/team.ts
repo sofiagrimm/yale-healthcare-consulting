@@ -5,7 +5,7 @@ import neeleshImg from '/neelesh.png'
 // @ts-ignore
 import sofiaImg from '/sofia.png'
 // @ts-ignore
-import kylerImg from '/kyler.png'
+import kylerImg from '/kylerNEW.jpg'
 // @ts-ignore
 import colinImg from '/colin.png'
 // @ts-ignore
