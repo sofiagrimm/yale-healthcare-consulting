@@ -2,7 +2,7 @@ import { Link } from 'react-router'
 import { ArrowRight } from 'lucide-react'
 import { FadeIn, BlurReveal, StaggerContainer, StaggerItem, HoverCard } from '../components/animations/FadeIn'
 // @ts-ignore
-import ongoingHeroImg from '/ongoing-hero.jpg'
+import ongoingHeroImg from '/DEVLIN credited.jpg'
 // @ts-ignore
 import dssImg from '/dss.png'
 // @ts-ignore
@@ -42,6 +42,9 @@ export default function OngoingProjects() {
             </BlurReveal>
           </div>
         </div>
+        <p className="absolute bottom-2 right-3 sm:bottom-3 sm:right-4 text-[10.5px] text-white/80 tracking-wide drop-shadow-[0_1px_4px_rgba(7,32,80,0.9)]">
+          Photo by DEVLIN
+        </p>
       </section>
 
       {/* Clients */}
