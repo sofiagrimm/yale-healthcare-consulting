@@ -18,10 +18,12 @@ const currentProjects = [
   {
     icon: <Stethoscope size={20} />,
     title: 'AI Tools for Pneumonia Diagnosis',
+    subtext: 'Literature review',
   },
   {
     icon: <Landmark size={20} />,
     title: 'Effects of Medicaid Changes on Behavioral Health Coverage',
+    subtext: 'Policy brief',
   },
 ]
 
@@ -80,14 +82,17 @@ export default function ResearchWing() {
             <p className="label-eyebrow mb-2">Fall Semester</p>
             <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Current Research Projects</h2>
           </FadeIn>
-          <StaggerContainer className="flex flex-wrap gap-6">
-            {currentProjects.map(({ icon, title }) => (
-              <StaggerItem key={title} className="w-full sm:w-[calc((100%-24px)/2)]">
+          <StaggerContainer className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+            {currentProjects.map(({ icon, title, subtext }) => (
+              <StaggerItem key={title} className="h-full">
                 <HoverCard className="bg-white border border-gray-100 rounded-2xl shadow-card p-8 h-full flex items-start gap-4">
                   <span className="w-11 h-11 rounded-full bg-yale-blue/8 text-yale-blue flex items-center justify-center flex-shrink-0">
                     {icon}
                   </span>
-                  <h3 className="text-[1.05rem] font-bold text-yale-blue tracking-tight leading-snug mt-1.5">{title}</h3>
+                  <div>
+                    <h3 className="text-[15px] font-bold text-yale-blue tracking-tight leading-snug whitespace-nowrap">{title}</h3>
+                    <p className="text-sm text-gray-500 mt-1">{subtext}</p>
+                  </div>
                 </HoverCard>
               </StaggerItem>
             ))}

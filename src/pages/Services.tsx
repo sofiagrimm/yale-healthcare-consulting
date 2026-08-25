@@ -4,6 +4,8 @@ import { BarChart2, Megaphone, Wrench, Bot } from 'lucide-react'
 import clientsImg from '/currentclients.png'
 // @ts-ignore
 import servicesHeroImg from '/services-hero.jpg'
+// @ts-ignore
+import mentalHealthCTLogo from '/Mental Health CT Logo.png'
 
 const services = [
   {
@@ -78,7 +80,7 @@ export default function Services() {
                       <h3 className="text-lg font-bold text-yale-blue mb-2.5 tracking-tight">{title}</h3>
                       <ul className="space-y-2">
                         {bullets.map((bullet) => (
-                          <li key={bullet} className="flex items-start gap-2 text-[12.5px] text-gray-500 leading-relaxed">
+                          <li key={bullet} className="flex items-start gap-2 text-[13px] text-gray-500 leading-relaxed">
                             <span className="text-yale-teal font-bold mt-0.5 flex-shrink-0">&#10003;</span>
                             {bullet}
                           </li>
@@ -148,31 +150,38 @@ export default function Services() {
       </section>
 
       {/* ── Testimonial ── */}
-      <section className="py-14 md:py-24 px-6 bg-hero-gradient relative overflow-hidden">
+      <section className="py-10 md:py-16 px-6 bg-hero-gradient relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_100%,rgba(255,255,255,0.05)_0%,transparent_60%)] pointer-events-none" />
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch relative">
-          <FadeIn direction="left">
-            <div className="h-full flex flex-col justify-center border-l-4 border-yale-teal pl-8 md:pl-10 py-2">
-              <div className="text-6xl text-yale-teal font-serif leading-none select-none mb-4">&ldquo;</div>
-              <p className="text-white text-xl md:text-2xl font-light leading-[1.6] tracking-[-0.01em]">
-                Working with YHCC was a seamless experience, and the results were invaluable. Their team
-                provided digitized surveys, thorough data analysis, and a comprehensive report outlining
-                methodology, outcomes, and actionable recommendations. We've already incorporated several
-                of the findings into grants.
-              </p>
-              <div className="mt-8 pt-6 border-t border-white/15 flex items-center gap-4">
-                <div className="w-11 h-11 rounded-full bg-yale-teal/15 border border-yale-teal/40 flex items-center justify-center text-yale-teal font-semibold text-sm flex-shrink-0">
-                  BS
-                </div>
-                <div>
-                  <div className="font-semibold text-white text-sm">Bethany Simmonds</div>
-                  <div className="text-white/55 text-xs mt-0.5">Senior Director of Advancement, Mental Health CT</div>
+        <div className="max-w-6xl mx-auto relative">
+          <FadeIn>
+            <div className="bg-white rounded-3xl shadow-card overflow-hidden grid sm:grid-cols-[1.5fr_1fr]">
+              <div className="p-8 md:p-12">
+                <p className="label-eyebrow mb-4">Client Testimonial</p>
+                <div className="text-5xl text-yale-teal font-serif leading-none select-none mb-4">&ldquo;</div>
+                <p className="text-yale-blue text-lg md:text-xl leading-relaxed tracking-[-0.01em] mb-8">
+                  Working with YHCC was a seamless experience, and the results were invaluable. Their team
+                  provided digitized surveys, thorough data analysis, and a comprehensive report outlining
+                  methodology, outcomes, and actionable recommendations. We've already incorporated several
+                  of the findings into grants.
+                </p>
+                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
+                  <div className="w-11 h-11 rounded-full bg-yale-teal/10 border border-yale-teal/30 flex items-center justify-center text-yale-teal font-semibold text-sm flex-shrink-0">
+                    BS
+                  </div>
+                  <div>
+                    <div className="font-semibold text-yale-blue text-sm">Bethany Simmonds</div>
+                    <div className="text-gray-400 text-xs mt-0.5">Senior Director of Advancement, Mental Health CT</div>
+                  </div>
                 </div>
               </div>
+              <div className="bg-surface flex items-center justify-center p-6 md:p-10 border-t sm:border-t-0 sm:border-l border-gray-100">
+                <img
+                  src={mentalHealthCTLogo}
+                  alt="Mental Health Connecticut"
+                  className="w-full max-w-[340px] h-auto"
+                />
+              </div>
             </div>
-          </FadeIn>
-          <FadeIn direction="right" delay={0.1} className="hidden md:block">
-            <div className="h-full min-h-[320px] rounded-2xl bg-white/10 border border-white/20" />
           </FadeIn>
         </div>
       </section>
