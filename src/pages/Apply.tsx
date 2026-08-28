@@ -4,14 +4,13 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 
 const timeline = [
   { label: 'Written Application Opens', date: 'Mon, 8/31' },
-  { label: 'Virtual Info Session', date: 'Sat, 9/5' },
   { label: 'Coffee Chats', date: '9/7 - 9/8' },
   { label: 'Written Application Due', date: 'Sat, 9/12' },
   { label: 'Interview Decisions Released', date: 'Tues, 9/15' },
-  { label: 'In-Person Interviews', date: '9/19 - 9/20' },
-  { label: 'Final Decisions Released', date: 'Mon, 9/21' },
-  { label: 'Deadline to Accept', date: 'Wed, 9/23' },
-  { label: 'Orientation & Onboarding', date: 'TBD' },
+  { label: 'In-Person Interviews', date: '9/17 - 9/18' },
+  { label: 'Final Decisions Released', date: 'Sun, 9/20' },
+  { label: 'Deadline to Accept', date: 'Tues, 9/22' },
+  { label: 'General Orientation', date: 'Wed, 9/23' },
 ]
 
 const faqs = [
