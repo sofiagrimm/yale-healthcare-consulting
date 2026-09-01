@@ -97,6 +97,42 @@ export default function Apply() {
 
           {/* Left: FAQ */}
           <div>
+            {/* Application Links */}
+            <FadeIn className="mb-10">
+              <p className="label-eyebrow mb-2">How to Apply</p>
+              <h2 className="text-[1.75rem] font-bold text-yale-blue tracking-tight mb-4">Application materials</h2>
+              <p className="text-[15px] text-gray-700 leading-relaxed">
+                Start by reading the{' '}
+                <a
+                  href="https://docs.google.com/document/d/1NJtKBgpHakJa8zt1U9e8gQLWe-QifR9xKPD5dtjpnp0/edit?tab=t.0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yale-blue font-semibold underline decoration-yale-teal/40 underline-offset-2 hover:text-yale-teal transition-colors"
+                >
+                  Fall 2026 Application Instructions
+                </a>
+                . When you&apos;re ready, submit the{' '}
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdYfkN2bUWpARA_DamZMuGZHLRUOW0Hgb9wU2bHZmXnbh9xwA/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yale-blue font-semibold underline decoration-yale-teal/40 underline-offset-2 hover:text-yale-teal transition-colors"
+                >
+                  application form
+                </a>
+                {' '}by <strong className="font-bold text-yale-blue">Saturday, September 12th at 5PM</strong>. You can also learn more about YHCC by signing up for a{' '}
+                <a
+                  href="https://calendly.com/yhcc/yhcc-coffee-chats"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yale-blue font-semibold underline decoration-yale-teal/40 underline-offset-2 hover:text-yale-teal transition-colors"
+                >
+                  coffee chat
+                </a>
+                {' '}with a board member.
+              </p>
+            </FadeIn>
+
             <FadeIn className="mb-8">
               <p className="label-eyebrow mb-2">Frequently Asked Questions</p>
               <h2 className="text-[1.75rem] font-bold text-yale-blue tracking-tight">Everything you need to know</h2>

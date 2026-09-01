@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router'
 import { useEffect } from 'react'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
+import ApplicationBanner from './components/layout/ApplicationBanner'
 
 export default function Root() {
   const { pathname } = useLocation()
@@ -9,6 +10,7 @@ export default function Root() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <ApplicationBanner />
       <Header />
       <main className="flex-1">
         <Outlet />
