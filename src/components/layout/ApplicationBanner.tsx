@@ -41,9 +41,10 @@ export default function ApplicationBanner() {
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-yale-teal/40" />
 
             <button
+              type="button"
               onClick={dismiss}
               aria-label="Close"
-              className="absolute top-5 right-5 w-8 h-8 flex items-center justify-center rounded-full text-gray-400 border border-gray-200 hover:text-yale-blue hover:border-gray-300 hover:bg-gray-50 transition-all duration-200 hover:rotate-90"
+              className="absolute top-5 right-5 z-20 w-8 h-8 flex items-center justify-center rounded-full text-gray-400 border border-gray-200 hover:text-yale-blue hover:border-gray-300 hover:bg-gray-50 transition-all duration-200 hover:rotate-90"
             >
               <X size={16} />
             </button>
@@ -79,6 +80,7 @@ export default function ApplicationBanner() {
               </Link>
 
               <button
+                type="button"
                 onClick={dismiss}
                 className="mt-4 text-[12.5px] text-gray-400 hover:text-gray-600 transition-colors"
               >
