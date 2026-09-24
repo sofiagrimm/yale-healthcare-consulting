@@ -26,6 +26,8 @@ import srishtiImg from '/srishti.png'
 import hollyImg from '/holly.jpg'
 // @ts-ignore
 import leoImg from '/leo.jpg'
+// @ts-ignore
+import usmanImg from '/usman.png'
 
 export interface TeamMember {
   name: string
@@ -47,9 +49,8 @@ export const board: TeamMember[] = [
   { name: 'Srishti Swaminathan', role: 'Director of Communications', image: srishtiImg },
   { name: 'Emma Lee', role: 'Co-Director of Membership', image: emmaImg },
   { name: 'Holly Tran', role: 'Co-Director of Membership', image: hollyImg },
-  { name: 'Nadia Bakhtari', role: 'Co-Director of Outreach' },
-  { name: 'Leo Chung', role: 'Co-Director of Outreach', image: leoImg },
-  { name: 'Usman Khalid', role: 'Director of Finance' },
+  { name: 'Leo Chung', role: 'Director of Outreach', image: leoImg },
+  { name: 'Usman Khalid', role: 'Director of Finance', image: usmanImg },
 ]
 
 export const advisors: TeamMember[] = [

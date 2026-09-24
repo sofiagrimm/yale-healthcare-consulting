@@ -66,16 +66,9 @@ export default function Team() {
             <p className="label-eyebrow mb-2">Board Members</p>
             <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Board</h2>
           </FadeIn>
-          <StaggerContainer className="flex flex-wrap justify-center gap-4 mb-4">
-            {board.slice(0, 4).map((member) => (
-              <StaggerItem key={member.name} className="w-[45%] sm:w-[30%] lg:w-[22%]">
-                <ExecCard {...member} />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
           <StaggerContainer className="flex flex-wrap justify-center gap-4">
-            {board.slice(4).map((member) => (
-              <StaggerItem key={member.name} className="w-[45%] sm:w-[30%] lg:w-[22%]">
+            {board.map((member) => (
+              <StaggerItem key={member.name} className="w-[45%] sm:w-[30%] lg:w-[30%]">
                 <ExecCard {...member} />
               </StaggerItem>
             ))}
