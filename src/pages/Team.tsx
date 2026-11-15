@@ -49,7 +49,7 @@ export default function Team() {
             <p className="label-eyebrow mb-2">Leadership</p>
             <h2 className="text-[2rem] font-bold text-yale-blue tracking-tight">Executive Board</h2>
           </FadeIn>
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {leadership.map((member) => (
               <StaggerItem key={member.name}>
                 <ExecCard {...member} />
