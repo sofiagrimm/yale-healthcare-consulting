@@ -4,8 +4,9 @@ import vivekImg from '/vivek.png'
 import neeleshImg from '/neelesh.png'
 // @ts-ignore
 import sofiaImg from '/sofia.png'
-// @ts-ignore
-import kylerImg from '/kylerNEW.jpg'
+// Kyler temporarily removed from the Team page; uncomment to restore.
+// // @ts-ignore
+// import kylerImg from '/kylerNEW.jpg'
 // @ts-ignore
 import colinImg from '/colin.png'
 // @ts-ignore
@@ -39,7 +40,7 @@ export interface TeamMember {
 export const leadership: TeamMember[] = [
   { name: 'Vivek Malik', role: 'Co-President', image: vivekImg },
   { name: 'Neelesh Pandey', role: 'Co-President', image: neeleshImg },
-  { name: 'Kyler Parker', role: 'Vice President of Operations', image: kylerImg },
+  // { name: 'Kyler Parker', role: 'Vice President of Operations', image: kylerImg },
   { name: 'Sofia Grimm', role: 'Vice President of Consulting', image: sofiaImg },
   { name: 'Colin George', role: 'Vice President of External Affairs', image: colinImg },
 ]
